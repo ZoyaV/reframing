@@ -1,0 +1,32 @@
+wandb:
+  entity: 'babycar27'
+  project: 'ppo_loss_exp'
+
+data:
+  inp: 'instruction'
+  out: 'builded'
+
+model:
+  txt_in_len: 5
+  txt_out_len: 20
+  seed: 1
+  model_name: 'google/flan-t5-base'
+  pretrained_model: './200'
+
+ppo_trainer:
+  config:
+    steps: 51200
+    learning_rate: 0.0000141
+    remove_unused_columns: false
+    log_with: 'wandb'
+    batch_size: 1
+
+text_generation:
+  parameters:
+    min_length: -1
+    top_k: 0.0
+    top_p: 1.0
+    do_sample: true
+    eos_token_id: -1
+    max_new_tokens: 20
+
