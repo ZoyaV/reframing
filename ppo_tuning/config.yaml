@@ -1,17 +1,17 @@
 wandb:
   entity: 'babycar27'
-  project: 'ppo_loss_exp'
+  project: 'curman'
 
 data:
-  inp: 'instruction'
-  out: 'builded'
+  inp: 'category_id'
+  out: 'bbox'
 
 model:
   txt_in_len: 5
-  txt_out_len: 20
+  txt_out_len: 5
   seed: 1
-  model_name: 'google/flan-t5-base'
-  pretrained_model: './200'
+  model_name: 'gpt2-large'
+  pretrained_model: 'gpt2-large'
 
 ppo_trainer:
   config:
@@ -28,5 +28,5 @@ text_generation:
     top_p: 1.0
     do_sample: true
     eos_token_id: -1
-    max_new_tokens: 20
+    max_new_tokens: 5
 
