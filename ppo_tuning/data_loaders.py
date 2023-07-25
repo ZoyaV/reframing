@@ -25,8 +25,6 @@ class CustomDataset():
     def __init__(self, data, tokenizer, txt_in_len, inp_column, out_column):
         self.tokenizer = tokenizer
         self.txt_in_len = txt_in_len
-
-        print(data['builded'])
         self.dataset = Dataset.from_pandas(data)
 
         for d in self.dataset :
@@ -34,7 +32,7 @@ class CustomDataset():
             print()
             print("----------------------")
 
-        exit()
+       # exit()
         self.inp_column = inp_column
         self.out_column = out_column
 
@@ -47,6 +45,11 @@ class CustomDataset():
 
     def prepare_dataset(self):
         return self.dataset.map(self.encode_and_decode, batched=True)
+
+class SegmentationsDataset(CustomDataset):
+    def __init__(self, tokenizer, txt_in_len, inp_column, out_column):
+        data = pd.read_csv('./dataset/prompts.csv')
+        super(SegmentationsDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
 
 
 class IgluDataset(CustomDataset):
