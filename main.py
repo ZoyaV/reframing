@@ -72,8 +72,9 @@ def main():
         plot_bbox(image, true_bbox, predicted_bbox)
 
         # Get pandas dataframe
-   # df = coco_wrapper.to_pandas(keys=['id', 'file_name'])
-    #print(df)
+    df = coco_wrapper.to_pandas(keys=['id', 'file_name', 'bbox', 'category_id'])
+
+    print(df)
 
 
 if __name__ == "__main__":
