@@ -14,20 +14,18 @@ class OwlViTDetector(BaseDetector):
         # Process image and text inputs
         inputs = self.processor(text=text_queries, images=image, return_tensors="pt").to(self.device)
 
+
         # Set model in evaluation mode
         self.model.eval()
 
         # Get predictions
         with torch.no_grad():
             outputs = self.model(**inputs)
-
+            target_sizes = torch.Tensor([image.shape[:2]]).to(self.device)
+            results = self.processor.post_process_object_detection(outputs=outputs, target_sizes=target_sizes, threshold=0.1)
+       # print(results)
         # Get prediction logits
-        logits = torch.max(outputs["logits"][0], dim=-1)
-        scores = torch.sigmoid(logits.values).cpu().detach().numpy()
-
-        # Get prediction labels and boundary boxes
-        labels = logits.indices.cpu().detach().numpy()
-        boxes = outputs["pred_boxes"][0].cpu().detach().numpy()
+        boxes, scores, labels = results[0]["boxes"], results[0]["scores"], results[0]["labels"]
 
         # Filter out low score predictions
         score_threshold = 0.1

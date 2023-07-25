@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import matplotlib.patches as patches
 from metrics.metrics import calculate_iou
+from categories import category_dict
 
 def plot_bbox(im, true_bbox, predicted_bbox):
     # Open the image
@@ -30,18 +31,37 @@ def plot_bbox(im, true_bbox, predicted_bbox):
 
     plt.show()
 
-def main():
-    coco_wrapper = CocoWrapper('./dataset/result.json')
 
+def all_class_all_pic():
+    for i in range(121):
+        coco_wrapper = CocoWrapper('./dataset/result.json')
+        image = coco_wrapper.get_image(image_id=1, image_folder_path='./dataset/imgs')
+        for j in category_dict.keys():
+            text_queries = [category_dict[j]]
+            model = OwlViTDetector("google/owlvit-base-patch32")
+            predicted_bbox = model.get_bboxes(image, text_queries)
+
+            if len(predicted_bbox) != 0:
+                print(i, text_queries)
+                print(predicted_bbox)
+
+def main():
+
+    coco_wrapper = CocoWrapper('./dataset/result.json')
+    category = 27
+    category_name = category_dict[category]
     # Get all annotations for the given image and category
-    annotations = coco_wrapper.get_anns(image_id=1, category_id=24)
+    annotations = coco_wrapper.get_anns(image_id=1, category_id=category)
     # Get image by id
     image = coco_wrapper.get_image(image_id=1, image_folder_path='./dataset/imgs')
 
-    text_queries = ['door']
+    text_queries = [category_name]
     try:
         model = OwlViTDetector("google/owlvit-base-patch32")
         predicted_bbox = (model.get_bboxes(image, text_queries)[0][1]).tolist()
+        xs,ys,xend, yend = predicted_bbox
+        predicted_bbox = [xs, ys, xend, yend]
+        print(predicted_bbox)
     except IndexError:
         predicted_bbox = [100.0, 150.0, 200.0, 250.0]
         # Apply the function

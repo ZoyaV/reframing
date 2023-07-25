@@ -11,7 +11,7 @@ category_dict = {
     10: 'chest of drawers',
     11: 'handle',
     12: 'box, basket, case, bin, container',
-    13: 'toy cat',
+    13: 'toy_cat',
     14: 'white toy',
     15: 'toy block',
     16: 'garlic',
