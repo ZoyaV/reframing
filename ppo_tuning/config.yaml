@@ -7,11 +7,11 @@ data:
   out: 'bbox'
 
 model:
-  txt_in_len: 5
-  txt_out_len: 5
+  txt_in_len: 10
+  txt_out_len: 15
   seed: 2
-  model_name: 'gpt2-large'
-  pretrained_model: 'gpt2-large'
+  model_name: 'google/flan-t5-base'
+  pretrained_model: 'google/flan-t5-base'
 
 ppo_trainer:
   config:
@@ -23,10 +23,9 @@ ppo_trainer:
 
 text_generation:
   parameters:
-    min_length: -1
-    top_k: 0.0
+    top_k: 3
     top_p: 1.0
     do_sample: true
     eos_token_id: -1
-    max_new_tokens: 5
+   # max_new_tokens: 15
 
