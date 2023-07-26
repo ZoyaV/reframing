@@ -61,12 +61,10 @@ class CocoWrapper:
         df = df.drop(columns=['tuples'])
         df.reset_index(drop=True, inplace=True)
         df = df.dropna()
-        prompt = lambda x: f"""In other words, 'table' is 'furniture' +
-                    In other words, 'cat' is 'animal' +
-                    In other words, 'laptop' is {x}"""
+        prompt = lambda x: f"""In other words, '{x}' is = """
 
         df['category_id'] = df['category_id'].map(category_dict)
-        df['category_id'] = df['category_id'].apply(prompt)
+        #df['category_id'] = df['category_id'].apply(prompt)
         df.to_csv('ppo_tuning/dataset/prompts.csv', index=False)
 
         return df
