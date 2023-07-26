@@ -47,8 +47,15 @@ class CustomDataset():
         return self.dataset.map(self.encode_and_decode, batched=True)
 
 class SegmentationsDataset(CustomDataset):
-    def __init__(self, tokenizer, txt_in_len, inp_column, out_column):
+    def __init__(self, tokenizer, txt_in_len, inp_column, out_column, prompts):
         data = pd.read_csv('./dataset/prompts.csv')
+       # prompt = lambda x: f"""In other words, '{x}' is = """
+
+        def format_with_each_prompt(x):
+            return [prompt.format(x) for prompt in prompts]
+        data['category_id'] = data['category_id'].map(format_with_each_prompt)
+        data = data.explode('category_id')
+
         super(SegmentationsDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
 
 
