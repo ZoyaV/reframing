@@ -10,7 +10,7 @@ import sys
 sys.path.append("../")
 from detectors.owlvit import OwlViTDetector
 from data_loaders import SegmentationsDataset
-from options import TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL, config, generation_kwargs, INPUT, OUTPUT
+from options import TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL, config, generation_kwargs, INPUT, OUTPUT, PROMPTS
 from rewarding import reinforce_loss
 import matplotlib.pyplot as plt
 
@@ -73,7 +73,8 @@ def main():
     generation_kwargs["pad_token_id"] = tokenizer.eos_token_id
 
     # Initialize the dataset and the PPO Trainer
-    dataset = SegmentationsDataset(tokenizer=tokenizer, txt_in_len=TXT_IN_LEN, inp_column=INPUT, out_column=OUTPUT).prepare_dataset()
+    dataset = SegmentationsDataset(tokenizer=tokenizer, txt_in_len=TXT_IN_LEN,
+                                   inp_column=INPUT, out_column=OUTPUT, prompts=PROMPTS).prepare_dataset()
    # print(dataset)
     ppo_trainer = PPOTrainer(config, model, model_ref, tokenizer, dataset, data_collator=collator)
 
