@@ -1,949 +1,949 @@
 id,file_name,bbox,category_id
-1,frame0031_zednode.jpg,"[1165.0, 133.0, 115.0, 146.0]","In other words, 'cucumber' is = "
-1,frame0031_zednode.jpg,"[42.0, 320.0, 80.0, 67.0]","In other words, 'drawer' is = "
-1,frame0031_zednode.jpg,"[917.0, 425.0, 71.0, 45.0]","In other words, 'chest of drawers' is = "
-1,frame0031_zednode.jpg,"[862.0, 557.0, 59.0, 86.0]","In other words, 'handle' is = "
-1,frame0031_zednode.jpg,"[338.0, 364.0, 36.0, 20.0]","In other words, 'box, basket, case, bin, container' is = "
-1,frame0031_zednode.jpg,"[395.0, 359.0, 19.0, 17.0]","In other words, 'toy_cat' is = "
-1,frame0031_zednode.jpg,"[0.0, 374.0, 478.0, 318.0]","In other words, 'white toy' is = "
-1,frame0031_zednode.jpg,"[540.0, 417.0, 15.0, 27.0]","In other words, 'garlic' is = "
-1,frame0031_zednode.jpg,"[424.0, 386.0, 215.0, 276.0]","In other words, 'tomato' is = "
-1,frame0031_zednode.jpg,"[185.0, 213.0, 94.0, 77.0]","In other words, 'potato' is = "
-1,frame0031_zednode.jpg,"[411.0, 213.0, 226.0, 65.0]","In other words, 'floor' is = "
-1,frame0031_zednode.jpg,"[359.0, 231.0, 50.0, 51.0]","In other words, 'wall' is = "
-1,frame0031_zednode.jpg,"[65.0, 204.0, 70.0, 58.0]","In other words, 'key' is = "
-1,frame0031_zednode.jpg,"[314.0, 358.0, 28.0, 20.0]","In other words, 'gripper' is = "
-1,frame0031_zednode.jpg,"[160.0, 263.0, 20.0, 27.0]","In other words, 'door' is = "
-1,frame0031_zednode.jpg,"[137.0, 254.0, 18.0, 25.0]","In other words, 'poster' is = "
-1,frame0031_zednode.jpg,"[444.0, 527.0, 51.0, 111.0]","In other words, 'table' is = "
-1,frame0031_zednode.jpg,"[444.0, 589.0, 53.0, 62.0]","In other words, 'ceiling' is = "
-2,frame1544.jpg,"[467.0, 397.0, 53.0, 27.0]","In other words, 'green bell pepper' is = "
-2,frame1544.jpg,"[339.0, 391.0, 115.0, 34.0]","In other words, 'red chili pepper' is = "
-2,frame1544.jpg,"[536.0, 350.0, 97.0, 74.0]","In other words, 'eggplant' is = "
-2,frame1544.jpg,"[911.0, 340.0, 106.0, 85.0]","In other words, 'corn' is = "
-2,frame1544.jpg,"[856.0, 366.0, 62.0, 59.0]","In other words, 'garlic' is = "
-2,frame1544.jpg,"[712.0, 362.0, 106.0, 62.0]","In other words, 'tomato' is = "
-2,frame1544.jpg,"[0.0, 0.0, 1280.0, 173.0]","In other words, 'potato' is = "
-2,frame1544.jpg,"[153.0, 107.0, 148.0, 66.0]","In other words, 'wall' is = "
-2,frame1544.jpg,"[0.0, 19.0, 245.0, 698.0]","In other words, 'ceiling' is = "
-3,frame0680_zednode.jpg,"[395.0, 189.0, 13.0, 40.0]","In other words, 'red bell pepper' is = "
-3,frame0680_zednode.jpg,"[656.0, 141.0, 598.0, 155.0]","In other words, 'toy_cat' is = "
-3,frame0680_zednode.jpg,"[1097.0, 467.0, 36.0, 25.0]","In other words, 'toy block' is = "
-3,frame0680_zednode.jpg,"[580.0, 286.0, 621.0, 185.0]","In other words, 'floor' is = "
-3,frame0680_zednode.jpg,"[471.0, 206.0, 94.0, 92.0]","In other words, 'wall' is = "
-3,frame0680_zednode.jpg,"[453.0, 218.0, 17.0, 28.0]","In other words, 'gripper' is = "
-3,frame0680_zednode.jpg,"[712.0, 532.0, 52.0, 37.0]","In other words, 'door' is = "
-3,frame0680_zednode.jpg,"[1200.0, 93.0, 80.0, 627.0]","In other words, 'poster' is = "
-3,frame0680_zednode.jpg,"[1019.0, 233.0, 68.0, 56.0]","In other words, 'ceiling' is = "
-4,frame0944_gripper.jpg,"[60.0, 0.0, 1220.0, 99.0]","In other words, 'cucumber' is = "
-4,frame0944_gripper.jpg,"[458.0, 506.0, 52.0, 70.0]","In other words, 'corn' is = "
-4,frame0944_gripper.jpg,"[307.0, 491.0, 105.0, 69.0]","In other words, 'toy_cat' is = "
-4,frame0944_gripper.jpg,"[0.0, 130.0, 86.0, 88.0]","In other words, 'potato' is = "
-4,frame0944_gripper.jpg,"[202.0, 172.0, 72.0, 49.0]","In other words, 'wall' is = "
-4,frame0944_gripper.jpg,"[442.0, 187.0, 61.0, 34.0]","In other words, 'door' is = "
-4,frame0944_gripper.jpg,"[1039.0, 517.0, 136.0, 62.0]","In other words, 'poster' is = "
-4,frame0944_gripper.jpg,"[404.0, 186.0, 74.0, 38.0]","In other words, 'table' is = "
-4,frame0944_gripper.jpg,"[87.0, 97.0, 1142.0, 128.0]","In other words, 'ceiling' is = "
-5,frame0003.jpg,"[952.0, 261.0, 328.0, 260.0]","In other words, 'carrot' is = "
-5,frame0003.jpg,"[627.0, 210.0, 57.0, 82.0]","In other words, 'red bell pepper' is = "
-5,frame0003.jpg,"[0.0, 0.0, 1280.0, 211.0]","In other words, 'drawer' is = "
-5,frame0003.jpg,"[1059.0, 203.0, 106.0, 76.0]","In other words, 'chest of drawers' is = "
-5,frame0003.jpg,"[0.0, 164.0, 96.0, 116.0]","In other words, 'handle' is = "
-5,frame0003.jpg,"[46.0, 27.0, 235.0, 128.0]","In other words, 'toy_cat' is = "
-5,frame0003.jpg,"[1015.0, 248.0, 15.0, 20.0]","In other words, 'toy block' is = "
-5,frame0003.jpg,"[1034.0, 253.0, 17.0, 27.0]","In other words, 'garlic' is = "
-5,frame0003.jpg,"[960.0, 216.0, 54.0, 41.0]","In other words, 'tomato' is = "
-5,frame0003.jpg,"[757.0, 104.0, 523.0, 182.0]","In other words, 'potato' is = "
-5,frame0003.jpg,"[887.0, 99.0, 49.0, 189.0]","In other words, 'floor' is = "
-5,frame0003.jpg,"[440.0, 447.0, 365.0, 273.0]","In other words, 'wall' is = "
-5,frame0003.jpg,"[0.0, 25.0, 625.0, 268.0]","In other words, 'key' is = "
-5,frame0003.jpg,"[0.0, 272.0, 294.0, 444.0]","In other words, 'gripper' is = "
-5,frame0003.jpg,"[11.0, 485.0, 1269.0, 235.0]","In other words, 'door' is = "
-5,frame0003.jpg,"[1114.0, 445.0, 54.0, 18.0]","In other words, 'poster' is = "
-5,frame0003.jpg,"[1112.0, 538.0, 58.0, 25.0]","In other words, 'table' is = "
-5,frame0003.jpg,"[1112.0, 493.0, 55.0, 19.0]","In other words, 'ceiling' is = "
-6,frame0721_gripper.jpg,"[146.0, 432.0, 45.0, 41.0]","In other words, 'green bell pepper' is = "
-6,frame0721_gripper.jpg,"[29.0, 447.0, 77.0, 26.0]","In other words, 'red bell pepper' is = "
-6,frame0721_gripper.jpg,"[0.0, 471.0, 393.0, 249.0]","In other words, 'corn' is = "
-6,frame0721_gripper.jpg,"[0.0, 261.0, 57.0, 78.0]","In other words, 'drawer' is = "
-6,frame0721_gripper.jpg,"[100.0, 445.0, 23.0, 28.0]","In other words, 'chest of drawers' is = "
-6,frame0721_gripper.jpg,"[66.0, 439.0, 34.0, 18.0]","In other words, 'handle' is = "
-6,frame0721_gripper.jpg,"[0.0, 443.0, 42.0, 28.0]","In other words, 'tomato' is = "
-6,frame0721_gripper.jpg,"[0.0, 0.0, 1280.0, 269.0]","In other words, 'potato' is = "
-6,frame0721_gripper.jpg,"[0.0, 337.0, 167.0, 136.0]","In other words, 'wall' is = "
-6,frame0721_gripper.jpg,"[170.0, 10.0, 1110.0, 707.0]","In other words, 'key' is = "
-6,frame0721_gripper.jpg,"[50.0, 502.0, 525.0, 218.0]","In other words, 'table' is = "
-6,frame0721_gripper.jpg,"[312.0, 135.0, 322.0, 168.0]","In other words, 'ceiling' is = "
-7,frame1056_gripper.jpg,"[395.0, 621.0, 367.0, 99.0]","In other words, 'carrot' is = "
-7,frame1056_gripper.jpg,"[346.0, 631.0, 71.0, 89.0]","In other words, 'cucumber' is = "
-7,frame1056_gripper.jpg,"[567.0, 397.0, 96.0, 81.0]","In other words, 'green bell pepper' is = "
-7,frame1056_gripper.jpg,"[0.0, 17.0, 1280.0, 440.0]","In other words, 'green chili pepper' is = "
-7,frame1056_gripper.jpg,"[0.0, 428.0, 1280.0, 289.0]","In other words, 'red bell pepper' is = "
-7,frame1056_gripper.jpg,"[246.0, 515.0, 296.0, 101.0]","In other words, 'red chili pepper' is = "
-7,frame1056_gripper.jpg,"[622.0, 407.0, 121.0, 138.0]","In other words, 'eggplant' is = "
-7,frame1056_gripper.jpg,"[494.0, 395.0, 124.0, 52.0]","In other words, 'corn' is = "
-7,frame1056_gripper.jpg,"[330.0, 404.0, 86.0, 66.0]","In other words, 'white toy' is = "
-7,frame1056_gripper.jpg,"[390.0, 436.0, 113.0, 167.0]","In other words, 'garlic' is = "
-7,frame1056_gripper.jpg,"[121.0, 595.0, 344.0, 70.0]","In other words, 'tomato' is = "
-7,frame1056_gripper.jpg,"[180.0, 0.0, 81.0, 73.0]","In other words, 'potato' is = "
-7,frame1056_gripper.jpg,"[432.0, 401.0, 84.0, 89.0]","In other words, 'wall' is = "
-7,frame1056_gripper.jpg,"[254.0, 454.0, 135.0, 79.0]","In other words, 'door' is = "
-7,frame1056_gripper.jpg,"[60.0, 487.0, 168.0, 132.0]","In other words, 'poster' is = "
-7,frame1056_gripper.jpg,"[330.0, 404.0, 86.0, 66.0]","In other words, 'table' is = "
-8,frame1590_gripper.jpg,"[0.0, 0.0, 1280.0, 720.0]","In other words, 'carrot' is = "
-8,frame1590_gripper.jpg,"[285.0, 134.0, 248.0, 229.0]","In other words, 'cucumber' is = "
-8,frame1590_gripper.jpg,"[0.0, 362.0, 33.0, 152.0]","In other words, 'red chili pepper' is = "
-8,frame1590_gripper.jpg,"[0.0, 134.0, 131.0, 379.0]","In other words, 'eggplant' is = "
-8,frame1590_gripper.jpg,"[191.0, 418.0, 293.0, 302.0]","In other words, 'corn' is = "
-8,frame1590_gripper.jpg,"[1179.0, 150.0, 101.0, 230.0]","In other words, 'garlic' is = "
-8,frame1590_gripper.jpg,"[1019.0, 0.0, 160.0, 70.0]","In other words, 'tomato' is = "
-8,frame1590_gripper.jpg,"[644.0, 259.0, 414.0, 461.0]","In other words, 'potato' is = "
-8,frame1590_gripper.jpg,"[789.0, 0.0, 158.0, 133.0]","In other words, 'table' is = "
-9,frame0509_zednode.jpg,"[0.0, 0.0, 1210.0, 214.0]","In other words, 'toy_cat' is = "
-9,frame0509_zednode.jpg,"[439.0, 254.0, 425.0, 466.0]","In other words, 'toy block' is = "
-9,frame0509_zednode.jpg,"[1040.0, 394.0, 64.0, 36.0]","In other words, 'floor' is = "
-9,frame0509_zednode.jpg,"[0.0, 309.0, 440.0, 196.0]","In other words, 'wall' is = "
-9,frame0509_zednode.jpg,"[440.0, 445.0, 354.0, 275.0]","In other words, 'gripper' is = "
-9,frame0509_zednode.jpg,"[0.0, 439.0, 1280.0, 281.0]","In other words, 'door' is = "
-9,frame0509_zednode.jpg,"[854.0, 538.0, 26.0, 24.0]","In other words, 'poster' is = "
-9,frame0509_zednode.jpg,"[724.0, 610.0, 37.0, 40.0]","In other words, 'table' is = "
-9,frame0509_zednode.jpg,"[984.0, 331.0, 170.0, 247.0]","In other words, 'ceiling' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1095.0, 152.0, 185.0, 174.0]","In other words, 'red bell pepper' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[0.0, 0.0, 1065.0, 435.0]","In other words, 'drawer' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[987.0, 0.0, 293.0, 632.0]","In other words, 'chest of drawers' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1149.0, 516.0, 131.0, 45.0]","In other words, 'handle' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1191.0, 388.0, 89.0, 37.0]","In other words, 'box, basket, case, bin, container' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1238.0, 234.0, 42.0, 25.0]","In other words, 'toy_cat' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[465.0, 259.0, 301.0, 339.0]","In other words, 'tomato' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1064.0, 308.0, 216.0, 167.0]","In other words, 'potato' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[0.0, 288.0, 1280.0, 432.0]","In other words, 'floor' is = "
-10,exploration_realsense_gripper_color_image_raw_198.jpg,"[296.0, 424.0, 54.0, 52.0]","In other words, 'wall' is = "
-11,frame1430_gripper.jpg,"[0.0, 0.0, 1280.0, 370.0]","In other words, 'green bell pepper' is = "
-11,frame1430_gripper.jpg,"[1017.0, 206.0, 263.0, 259.0]","In other words, 'green chili pepper' is = "
-11,frame1430_gripper.jpg,"[0.0, 312.0, 1280.0, 405.0]","In other words, 'red chili pepper' is = "
-11,frame1430_gripper.jpg,"[210.0, 398.0, 154.0, 129.0]","In other words, 'toy_cat' is = "
-11,frame1430_gripper.jpg,"[727.0, 412.0, 383.0, 308.0]","In other words, 'garlic' is = "
-11,frame1430_gripper.jpg,"[244.0, 487.0, 306.0, 102.0]","In other words, 'tomato' is = "
-11,frame1430_gripper.jpg,"[83.0, 552.0, 139.0, 168.0]","In other words, 'wall' is = "
-11,frame1430_gripper.jpg,"[0.0, 454.0, 80.0, 75.0]","In other words, 'table' is = "
-12,frame0469_zednode.jpg,"[547.0, 373.0, 719.0, 347.0]","In other words, 'cucumber' is = "
-12,frame0469_zednode.jpg,"[959.0, 359.0, 71.0, 20.0]","In other words, 'green chili pepper' is = "
-12,frame0469_zednode.jpg,"[755.0, 359.0, 20.0, 19.0]","In other words, 'corn' is = "
-12,frame0469_zednode.jpg,"[709.0, 354.0, 34.0, 22.0]","In other words, 'chest of drawers' is = "
-12,frame0469_zednode.jpg,"[706.0, 627.0, 468.0, 93.0]","In other words, 'toy_cat' is = "
-12,frame0469_zednode.jpg,"[371.0, 50.0, 207.0, 205.0]","In other words, 'potato' is = "
-12,frame0469_zednode.jpg,"[313.0, 3.0, 62.0, 210.0]","In other words, 'floor' is = "
-12,frame0469_zednode.jpg,"[741.0, 212.0, 67.0, 50.0]","In other words, 'wall' is = "
-12,frame0469_zednode.jpg,"[0.0, 0.0, 1280.0, 166.0]","In other words, 'gripper' is = "
-12,frame0469_zednode.jpg,"[658.0, 94.0, 622.0, 157.0]","In other words, 'door' is = "
-12,frame0469_zednode.jpg,"[440.0, 443.0, 352.0, 277.0]","In other words, 'poster' is = "
-12,frame0469_zednode.jpg,"[578.0, 464.0, 90.0, 153.0]","In other words, 'table' is = "
-12,frame0469_zednode.jpg,"[671.0, 210.0, 67.0, 55.0]","In other words, 'ceiling' is = "
-13,frame0041_zednode.jpg,"[0.0, 279.0, 160.0, 387.0]","In other words, 'carrot' is = "
-13,frame0041_zednode.jpg,"[708.0, 26.0, 358.0, 249.0]","In other words, 'corn' is = "
-13,frame0041_zednode.jpg,"[0.0, 3.0, 708.0, 282.0]","In other words, 'box, basket, case, bin, container' is = "
-13,frame0041_zednode.jpg,"[145.0, 253.0, 1135.0, 445.0]","In other words, 'white toy' is = "
-13,frame0041_zednode.jpg,"[1160.0, 337.0, 40.0, 23.0]","In other words, 'toy block' is = "
-13,frame0041_zednode.jpg,"[1101.0, 335.0, 60.0, 24.0]","In other words, 'floor' is = "
-13,frame0041_zednode.jpg,"[1065.0, 23.0, 70.0, 243.0]","In other words, 'wall' is = "
-13,frame0041_zednode.jpg,"[0.0, 572.0, 1280.0, 148.0]","In other words, 'person' is = "
-13,frame0041_zednode.jpg,"[1040.0, 304.0, 66.0, 79.0]","In other words, 'gripper' is = "
-13,frame0041_zednode.jpg,"[977.0, 359.0, 303.0, 221.0]","In other words, 'poster' is = "
-13,frame0041_zednode.jpg,"[1134.0, 32.0, 146.0, 231.0]","In other words, 'table' is = "
-13,frame0041_zednode.jpg,"[357.0, 599.0, 46.0, 27.0]","In other words, 'ceiling' is = "
-14,frame0088_zednode.jpg,"[331.0, 157.0, 621.0, 108.0]","In other words, 'carrot' is = "
-14,frame0088_zednode.jpg,"[881.0, 386.0, 206.0, 334.0]","In other words, 'cucumber' is = "
-14,frame0088_zednode.jpg,"[905.0, 418.0, 169.0, 76.0]","In other words, 'green bell pepper' is = "
-14,frame0088_zednode.jpg,"[905.0, 489.0, 167.0, 76.0]","In other words, 'red bell pepper' is = "
-14,frame0088_zednode.jpg,"[906.0, 629.0, 166.0, 77.0]","In other words, 'eggplant' is = "
-14,frame0088_zednode.jpg,"[486.0, 208.0, 97.0, 57.0]","In other words, 'drawer' is = "
-14,frame0088_zednode.jpg,"[1105.0, 151.0, 149.0, 104.0]","In other words, 'chest of drawers' is = "
-14,frame0088_zednode.jpg,"[0.0, 0.0, 1280.0, 162.0]","In other words, 'handle' is = "
-14,frame0088_zednode.jpg,"[335.0, 210.0, 73.0, 58.0]","In other words, 'toy_cat' is = "
-14,frame0088_zednode.jpg,"[0.0, 9.0, 218.0, 224.0]","In other words, 'potato' is = "
-14,frame0088_zednode.jpg,"[216.0, 124.0, 58.0, 124.0]","In other words, 'floor' is = "
-14,frame0088_zednode.jpg,"[265.0, 125.0, 66.0, 125.0]","In other words, 'wall' is = "
-14,frame0088_zednode.jpg,"[0.0, 177.0, 345.0, 543.0]","In other words, 'key' is = "
-14,frame0088_zednode.jpg,"[338.0, 257.0, 922.0, 413.0]","In other words, 'gripper' is = "
-14,frame0088_zednode.jpg,"[325.0, 491.0, 955.0, 229.0]","In other words, 'door' is = "
-14,frame0088_zednode.jpg,"[906.0, 558.0, 166.0, 78.0]","In other words, 'table' is = "
-14,frame0088_zednode.jpg,"[954.0, 593.0, 74.0, 20.0]","In other words, 'ceiling' is = "
-15,frame2007_gripper.jpg,"[1048.0, 482.0, 93.0, 52.0]","In other words, 'cucumber' is = "
-15,frame2007_gripper.jpg,"[0.0, 165.0, 133.0, 390.0]","In other words, 'corn' is = "
-15,frame2007_gripper.jpg,"[135.0, 209.0, 1145.0, 308.0]","In other words, 'toy_cat' is = "
-15,frame2007_gripper.jpg,"[474.0, 476.0, 47.0, 58.0]","In other words, 'potato' is = "
-15,frame2007_gripper.jpg,"[675.0, 387.0, 432.0, 251.0]","In other words, 'wall' is = "
-15,frame2007_gripper.jpg,"[21.0, 0.0, 1259.0, 203.0]","In other words, 'table' is = "
-15,frame2007_gripper.jpg,"[0.0, 0.0, 1280.0, 216.0]","In other words, 'ceiling' is = "
-16,frame1747_gripper.jpg,"[570.0, 189.0, 147.0, 330.0]","In other words, 'cucumber' is = "
-16,frame1747_gripper.jpg,"[290.0, 7.0, 763.0, 706.0]","In other words, 'floor' is = "
-16,frame1747_gripper.jpg,"[0.0, 3.0, 1280.0, 714.0]","In other words, 'box, basket, case, bin, container' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[533.0, 273.0, 41.0, 44.0]","In other words, 'cucumber' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[0.0, 154.0, 1280.0, 566.0]","In other words, 'green bell pepper' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[14.0, 0.0, 420.0, 487.0]","In other words, 'eggplant' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[1002.0, 300.0, 80.0, 35.0]","In other words, 'corn' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[474.0, 195.0, 29.0, 26.0]","In other words, 'box, basket, case, bin, container' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[0.0, 0.0, 1280.0, 267.0]","In other words, 'toy_cat' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[580.0, 184.0, 20.0, 23.0]","In other words, 'toy block' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[629.0, 175.0, 35.0, 15.0]","In other words, 'tomato' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[920.0, 215.0, 24.0, 23.0]","In other words, 'potato' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[1116.0, 245.0, 75.0, 65.0]","In other words, 'floor' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[955.0, 248.0, 35.0, 27.0]","In other words, 'wall' is = "
-17,exploration_realsense_gripper_color_image_raw_990.jpg,"[1017.0, 151.0, 181.0, 104.0]","In other words, 'table' is = "
-18,frame0028_zednode.jpg,"[0.0, 647.0, 47.0, 73.0]","In other words, 'cucumber' is = "
-18,frame0028_zednode.jpg,"[437.0, 446.0, 356.0, 274.0]","In other words, 'green bell pepper' is = "
-18,frame0028_zednode.jpg,"[460.0, 536.0, 21.0, 16.0]","In other words, 'toy_cat' is = "
-18,frame0028_zednode.jpg,"[0.0, 0.0, 1280.0, 305.0]","In other words, 'tomato' is = "
-18,frame0028_zednode.jpg,"[26.0, 252.0, 1254.0, 396.0]","In other words, 'floor' is = "
-18,frame0028_zednode.jpg,"[0.0, 262.0, 33.0, 393.0]","In other words, 'wall' is = "
-18,frame0028_zednode.jpg,"[679.0, 562.0, 25.0, 26.0]","In other words, 'person' is = "
-18,frame0028_zednode.jpg,"[289.0, 510.0, 19.0, 15.0]","In other words, 'gripper' is = "
-18,frame0028_zednode.jpg,"[31.0, 490.0, 1249.0, 230.0]","In other words, 'door' is = "
-18,frame0028_zednode.jpg,"[146.0, 184.0, 114.0, 119.0]","In other words, 'poster' is = "
-18,frame0028_zednode.jpg,"[0.0, 0.0, 493.0, 127.0]","In other words, 'ceiling' is = "
-19,frame1527_gripper.jpg,"[189.0, 3.0, 1091.0, 717.0]","In other words, 'carrot' is = "
-19,frame1527_gripper.jpg,"[0.0, 7.0, 361.0, 710.0]","In other words, 'cucumber' is = "
-19,frame1527_gripper.jpg,"[949.0, 65.0, 88.0, 144.0]","In other words, 'red bell pepper' is = "
-19,frame1527_gripper.jpg,"[1151.0, 548.0, 100.0, 172.0]","In other words, 'corn' is = "
-19,frame1527_gripper.jpg,"[1147.0, 301.0, 133.0, 112.0]","In other words, 'box, basket, case, bin, container' is = "
-19,frame1527_gripper.jpg,"[4.0, 0.0, 423.0, 106.0]","In other words, 'potato' is = "
-19,frame1527_gripper.jpg,"[809.0, 0.0, 471.0, 133.0]","In other words, 'floor' is = "
-19,frame1527_gripper.jpg,"[577.0, 351.0, 414.0, 369.0]","In other words, 'wall' is = "
-20,frame0534.jpg,"[405.0, 442.0, 110.0, 61.0]","In other words, 'green bell pepper' is = "
-20,frame0534.jpg,"[406.0, 472.0, 107.0, 84.0]","In other words, 'green chili pepper' is = "
-20,frame0534.jpg,"[406.0, 542.0, 87.0, 65.0]","In other words, 'red chili pepper' is = "
-20,frame0534.jpg,"[496.0, 400.0, 13.0, 24.0]","In other words, 'eggplant' is = "
-20,frame0534.jpg,"[440.0, 418.0, 50.0, 16.0]","In other words, 'drawer' is = "
-20,frame0534.jpg,"[0.0, 441.0, 1280.0, 279.0]","In other words, 'chest of drawers' is = "
-20,frame0534.jpg,"[0.0, 278.0, 670.0, 381.0]","In other words, 'handle' is = "
-20,frame0534.jpg,"[0.0, 374.0, 392.0, 285.0]","In other words, 'toy_cat' is = "
-20,frame0534.jpg,"[440.0, 465.0, 50.0, 18.0]","In other words, 'toy block' is = "
-20,frame0534.jpg,"[929.0, 268.0, 351.0, 294.0]","In other words, 'garlic' is = "
-20,frame0534.jpg,"[856.0, 290.0, 74.0, 207.0]","In other words, 'tomato' is = "
-20,frame0534.jpg,"[671.0, 295.0, 186.0, 173.0]","In other words, 'potato' is = "
-20,frame0534.jpg,"[0.0, 0.0, 1280.0, 299.0]","In other words, 'floor' is = "
-20,frame0534.jpg,"[68.0, 197.0, 146.0, 82.0]","In other words, 'wall' is = "
-20,frame0534.jpg,"[681.0, 207.0, 79.0, 96.0]","In other words, 'key' is = "
-20,frame0534.jpg,"[1017.0, 78.0, 263.0, 203.0]","In other words, 'gripper' is = "
-20,frame0534.jpg,"[902.0, 158.0, 68.0, 130.0]","In other words, 'door' is = "
-20,frame0534.jpg,"[971.0, 175.0, 44.0, 35.0]","In other words, 'poster' is = "
-20,frame0534.jpg,"[765.0, 219.0, 21.0, 25.0]","In other words, 'table' is = "
-20,frame0534.jpg,"[152.0, 337.0, 67.0, 52.0]","In other words, 'ceiling' is = "
-21,frame0497_zednode.jpg,"[0.0, 168.0, 344.0, 105.0]","In other words, 'box, basket, case, bin, container' is = "
-21,frame0497_zednode.jpg,"[0.0, 0.0, 971.0, 104.0]","In other words, 'floor' is = "
-21,frame0497_zednode.jpg,"[129.0, 585.0, 236.0, 135.0]","In other words, 'wall' is = "
-21,frame0497_zednode.jpg,"[1032.0, 0.0, 248.0, 244.0]","In other words, 'gripper' is = "
-21,frame0497_zednode.jpg,"[0.0, 646.0, 1053.0, 74.0]","In other words, 'door' is = "
-21,frame0497_zednode.jpg,"[599.0, 574.0, 183.0, 146.0]","In other words, 'ceiling' is = "
-22,frame0310.jpg,"[413.0, 449.0, 867.0, 54.0]","In other words, 'carrot' is = "
-22,frame0310.jpg,"[0.0, 3.0, 1280.0, 714.0]","In other words, 'cucumber' is = "
-22,frame0310.jpg,"[491.0, 164.0, 789.0, 91.0]","In other words, 'green bell pepper' is = "
-22,frame0310.jpg,"[830.0, 407.0, 149.0, 43.0]","In other words, 'eggplant' is = "
-22,frame0310.jpg,"[701.0, 400.0, 58.0, 48.0]","In other words, 'toy_cat' is = "
-22,frame0310.jpg,"[747.0, 421.0, 100.0, 28.0]","In other words, 'potato' is = "
-22,frame0310.jpg,"[775.0, 397.0, 66.0, 27.0]","In other words, 'wall' is = "
-22,frame0310.jpg,"[839.0, 392.0, 55.0, 29.0]","In other words, 'table' is = "
-22,frame0310.jpg,"[886.0, 328.0, 167.0, 120.0]","In other words, 'ceiling' is = "
-23,frame0424_zednode.jpg,"[0.0, 0.0, 627.0, 90.0]","In other words, 'carrot' is = "
-23,frame0424_zednode.jpg,"[0.0, 497.0, 1280.0, 223.0]","In other words, 'green bell pepper' is = "
-23,frame0424_zednode.jpg,"[1051.0, 621.0, 50.0, 18.0]","In other words, 'eggplant' is = "
-23,frame0424_zednode.jpg,"[1206.0, 555.0, 31.0, 20.0]","In other words, 'garlic' is = "
-23,frame0424_zednode.jpg,"[663.0, 557.0, 45.0, 16.0]","In other words, 'tomato' is = "
-23,frame0424_zednode.jpg,"[842.0, 566.0, 26.0, 21.0]","In other words, 'potato' is = "
-23,frame0424_zednode.jpg,"[825.0, 539.0, 25.0, 27.0]","In other words, 'floor' is = "
-23,frame0424_zednode.jpg,"[823.0, 523.0, 21.0, 22.0]","In other words, 'wall' is = "
-23,frame0424_zednode.jpg,"[306.0, 297.0, 113.0, 242.0]","In other words, 'door' is = "
-23,frame0424_zednode.jpg,"[411.0, 268.0, 869.0, 283.0]","In other words, 'poster' is = "
-23,frame0424_zednode.jpg,"[350.0, 170.0, 73.0, 126.0]","In other words, 'ceiling' is = "
-24,frame1104_gripper.jpg,"[13.0, 597.0, 201.0, 123.0]","In other words, 'green bell pepper' is = "
-24,frame1104_gripper.jpg,"[0.0, 0.0, 1280.0, 105.0]","In other words, 'red bell pepper' is = "
-24,frame1104_gripper.jpg,"[1118.0, 546.0, 162.0, 174.0]","In other words, 'white toy' is = "
-24,frame1104_gripper.jpg,"[360.0, 509.0, 109.0, 157.0]","In other words, 'garlic' is = "
-24,frame1104_gripper.jpg,"[0.0, 532.0, 131.0, 149.0]","In other words, 'tomato' is = "
-24,frame1104_gripper.jpg,"[0.0, 86.0, 1280.0, 476.0]","In other words, 'wall' is = "
-24,frame1104_gripper.jpg,"[0.0, 559.0, 1280.0, 161.0]","In other words, 'door' is = "
-24,frame1104_gripper.jpg,"[0.0, 32.0, 108.0, 73.0]","In other words, 'table' is = "
-25,frame0533_zednode.jpg,"[823.0, 392.0, 19.0, 30.0]","In other words, 'green bell pepper' is = "
-25,frame0533_zednode.jpg,"[89.0, 196.0, 62.0, 53.0]","In other words, 'green chili pepper' is = "
-25,frame0533_zednode.jpg,"[195.0, 208.0, 73.0, 61.0]","In other words, 'red chili pepper' is = "
-25,frame0533_zednode.jpg,"[225.0, 445.0, 1055.0, 275.0]","In other words, 'eggplant' is = "
-25,frame0533_zednode.jpg,"[46.0, 0.0, 1234.0, 178.0]","In other words, 'drawer' is = "
-25,frame0533_zednode.jpg,"[710.0, 372.0, 149.0, 233.0]","In other words, 'chest of drawers' is = "
-25,frame0533_zednode.jpg,"[733.0, 522.0, 119.0, 65.0]","In other words, 'handle' is = "
-25,frame0533_zednode.jpg,"[697.0, 489.0, 155.0, 49.0]","In other words, 'toy_cat' is = "
-25,frame0533_zednode.jpg,"[732.0, 440.0, 119.0, 49.0]","In other words, 'garlic' is = "
-25,frame0533_zednode.jpg,"[732.0, 394.0, 120.0, 47.0]","In other words, 'tomato' is = "
-25,frame0533_zednode.jpg,"[764.0, 560.0, 54.0, 12.0]","In other words, 'potato' is = "
-25,frame0533_zednode.jpg,"[767.0, 509.0, 52.0, 15.0]","In other words, 'floor' is = "
-25,frame0533_zednode.jpg,"[764.0, 459.0, 55.0, 14.0]","In other words, 'wall' is = "
-25,frame0533_zednode.jpg,"[763.0, 410.0, 57.0, 14.0]","In other words, 'key' is = "
-25,frame0533_zednode.jpg,"[540.0, 330.0, 44.0, 42.0]","In other words, 'gripper' is = "
-25,frame0533_zednode.jpg,"[1062.0, 649.0, 73.0, 32.0]","In other words, 'door' is = "
-25,frame0533_zednode.jpg,"[298.0, 363.0, 419.0, 264.0]","In other words, 'poster' is = "
-25,frame0533_zednode.jpg,"[1075.0, 667.0, 50.0, 41.0]","In other words, 'table' is = "
-25,frame0533_zednode.jpg,"[442.0, 444.0, 353.0, 276.0]","In other words, 'ceiling' is = "
-26,frame0655_zednode.jpg,"[1009.0, 163.0, 271.0, 104.0]","In other words, 'cucumber' is = "
-26,frame0655_zednode.jpg,"[721.0, 217.0, 44.0, 43.0]","In other words, 'green bell pepper' is = "
-26,frame0655_zednode.jpg,"[443.0, 447.0, 355.0, 273.0]","In other words, 'red chili pepper' is = "
-26,frame0655_zednode.jpg,"[0.0, 0.0, 361.0, 262.0]","In other words, 'drawer' is = "
-26,frame0655_zednode.jpg,"[0.0, 251.0, 1280.0, 469.0]","In other words, 'chest of drawers' is = "
-26,frame0655_zednode.jpg,"[698.0, 100.0, 582.0, 178.0]","In other words, 'handle' is = "
-26,frame0655_zednode.jpg,"[1178.0, 384.0, 102.0, 327.0]","In other words, 'toy_cat' is = "
-26,frame0655_zednode.jpg,"[1182.0, 409.0, 98.0, 76.0]","In other words, 'garlic' is = "
-26,frame0655_zednode.jpg,"[1181.0, 474.0, 99.0, 83.0]","In other words, 'tomato' is = "
-26,frame0655_zednode.jpg,"[1181.0, 539.0, 99.0, 90.0]","In other words, 'floor' is = "
-26,frame0655_zednode.jpg,"[1180.0, 606.0, 100.0, 94.0]","In other words, 'wall' is = "
-26,frame0655_zednode.jpg,"[1243.0, 652.0, 37.0, 24.0]","In other words, 'gripper' is = "
-26,frame0655_zednode.jpg,"[1244.0, 580.0, 36.0, 24.0]","In other words, 'door' is = "
-26,frame0655_zednode.jpg,"[1243.0, 512.0, 37.0, 21.0]","In other words, 'poster' is = "
-26,frame0655_zednode.jpg,"[1247.0, 442.0, 33.0, 22.0]","In other words, 'table' is = "
-26,frame0655_zednode.jpg,"[265.0, 539.0, 1015.0, 181.0]","In other words, 'ceiling' is = "
-27,frame0042.jpg,"[690.0, 123.0, 162.0, 154.0]","In other words, 'carrot' is = "
-27,frame0042.jpg,"[885.0, 309.0, 51.0, 51.0]","In other words, 'corn' is = "
-27,frame0042.jpg,"[930.0, 336.0, 50.0, 23.0]","In other words, 'drawer' is = "
-27,frame0042.jpg,"[978.0, 338.0, 32.0, 21.0]","In other words, 'chest of drawers' is = "
-27,frame0042.jpg,"[1008.0, 340.0, 42.0, 20.0]","In other words, 'box, basket, case, bin, container' is = "
-27,frame0042.jpg,"[1110.0, 346.0, 51.0, 29.0]","In other words, 'white toy' is = "
-27,frame0042.jpg,"[1214.0, 348.0, 37.0, 24.0]","In other words, 'toy block' is = "
-27,frame0042.jpg,"[436.0, 445.0, 358.0, 275.0]","In other words, 'garlic' is = "
-27,frame0042.jpg,"[0.0, 0.0, 134.0, 114.0]","In other words, 'potato' is = "
-27,frame0042.jpg,"[975.0, 200.0, 59.0, 47.0]","In other words, 'floor' is = "
-27,frame0042.jpg,"[1108.0, 184.0, 112.0, 76.0]","In other words, 'wall' is = "
-27,frame0042.jpg,"[0.0, 244.0, 1280.0, 400.0]","In other words, 'person' is = "
-27,frame0042.jpg,"[0.0, 0.0, 576.0, 282.0]","In other words, 'gripper' is = "
-27,frame0042.jpg,"[946.0, 74.0, 334.0, 200.0]","In other words, 'door' is = "
-27,frame0042.jpg,"[206.0, 629.0, 53.0, 32.0]","In other words, 'poster' is = "
-27,frame0042.jpg,"[1214.0, 406.0, 66.0, 314.0]","In other words, 'table' is = "
-27,frame0042.jpg,"[1228.0, 424.0, 52.0, 87.0]","In other words, 'ceiling' is = "
-28,frame0466_zednode.jpg,"[622.0, 37.0, 350.0, 227.0]","In other words, 'red chili pepper' is = "
-28,frame0466_zednode.jpg,"[960.0, 36.0, 60.0, 229.0]","In other words, 'corn' is = "
-28,frame0466_zednode.jpg,"[0.0, 256.0, 1280.0, 444.0]","In other words, 'tomato' is = "
-28,frame0466_zednode.jpg,"[0.0, 0.0, 629.0, 267.0]","In other words, 'potato' is = "
-28,frame0466_zednode.jpg,"[452.0, 652.0, 34.0, 33.0]","In other words, 'floor' is = "
-28,frame0466_zednode.jpg,"[955.0, 602.0, 67.0, 25.0]","In other words, 'wall' is = "
-28,frame0466_zednode.jpg,"[441.0, 445.0, 352.0, 275.0]","In other words, 'gripper' is = "
-28,frame0466_zednode.jpg,"[1018.0, 54.0, 262.0, 211.0]","In other words, 'door' is = "
-28,frame0466_zednode.jpg,"[0.0, 586.0, 1280.0, 134.0]","In other words, 'poster' is = "
-28,frame0466_zednode.jpg,"[582.0, 359.0, 698.0, 249.0]","In other words, 'table' is = "
-28,frame0466_zednode.jpg,"[1209.0, 344.0, 43.0, 22.0]","In other words, 'ceiling' is = "
-29,frame0538.jpg,"[0.0, 295.0, 361.0, 303.0]","In other words, 'toy_cat' is = "
-29,frame0538.jpg,"[359.0, 222.0, 921.0, 495.0]","In other words, 'tomato' is = "
-29,frame0538.jpg,"[0.0, 0.0, 926.0, 296.0]","In other words, 'floor' is = "
-29,frame0538.jpg,"[662.0, 81.0, 618.0, 163.0]","In other words, 'wall' is = "
-29,frame0538.jpg,"[83.0, 662.0, 91.0, 58.0]","In other words, 'gripper' is = "
-29,frame0538.jpg,"[191.0, 555.0, 26.0, 20.0]","In other words, 'door' is = "
-29,frame0538.jpg,"[441.0, 445.0, 353.0, 275.0]","In other words, 'poster' is = "
-29,frame0538.jpg,"[481.0, 186.0, 131.0, 100.0]","In other words, 'ceiling' is = "
-30,frame0692_zednode.jpg,"[1176.0, 588.0, 102.0, 44.0]","In other words, 'cucumber' is = "
-30,frame0692_zednode.jpg,"[442.0, 445.0, 352.0, 275.0]","In other words, 'green bell pepper' is = "
-30,frame0692_zednode.jpg,"[1177.0, 664.0, 100.0, 47.0]","In other words, 'green chili pepper' is = "
-30,frame0692_zednode.jpg,"[1125.0, 479.0, 155.0, 106.0]","In other words, 'red bell pepper' is = "
-30,frame0692_zednode.jpg,"[1125.0, 414.0, 155.0, 91.0]","In other words, 'drawer' is = "
-30,frame0692_zednode.jpg,"[1125.0, 548.0, 155.0, 115.0]","In other words, 'chest of drawers' is = "
-30,frame0692_zednode.jpg,"[0.0, 0.0, 435.0, 275.0]","In other words, 'handle' is = "
-30,frame0692_zednode.jpg,"[507.0, 81.0, 271.0, 199.0]","In other words, 'garlic' is = "
-30,frame0692_zednode.jpg,"[468.0, 204.0, 39.0, 72.0]","In other words, 'tomato' is = "
-30,frame0692_zednode.jpg,"[717.0, 79.0, 65.0, 201.0]","In other words, 'potato' is = "
-30,frame0692_zednode.jpg,"[766.0, 96.0, 255.0, 185.0]","In other words, 'floor' is = "
-30,frame0692_zednode.jpg,"[1017.0, 121.0, 46.0, 145.0]","In other words, 'wall' is = "
-30,frame0692_zednode.jpg,"[1185.0, 518.0, 94.0, 32.0]","In other words, 'person' is = "
-30,frame0692_zednode.jpg,"[432.0, 0.0, 848.0, 263.0]","In other words, 'gripper' is = "
-30,frame0692_zednode.jpg,"[0.0, 538.0, 1169.0, 182.0]","In other words, 'door' is = "
-30,frame0692_zednode.jpg,"[526.0, 240.0, 40.0, 38.0]","In other words, 'poster' is = "
-30,frame0692_zednode.jpg,"[805.0, 215.0, 48.0, 45.0]","In other words, 'table' is = "
-30,frame0692_zednode.jpg,"[1074.0, 203.0, 68.0, 58.0]","In other words, 'ceiling' is = "
-31,frame0022.jpg,"[0.0, 0.0, 1028.0, 264.0]","In other words, 'carrot' is = "
-31,frame0022.jpg,"[979.0, 0.0, 238.0, 273.0]","In other words, 'corn' is = "
-31,frame0022.jpg,"[775.0, 244.0, 15.0, 34.0]","In other words, 'floor' is = "
-31,frame0022.jpg,"[619.0, 239.0, 62.0, 40.0]","In other words, 'wall' is = "
-31,frame0022.jpg,"[377.0, 237.0, 162.0, 40.0]","In other words, 'gripper' is = "
-31,frame0022.jpg,"[0.0, 126.0, 292.0, 148.0]","In other words, 'door' is = "
-31,frame0022.jpg,"[289.0, 158.0, 500.0, 120.0]","In other words, 'poster' is = "
-31,frame0022.jpg,"[788.0, 0.0, 492.0, 277.0]","In other words, 'ceiling' is = "
-32,frame0552_zednode.jpg,"[13.0, 176.0, 192.0, 118.0]","In other words, 'carrot' is = "
-32,frame0552_zednode.jpg,"[473.0, 472.0, 41.0, 53.0]","In other words, 'green bell pepper' is = "
-32,frame0552_zednode.jpg,"[36.0, 506.0, 964.0, 214.0]","In other words, 'box, basket, case, bin, container' is = "
-32,frame0552_zednode.jpg,"[772.0, 128.0, 111.0, 147.0]","In other words, 'floor' is = "
-32,frame0552_zednode.jpg,"[1176.0, 0.0, 104.0, 173.0]","In other words, 'wall' is = "
-32,frame0552_zednode.jpg,"[0.0, 0.0, 841.0, 142.0]","In other words, 'gripper' is = "
-32,frame0552_zednode.jpg,"[892.0, 142.0, 36.0, 44.0]","In other words, 'door' is = "
-32,frame0552_zednode.jpg,"[0.0, 0.0, 1176.0, 558.0]","In other words, 'poster' is = "
-32,frame0552_zednode.jpg,"[689.0, 528.0, 23.0, 18.0]","In other words, 'ceiling' is = "
-33,frame0271_zednode.jpg,"[825.0, 266.0, 14.0, 31.0]","In other words, 'toy_cat' is = "
-33,frame0271_zednode.jpg,"[876.0, 275.0, 64.0, 20.0]","In other words, 'white toy' is = "
-33,frame0271_zednode.jpg,"[662.0, 225.0, 13.0, 23.0]","In other words, 'floor' is = "
-33,frame0271_zednode.jpg,"[442.0, 448.0, 358.0, 272.0]","In other words, 'wall' is = "
-33,frame0271_zednode.jpg,"[677.0, 212.0, 44.0, 81.0]","In other words, 'gripper' is = "
-33,frame0271_zednode.jpg,"[671.0, 476.0, 48.0, 44.0]","In other words, 'door' is = "
-33,frame0271_zednode.jpg,"[1030.0, 470.0, 59.0, 33.0]","In other words, 'poster' is = "
-33,frame0271_zednode.jpg,"[107.0, 0.0, 1173.0, 298.0]","In other words, 'ceiling' is = "
-34,frame0711_gripper.jpg,"[364.0, 398.0, 86.0, 53.0]","In other words, 'cucumber' is = "
-34,frame0711_gripper.jpg,"[491.0, 411.0, 42.0, 40.0]","In other words, 'green chili pepper' is = "
-34,frame0711_gripper.jpg,"[0.0, 452.0, 1280.0, 268.0]","In other words, 'corn' is = "
-34,frame0711_gripper.jpg,"[0.0, 0.0, 1280.0, 185.0]","In other words, 'potato' is = "
-34,frame0711_gripper.jpg,"[971.0, 405.0, 122.0, 46.0]","In other words, 'wall' is = "
-34,frame0711_gripper.jpg,"[1220.0, 157.0, 60.0, 31.0]","In other words, 'table' is = "
-34,frame0711_gripper.jpg,"[1201.0, 415.0, 79.0, 36.0]","In other words, 'ceiling' is = "
-35,frame0419_zednode.jpg,"[50.0, 622.0, 38.0, 28.0]","In other words, 'carrot' is = "
-35,frame0419_zednode.jpg,"[31.0, 599.0, 30.0, 29.0]","In other words, 'green bell pepper' is = "
-35,frame0419_zednode.jpg,"[410.0, 516.0, 18.0, 16.0]","In other words, 'white toy' is = "
-35,frame0419_zednode.jpg,"[347.0, 171.0, 22.0, 46.0]","In other words, 'garlic' is = "
-35,frame0419_zednode.jpg,"[88.0, 637.0, 39.0, 31.0]","In other words, 'tomato' is = "
-35,frame0419_zednode.jpg,"[465.0, 542.0, 32.0, 35.0]","In other words, 'floor' is = "
-35,frame0419_zednode.jpg,"[441.0, 444.0, 351.0, 276.0]","In other words, 'wall' is = "
-35,frame0419_zednode.jpg,"[337.0, 602.0, 34.0, 24.0]","In other words, 'gripper' is = "
-35,frame0419_zednode.jpg,"[0.0, 242.0, 1280.0, 468.0]","In other words, 'door' is = "
-35,frame0419_zednode.jpg,"[512.0, 186.0, 106.0, 102.0]","In other words, 'poster' is = "
-35,frame0419_zednode.jpg,"[335.0, 0.0, 945.0, 263.0]","In other words, 'ceiling' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[971.0, 0.0, 309.0, 45.0]","In other words, 'red bell pepper' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[878.0, 156.0, 21.0, 47.0]","In other words, 'white toy' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[1171.0, 388.0, 109.0, 332.0]","In other words, 'garlic' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[824.0, 585.0, 27.0, 24.0]","In other words, 'tomato' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[1069.0, 584.0, 27.0, 22.0]","In other words, 'floor' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[923.0, 588.0, 33.0, 28.0]","In other words, 'wall' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[1012.0, 173.0, 33.0, 32.0]","In other words, 'gripper' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[0.0, 524.0, 1280.0, 196.0]","In other words, 'door' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[457.0, 496.0, 306.0, 224.0]","In other words, 'poster' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[701.0, 524.0, 46.0, 66.0]","In other words, 'table' is = "
-36,exploration_zed_node_left_image_rect_color_594.jpg,"[87.0, 83.0, 321.0, 196.0]","In other words, 'ceiling' is = "
-37,frame1484_gripper.jpg,"[969.0, 205.0, 81.0, 66.0]","In other words, 'carrot' is = "
-37,frame1484_gripper.jpg,"[558.0, 402.0, 78.0, 79.0]","In other words, 'cucumber' is = "
-37,frame1484_gripper.jpg,"[756.0, 437.0, 40.0, 117.0]","In other words, 'green bell pepper' is = "
-37,frame1484_gripper.jpg,"[0.0, 241.0, 324.0, 479.0]","In other words, 'corn' is = "
-37,frame1484_gripper.jpg,"[473.0, 671.0, 67.0, 49.0]","In other words, 'box, basket, case, bin, container' is = "
-37,frame1484_gripper.jpg,"[674.0, 92.0, 53.0, 112.0]","In other words, 'tomato' is = "
-37,frame1484_gripper.jpg,"[774.0, 283.0, 81.0, 61.0]","In other words, 'potato' is = "
-37,frame1484_gripper.jpg,"[0.0, 0.0, 1280.0, 276.0]","In other words, 'floor' is = "
-37,frame1484_gripper.jpg,"[163.0, 3.0, 1117.0, 717.0]","In other words, 'wall' is = "
-38,frame0033_zednode.jpg,"[1157.0, 638.0, 123.0, 82.0]","In other words, 'carrot' is = "
-38,frame0033_zednode.jpg,"[436.0, 445.0, 358.0, 275.0]","In other words, 'drawer' is = "
-38,frame0033_zednode.jpg,"[1145.0, 377.0, 135.0, 343.0]","In other words, 'chest of drawers' is = "
-38,frame0033_zednode.jpg,"[1157.0, 517.0, 123.0, 171.0]","In other words, 'handle' is = "
-38,frame0033_zednode.jpg,"[144.0, 647.0, 56.0, 35.0]","In other words, 'white toy' is = "
-38,frame0033_zednode.jpg,"[1138.0, 349.0, 30.0, 21.0]","In other words, 'garlic' is = "
-38,frame0033_zednode.jpg,"[829.0, 307.0, 56.0, 53.0]","In other words, 'tomato' is = "
-38,frame0033_zednode.jpg,"[1045.0, 346.0, 46.0, 29.0]","In other words, 'floor' is = "
-38,frame0033_zednode.jpg,"[0.0, 541.0, 1147.0, 179.0]","In other words, 'wall' is = "
-38,frame0033_zednode.jpg,"[1065.0, 168.0, 27.0, 12.0]","In other words, 'person' is = "
-38,frame0033_zednode.jpg,"[967.0, 243.0, 13.0, 21.0]","In other words, 'gripper' is = "
-38,frame0033_zednode.jpg,"[909.0, 206.0, 56.0, 45.0]","In other words, 'door' is = "
-38,frame0033_zednode.jpg,"[1211.0, 463.0, 69.0, 19.0]","In other words, 'poster' is = "
-38,frame0033_zednode.jpg,"[1156.0, 419.0, 124.0, 100.0]","In other words, 'table' is = "
-38,frame0033_zednode.jpg,"[1157.0, 492.0, 123.0, 110.0]","In other words, 'ceiling' is = "
-39,frame0574_zednode.jpg,"[0.0, 0.0, 1280.0, 266.0]","In other words, 'eggplant' is = "
-39,frame0574_zednode.jpg,"[0.0, 154.0, 218.0, 114.0]","In other words, 'box, basket, case, bin, container' is = "
-39,frame0574_zednode.jpg,"[0.0, 603.0, 251.0, 117.0]","In other words, 'tomato' is = "
-39,frame0574_zednode.jpg,"[0.0, 0.0, 878.0, 107.0]","In other words, 'floor' is = "
-39,frame0574_zednode.jpg,"[0.0, 199.0, 1280.0, 518.0]","In other words, 'wall' is = "
-39,frame0574_zednode.jpg,"[581.0, 567.0, 118.0, 50.0]","In other words, 'gripper' is = "
-39,frame0574_zednode.jpg,"[440.0, 434.0, 352.0, 286.0]","In other words, 'door' is = "
-39,frame0574_zednode.jpg,"[231.0, 624.0, 751.0, 96.0]","In other words, 'poster' is = "
-39,frame0574_zednode.jpg,"[932.0, 707.0, 24.0, 13.0]","In other words, 'ceiling' is = "
-40,frame0746_gripper.jpg,"[757.0, 538.0, 86.0, 57.0]","In other words, 'green bell pepper' is = "
-40,frame0746_gripper.jpg,"[1119.0, 340.0, 26.0, 31.0]","In other words, 'red chili pepper' is = "
-40,frame0746_gripper.jpg,"[1006.0, 287.0, 107.0, 66.0]","In other words, 'toy_cat' is = "
-40,frame0746_gripper.jpg,"[408.0, 259.0, 56.0, 105.0]","In other words, 'garlic' is = "
-40,frame0746_gripper.jpg,"[711.0, 572.0, 35.0, 14.0]","In other words, 'wall' is = "
-40,frame0746_gripper.jpg,"[743.0, 569.0, 25.0, 22.0]","In other words, 'door' is = "
-40,frame0746_gripper.jpg,"[824.0, 557.0, 25.0, 31.0]","In other words, 'poster' is = "
-40,frame0746_gripper.jpg,"[1161.0, 348.0, 32.0, 22.0]","In other words, 'ceiling' is = "
-41,frame0084_zednode.jpg,"[652.0, 590.0, 513.0, 130.0]","In other words, 'carrot' is = "
-41,frame0084_zednode.jpg,"[1187.0, 646.0, 93.0, 74.0]","In other words, 'green bell pepper' is = "
-41,frame0084_zednode.jpg,"[689.0, 193.0, 246.0, 80.0]","In other words, 'green chili pepper' is = "
-41,frame0084_zednode.jpg,"[0.0, 163.0, 1280.0, 557.0]","In other words, 'eggplant' is = "
-41,frame0084_zednode.jpg,"[441.0, 444.0, 360.0, 276.0]","In other words, 'drawer' is = "
-41,frame0084_zednode.jpg,"[700.0, 353.0, 33.0, 22.0]","In other words, 'chest of drawers' is = "
-41,frame0084_zednode.jpg,"[733.0, 360.0, 29.0, 9.0]","In other words, 'handle' is = "
-41,frame0084_zednode.jpg,"[715.0, 347.0, 68.0, 15.0]","In other words, 'toy_cat' is = "
-41,frame0084_zednode.jpg,"[764.0, 350.0, 20.0, 15.0]","In other words, 'tomato' is = "
-41,frame0084_zednode.jpg,"[720.0, 364.0, 38.0, 14.0]","In other words, 'potato' is = "
-41,frame0084_zednode.jpg,"[754.0, 363.0, 46.0, 17.0]","In other words, 'floor' is = "
-41,frame0084_zednode.jpg,"[1188.0, 571.0, 92.0, 87.0]","In other words, 'wall' is = "
-41,frame0084_zednode.jpg,"[1189.0, 496.0, 91.0, 84.0]","In other words, 'gripper' is = "
-41,frame0084_zednode.jpg,"[1189.0, 422.0, 91.0, 80.0]","In other words, 'door' is = "
-41,frame0084_zednode.jpg,"[1260.0, 460.0, 20.0, 9.0]","In other words, 'poster' is = "
-41,frame0084_zednode.jpg,"[1260.0, 537.0, 20.0, 10.0]","In other words, 'table' is = "
-41,frame0084_zednode.jpg,"[1258.0, 615.0, 22.0, 18.0]","In other words, 'ceiling' is = "
-42,frame0786_gripper.jpg,"[0.0, 0.0, 1252.0, 366.0]","In other words, 'carrot' is = "
-42,frame0786_gripper.jpg,"[0.0, 232.0, 1280.0, 488.0]","In other words, 'green bell pepper' is = "
-42,frame0786_gripper.jpg,"[595.0, 205.0, 123.0, 145.0]","In other words, 'box, basket, case, bin, container' is = "
-42,frame0786_gripper.jpg,"[1243.0, 0.0, 37.0, 235.0]","In other words, 'floor' is = "
-42,frame0786_gripper.jpg,"[729.0, 224.0, 35.0, 47.0]","In other words, 'wall' is = "
-42,frame0786_gripper.jpg,"[0.0, 637.0, 657.0, 83.0]","In other words, 'door' is = "
-42,frame0786_gripper.jpg,"[495.0, 652.0, 28.0, 24.0]","In other words, 'poster' is = "
-42,frame0786_gripper.jpg,"[545.0, 671.0, 27.0, 27.0]","In other words, 'ceiling' is = "
-43,frame0609_zednode.jpg,"[0.0, 0.0, 1280.0, 294.0]","In other words, 'green bell pepper' is = "
-43,frame0609_zednode.jpg,"[351.0, 166.0, 163.0, 129.0]","In other words, 'eggplant' is = "
-43,frame0609_zednode.jpg,"[372.0, 490.0, 115.0, 90.0]","In other words, 'corn' is = "
-43,frame0609_zednode.jpg,"[0.0, 262.0, 1280.0, 458.0]","In other words, 'box, basket, case, bin, container' is = "
-43,frame0609_zednode.jpg,"[606.0, 522.0, 21.0, 14.0]","In other words, 'white toy' is = "
-43,frame0609_zednode.jpg,"[658.0, 511.0, 20.0, 17.0]","In other words, 'potato' is = "
-43,frame0609_zednode.jpg,"[597.0, 537.0, 13.0, 19.0]","In other words, 'floor' is = "
-43,frame0609_zednode.jpg,"[298.0, 612.0, 58.0, 17.0]","In other words, 'wall' is = "
-43,frame0609_zednode.jpg,"[951.0, 519.0, 57.0, 46.0]","In other words, 'gripper' is = "
-43,frame0609_zednode.jpg,"[245.0, 516.0, 1035.0, 204.0]","In other words, 'door' is = "
-43,frame0609_zednode.jpg,"[440.0, 445.0, 354.0, 275.0]","In other words, 'poster' is = "
-43,frame0609_zednode.jpg,"[851.0, 160.0, 52.0, 37.0]","In other words, 'ceiling' is = "
-44,frame1409_gripper.jpg,"[0.0, 0.0, 1280.0, 162.0]","In other words, 'cucumber' is = "
-44,frame1409_gripper.jpg,"[312.0, 364.0, 80.0, 83.0]","In other words, 'green chili pepper' is = "
-44,frame1409_gripper.jpg,"[10.0, 0.0, 1270.0, 123.0]","In other words, 'red chili pepper' is = "
-44,frame1409_gripper.jpg,"[0.0, 414.0, 1280.0, 287.0]","In other words, 'toy_cat' is = "
-44,frame1409_gripper.jpg,"[385.0, 357.0, 86.0, 69.0]","In other words, 'garlic' is = "
-44,frame1409_gripper.jpg,"[401.0, 399.0, 190.0, 37.0]","In other words, 'tomato' is = "
-44,frame1409_gripper.jpg,"[726.0, 409.0, 385.0, 311.0]","In other words, 'wall' is = "
-44,frame1409_gripper.jpg,"[906.0, 290.0, 193.0, 141.0]","In other words, 'table' is = "
-44,frame1409_gripper.jpg,"[0.0, 118.0, 1280.0, 599.0]","In other words, 'ceiling' is = "
-45,frame1976.jpg,"[417.0, 196.0, 58.0, 108.0]","In other words, 'cucumber' is = "
-45,frame1976.jpg,"[244.0, 178.0, 117.0, 88.0]","In other words, 'corn' is = "
-45,frame1976.jpg,"[0.0, 0.0, 1280.0, 262.0]","In other words, 'white toy' is = "
-45,frame1976.jpg,"[0.0, 185.0, 1280.0, 535.0]","In other words, 'potato' is = "
-45,frame1976.jpg,"[925.0, 634.0, 272.0, 86.0]","In other words, 'wall' is = "
-45,frame1976.jpg,"[1065.0, 197.0, 160.0, 95.0]","In other words, 'table' is = "
-46,frame0617_zednode.jpg,"[465.0, 667.0, 23.0, 41.0]","In other words, 'carrot' is = "
-46,frame0617_zednode.jpg,"[226.0, 646.0, 795.0, 74.0]","In other words, 'box, basket, case, bin, container' is = "
-46,frame0617_zednode.jpg,"[44.0, 672.0, 207.0, 48.0]","In other words, 'tomato' is = "
-46,frame0617_zednode.jpg,"[277.0, 691.0, 40.0, 29.0]","In other words, 'potato' is = "
-46,frame0617_zednode.jpg,"[427.0, 127.0, 54.0, 45.0]","In other words, 'floor' is = "
-46,frame0617_zednode.jpg,"[979.0, 0.0, 301.0, 243.0]","In other words, 'wall' is = "
-46,frame0617_zednode.jpg,"[191.0, 82.0, 223.0, 189.0]","In other words, 'gripper' is = "
-46,frame0617_zednode.jpg,"[0.0, 0.0, 1191.0, 653.0]","In other words, 'door' is = "
-46,frame0617_zednode.jpg,"[371.0, 702.0, 41.0, 18.0]","In other words, 'poster' is = "
-47,frame0032_zednode.jpg,"[649.0, 351.0, 32.0, 21.0]","In other words, 'drawer' is = "
-47,frame0032_zednode.jpg,"[640.0, 346.0, 22.0, 18.0]","In other words, 'chest of drawers' is = "
-47,frame0032_zednode.jpg,"[452.0, 313.0, 52.0, 51.0]","In other words, 'handle' is = "
-47,frame0032_zednode.jpg,"[726.0, 380.0, 212.0, 305.0]","In other words, 'white toy' is = "
-47,frame0032_zednode.jpg,"[705.0, 349.0, 19.0, 16.0]","In other words, 'garlic' is = "
-47,frame0032_zednode.jpg,"[0.0, 0.0, 1280.0, 287.0]","In other words, 'tomato' is = "
-47,frame0032_zednode.jpg,"[0.0, 117.0, 1280.0, 600.0]","In other words, 'potato' is = "
-47,frame0032_zednode.jpg,"[834.0, 212.0, 135.0, 54.0]","In other words, 'floor' is = "
-47,frame0032_zednode.jpg,"[556.0, 220.0, 88.0, 66.0]","In other words, 'wall' is = "
-47,frame0032_zednode.jpg,"[761.0, 186.0, 258.0, 85.0]","In other words, 'key' is = "
-47,frame0032_zednode.jpg,"[714.0, 227.0, 47.0, 44.0]","In other words, 'gripper' is = "
-47,frame0032_zednode.jpg,"[491.0, 221.0, 46.0, 44.0]","In other words, 'door' is = "
-47,frame0032_zednode.jpg,"[538.0, 258.0, 11.0, 20.0]","In other words, 'poster' is = "
-47,frame0032_zednode.jpg,"[553.0, 264.0, 17.0, 23.0]","In other words, 'table' is = "
-47,frame0032_zednode.jpg,"[610.0, 202.0, 18.0, 11.0]","In other words, 'ceiling' is = "
-48,frame0126_zednode.jpg,"[0.0, 171.0, 1280.0, 549.0]","In other words, 'cucumber' is = "
-48,frame0126_zednode.jpg,"[0.0, 0.0, 1136.0, 291.0]","In other words, 'box, basket, case, bin, container' is = "
-48,frame0126_zednode.jpg,"[0.0, 166.0, 129.0, 125.0]","In other words, 'toy_cat' is = "
-48,frame0126_zednode.jpg,"[720.0, 132.0, 109.0, 145.0]","In other words, 'floor' is = "
-48,frame0126_zednode.jpg,"[838.0, 147.0, 35.0, 43.0]","In other words, 'wall' is = "
-48,frame0126_zednode.jpg,"[1106.0, 0.0, 174.0, 183.0]","In other words, 'gripper' is = "
-48,frame0126_zednode.jpg,"[0.0, 0.0, 796.0, 142.0]","In other words, 'door' is = "
-48,frame0126_zednode.jpg,"[95.0, 548.0, 62.0, 83.0]","In other words, 'poster' is = "
-48,frame0126_zednode.jpg,"[847.0, 642.0, 35.0, 41.0]","In other words, 'ceiling' is = "
-49,frame1031.jpg,"[235.0, 198.0, 125.0, 90.0]","In other words, 'carrot' is = "
-49,frame1031.jpg,"[141.0, 148.0, 119.0, 104.0]","In other words, 'cucumber' is = "
-49,frame1031.jpg,"[80.0, 249.0, 139.0, 127.0]","In other words, 'green bell pepper' is = "
-49,frame1031.jpg,"[0.0, 81.0, 1280.0, 636.0]","In other words, 'green chili pepper' is = "
-49,frame1031.jpg,"[289.0, 133.0, 95.0, 80.0]","In other words, 'red bell pepper' is = "
-49,frame1031.jpg,"[234.0, 282.0, 228.0, 121.0]","In other words, 'eggplant' is = "
-49,frame1031.jpg,"[0.0, 0.0, 1280.0, 159.0]","In other words, 'corn' is = "
-49,frame1031.jpg,"[442.0, 93.0, 129.0, 43.0]","In other words, 'toy_cat' is = "
-49,frame1031.jpg,"[412.0, 92.0, 279.0, 300.0]","In other words, 'garlic' is = "
-49,frame1031.jpg,"[338.0, 383.0, 219.0, 100.0]","In other words, 'tomato' is = "
-49,frame1031.jpg,"[356.0, 179.0, 94.0, 107.0]","In other words, 'potato' is = "
-49,frame1031.jpg,"[155.0, 352.0, 299.0, 68.0]","In other words, 'wall' is = "
-49,frame1031.jpg,"[382.0, 128.0, 64.0, 61.0]","In other words, 'table' is = "
-50,frame1905.jpg,"[0.0, 0.0, 1280.0, 720.0]","In other words, 'floor' is = "
-50,frame1905.jpg,"[503.0, 473.0, 268.0, 247.0]","In other words, 'box, basket, case, bin, container' is = "
-50,frame1905.jpg,"[1128.0, 222.0, 152.0, 332.0]","In other words, 'toy_cat' is = "
-51,frame1556_gripper.jpg,"[433.0, 244.0, 108.0, 48.0]","In other words, 'carrot' is = "
-51,frame1556_gripper.jpg,"[748.0, 171.0, 86.0, 133.0]","In other words, 'cucumber' is = "
-51,frame1556_gripper.jpg,"[890.0, 213.0, 88.0, 79.0]","In other words, 'green bell pepper' is = "
-51,frame1556_gripper.jpg,"[507.0, 277.0, 120.0, 98.0]","In other words, 'red bell pepper' is = "
-51,frame1556_gripper.jpg,"[486.0, 165.0, 90.0, 75.0]","In other words, 'red chili pepper' is = "
-51,frame1556_gripper.jpg,"[0.0, 0.0, 1280.0, 717.0]","In other words, 'eggplant' is = "
-51,frame1556_gripper.jpg,"[958.0, 284.0, 136.0, 117.0]","In other words, 'corn' is = "
-51,frame1556_gripper.jpg,"[759.0, 241.0, 87.0, 70.0]","In other words, 'garlic' is = "
-51,frame1556_gripper.jpg,"[277.0, 269.0, 138.0, 112.0]","In other words, 'tomato' is = "
-51,frame1556_gripper.jpg,"[0.0, 223.0, 1280.0, 491.0]","In other words, 'potato' is = "
-51,frame1556_gripper.jpg,"[272.0, 323.0, 112.0, 103.0]","In other words, 'wall' is = "
-51,frame1556_gripper.jpg,"[467.0, 365.0, 141.0, 149.0]","In other words, 'table' is = "
-52,frame0015_zednode.jpg,"[22.0, 0.0, 1258.0, 163.0]","In other words, 'cucumber' is = "
-52,frame0015_zednode.jpg,"[918.0, 417.0, 170.0, 72.0]","In other words, 'red chili pepper' is = "
-52,frame0015_zednode.jpg,"[918.0, 482.0, 168.0, 77.0]","In other words, 'corn' is = "
-52,frame0015_zednode.jpg,"[918.0, 624.0, 167.0, 74.0]","In other words, 'drawer' is = "
-52,frame0015_zednode.jpg,"[919.0, 555.0, 167.0, 74.0]","In other words, 'chest of drawers' is = "
-52,frame0015_zednode.jpg,"[835.0, 384.0, 267.0, 329.0]","In other words, 'handle' is = "
-52,frame0015_zednode.jpg,"[1180.0, 708.0, 36.0, 12.0]","In other words, 'toy_cat' is = "
-52,frame0015_zednode.jpg,"[175.0, 167.0, 22.0, 17.0]","In other words, 'toy block' is = "
-52,frame0015_zednode.jpg,"[576.0, 334.0, 81.0, 59.0]","In other words, 'floor' is = "
-52,frame0015_zednode.jpg,"[402.0, 442.0, 486.0, 278.0]","In other words, 'wall' is = "
-52,frame0015_zednode.jpg,"[967.0, 659.0, 69.0, 11.0]","In other words, 'key' is = "
-52,frame0015_zednode.jpg,"[968.0, 590.0, 69.0, 11.0]","In other words, 'gripper' is = "
-52,frame0015_zednode.jpg,"[968.0, 519.0, 69.0, 10.0]","In other words, 'door' is = "
-52,frame0015_zednode.jpg,"[1139.0, 148.0, 141.0, 106.0]","In other words, 'poster' is = "
-52,frame0015_zednode.jpg,"[121.0, 178.0, 112.0, 52.0]","In other words, 'table' is = "
-52,frame0015_zednode.jpg,"[969.0, 449.0, 69.0, 8.0]","In other words, 'ceiling' is = "
-53,frame1604_gripper.jpg,"[88.0, 0.0, 1192.0, 123.0]","In other words, 'cucumber' is = "
-53,frame1604_gripper.jpg,"[0.0, 387.0, 1280.0, 329.0]","In other words, 'green bell pepper' is = "
-53,frame1604_gripper.jpg,"[870.0, 340.0, 55.0, 59.0]","In other words, 'red chili pepper' is = "
-53,frame1604_gripper.jpg,"[0.0, 5.0, 1280.0, 711.0]","In other words, 'eggplant' is = "
-53,frame1604_gripper.jpg,"[509.0, 332.0, 55.0, 39.0]","In other words, 'corn' is = "
-53,frame1604_gripper.jpg,"[4.0, 0.0, 1276.0, 128.0]","In other words, 'garlic' is = "
-53,frame1604_gripper.jpg,"[494.0, 356.0, 122.0, 69.0]","In other words, 'tomato' is = "
-53,frame1604_gripper.jpg,"[461.0, 337.0, 97.0, 62.0]","In other words, 'potato' is = "
-53,frame1604_gripper.jpg,"[529.0, 331.0, 103.0, 77.0]","In other words, 'wall' is = "
-53,frame1604_gripper.jpg,"[329.0, 335.0, 93.0, 81.0]","In other words, 'table' is = "
-53,frame1604_gripper.jpg,"[409.0, 373.0, 38.0, 38.0]","In other words, 'ceiling' is = "
-54,frame0607_zednode.jpg,"[275.0, 597.0, 37.0, 21.0]","In other words, 'carrot' is = "
-54,frame0607_zednode.jpg,"[302.0, 560.0, 24.0, 20.0]","In other words, 'cucumber' is = "
-54,frame0607_zednode.jpg,"[337.0, 531.0, 18.0, 17.0]","In other words, 'eggplant' is = "
-54,frame0607_zednode.jpg,"[364.0, 558.0, 12.0, 20.0]","In other words, 'corn' is = "
-54,frame0607_zednode.jpg,"[370.0, 541.0, 23.0, 16.0]","In other words, 'box, basket, case, bin, container' is = "
-54,frame0607_zednode.jpg,"[67.0, 522.0, 167.0, 116.0]","In other words, 'white toy' is = "
-54,frame0607_zednode.jpg,"[705.0, 502.0, 45.0, 40.0]","In other words, 'tomato' is = "
-54,frame0607_zednode.jpg,"[431.0, 445.0, 363.0, 275.0]","In other words, 'potato' is = "
-54,frame0607_zednode.jpg,"[600.0, 177.0, 45.0, 33.0]","In other words, 'floor' is = "
-54,frame0607_zednode.jpg,"[0.0, 509.0, 970.0, 211.0]","In other words, 'wall' is = "
-54,frame0607_zednode.jpg,"[0.0, 698.0, 55.0, 22.0]","In other words, 'gripper' is = "
-54,frame0607_zednode.jpg,"[0.0, 0.0, 1280.0, 295.0]","In other words, 'door' is = "
-54,frame0607_zednode.jpg,"[0.0, 190.0, 1280.0, 527.0]","In other words, 'poster' is = "
-55,frame1562.jpg,"[911.0, 90.0, 96.0, 94.0]","In other words, 'carrot' is = "
-55,frame1562.jpg,"[390.0, 130.0, 150.0, 78.0]","In other words, 'cucumber' is = "
-55,frame1562.jpg,"[236.0, 183.0, 157.0, 144.0]","In other words, 'green bell pepper' is = "
-55,frame1562.jpg,"[238.0, 286.0, 120.0, 109.0]","In other words, 'red bell pepper' is = "
-55,frame1562.jpg,"[0.0, 70.0, 1280.0, 619.0]","In other words, 'red chili pepper' is = "
-55,frame1562.jpg,"[0.0, 0.0, 1280.0, 210.0]","In other words, 'eggplant' is = "
-55,frame1562.jpg,"[267.0, 675.0, 1013.0, 45.0]","In other words, 'corn' is = "
-55,frame1562.jpg,"[0.0, 688.0, 267.0, 32.0]","In other words, 'garlic' is = "
-55,frame1562.jpg,"[488.0, 202.0, 130.0, 123.0]","In other words, 'tomato' is = "
-55,frame1562.jpg,"[753.0, 26.0, 87.0, 105.0]","In other words, 'potato' is = "
-55,frame1562.jpg,"[458.0, 17.0, 102.0, 91.0]","In other words, 'floor' is = "
-55,frame1562.jpg,"[765.0, 115.0, 94.0, 100.0]","In other words, 'wall' is = "
-55,frame1562.jpg,"[979.0, 213.0, 146.0, 133.0]","In other words, 'table' is = "
-56,frame1067_gripper.jpg,"[0.0, 454.0, 1280.0, 266.0]","In other words, 'cucumber' is = "
-56,frame1067_gripper.jpg,"[0.0, 122.0, 1280.0, 598.0]","In other words, 'green bell pepper' is = "
-56,frame1067_gripper.jpg,"[0.0, 38.0, 297.0, 149.0]","In other words, 'green chili pepper' is = "
-56,frame1067_gripper.jpg,"[0.0, 0.0, 1280.0, 189.0]","In other words, 'red bell pepper' is = "
-56,frame1067_gripper.jpg,"[448.0, 215.0, 243.0, 238.0]","In other words, 'red chili pepper' is = "
-56,frame1067_gripper.jpg,"[312.0, 382.0, 84.0, 71.0]","In other words, 'eggplant' is = "
-56,frame1067_gripper.jpg,"[274.0, 389.0, 28.0, 21.0]","In other words, 'corn' is = "
-56,frame1067_gripper.jpg,"[292.0, 391.0, 201.0, 51.0]","In other words, 'toy_cat' is = "
-56,frame1067_gripper.jpg,"[466.0, 424.0, 45.0, 29.0]","In other words, 'garlic' is = "
-56,frame1067_gripper.jpg,"[396.0, 375.0, 77.0, 39.0]","In other words, 'tomato' is = "
-56,frame1067_gripper.jpg,"[167.0, 379.0, 112.0, 74.0]","In other words, 'potato' is = "
-56,frame1067_gripper.jpg,"[677.0, 396.0, 76.0, 55.0]","In other words, 'wall' is = "
-56,frame1067_gripper.jpg,"[848.0, 374.0, 58.0, 20.0]","In other words, 'table' is = "
-56,frame1067_gripper.jpg,"[772.0, 429.0, 90.0, 23.0]","In other words, 'ceiling' is = "
-57,frame0074_zednode.jpg,"[920.0, 246.0, 32.0, 33.0]","In other words, 'drawer' is = "
-57,frame0074_zednode.jpg,"[0.0, 260.0, 1280.0, 438.0]","In other words, 'chest of drawers' is = "
-57,frame0074_zednode.jpg,"[0.0, 0.0, 1280.0, 293.0]","In other words, 'handle' is = "
-57,frame0074_zednode.jpg,"[898.0, 214.0, 136.0, 65.0]","In other words, 'toy_cat' is = "
-57,frame0074_zednode.jpg,"[653.0, 229.0, 62.0, 67.0]","In other words, 'tomato' is = "
-57,frame0074_zednode.jpg,"[782.0, 234.0, 44.0, 53.0]","In other words, 'floor' is = "
-57,frame0074_zednode.jpg,"[786.0, 190.0, 297.0, 93.0]","In other words, 'wall' is = "
-57,frame0074_zednode.jpg,"[862.0, 522.0, 43.0, 15.0]","In other words, 'key' is = "
-57,frame0074_zednode.jpg,"[245.0, 0.0, 1035.0, 201.0]","In other words, 'gripper' is = "
-57,frame0074_zednode.jpg,"[441.0, 444.0, 360.0, 276.0]","In other words, 'door' is = "
-57,frame0074_zednode.jpg,"[0.0, 482.0, 1280.0, 238.0]","In other words, 'table' is = "
-57,frame0074_zednode.jpg,"[570.0, 354.0, 264.0, 201.0]","In other words, 'ceiling' is = "
-58,frame1014_gripper.jpg,"[0.0, 0.0, 1280.0, 161.0]","In other words, 'carrot' is = "
-58,frame1014_gripper.jpg,"[0.0, 88.0, 1280.0, 632.0]","In other words, 'green bell pepper' is = "
-58,frame1014_gripper.jpg,"[0.0, 435.0, 1280.0, 285.0]","In other words, 'green chili pepper' is = "
-58,frame1014_gripper.jpg,"[0.0, 19.0, 1280.0, 156.0]","In other words, 'red bell pepper' is = "
-58,frame1014_gripper.jpg,"[396.0, 364.0, 46.0, 23.0]","In other words, 'red chili pepper' is = "
-58,frame1014_gripper.jpg,"[360.0, 370.0, 78.0, 25.0]","In other words, 'eggplant' is = "
-58,frame1014_gripper.jpg,"[315.0, 375.0, 32.0, 28.0]","In other words, 'toy_cat' is = "
-58,frame1014_gripper.jpg,"[439.0, 362.0, 76.0, 42.0]","In other words, 'tomato' is = "
-58,frame1014_gripper.jpg,"[341.0, 380.0, 131.0, 33.0]","In other words, 'potato' is = "
-58,frame1014_gripper.jpg,"[217.0, 369.0, 110.0, 75.0]","In other words, 'wall' is = "
-58,frame1014_gripper.jpg,"[410.0, 388.0, 178.0, 61.0]","In other words, 'table' is = "
-58,frame1014_gripper.jpg,"[265.0, 404.0, 167.0, 43.0]","In other words, 'ceiling' is = "
-59,frame0000_gripper.jpg,"[0.0, 83.0, 1280.0, 634.0]","In other words, 'cucumber' is = "
-59,frame0000_gripper.jpg,"[0.0, 416.0, 1280.0, 301.0]","In other words, 'red bell pepper' is = "
-59,frame0000_gripper.jpg,"[0.0, 0.0, 1280.0, 159.0]","In other words, 'corn' is = "
-59,frame0000_gripper.jpg,"[0.0, 34.0, 1280.0, 144.0]","In other words, 'garlic' is = "
-59,frame0000_gripper.jpg,"[202.0, 381.0, 38.0, 43.0]","In other words, 'tomato' is = "
-59,frame0000_gripper.jpg,"[224.0, 350.0, 93.0, 81.0]","In other words, 'wall' is = "
-59,frame0000_gripper.jpg,"[654.0, 358.0, 69.0, 65.0]","In other words, 'table' is = "
-59,frame0000_gripper.jpg,"[434.0, 359.0, 85.0, 67.0]","In other words, 'ceiling' is = "
-60,frame0568.jpg,"[0.0, 235.0, 1280.0, 482.0]","In other words, 'red bell pepper' is = "
-60,frame0568.jpg,"[0.0, 0.0, 1280.0, 419.0]","In other words, 'corn' is = "
-60,frame0568.jpg,"[537.0, 276.0, 12.0, 29.0]","In other words, 'toy block' is = "
-60,frame0568.jpg,"[0.0, 29.0, 42.0, 206.0]","In other words, 'tomato' is = "
-60,frame0568.jpg,"[410.0, 216.0, 84.0, 84.0]","In other words, 'floor' is = "
-60,frame0568.jpg,"[1092.0, 686.0, 46.0, 34.0]","In other words, 'wall' is = "
-60,frame0568.jpg,"[473.0, 551.0, 17.0, 28.0]","In other words, 'gripper' is = "
-60,frame0568.jpg,"[261.0, 0.0, 1019.0, 253.0]","In other words, 'door' is = "
-60,frame0568.jpg,"[1142.0, 190.0, 46.0, 55.0]","In other words, 'poster' is = "
-60,frame0568.jpg,"[701.0, 252.0, 117.0, 49.0]","In other words, 'ceiling' is = "
-61,frame0625_zednode.jpg,"[347.0, 286.0, 72.0, 19.0]","In other words, 'toy block' is = "
-61,frame0625_zednode.jpg,"[160.0, 200.0, 107.0, 55.0]","In other words, 'floor' is = "
-61,frame0625_zednode.jpg,"[60.0, 0.0, 1166.0, 252.0]","In other words, 'wall' is = "
-61,frame0625_zednode.jpg,"[0.0, 0.0, 1280.0, 304.0]","In other words, 'door' is = "
-61,frame0625_zednode.jpg,"[0.0, 254.0, 1280.0, 466.0]","In other words, 'poster' is = "
-61,frame0625_zednode.jpg,"[1022.0, 617.0, 44.0, 39.0]","In other words, 'ceiling' is = "
-62,frame0603_zednode.jpg,"[0.0, 0.0, 1275.0, 263.0]","In other words, 'green chili pepper' is = "
-62,frame0603_zednode.jpg,"[391.0, 218.0, 69.0, 48.0]","In other words, 'red chili pepper' is = "
-62,frame0603_zednode.jpg,"[0.0, 4.0, 1280.0, 278.0]","In other words, 'drawer' is = "
-62,frame0603_zednode.jpg,"[0.0, 183.0, 1280.0, 537.0]","In other words, 'chest of drawers' is = "
-62,frame0603_zednode.jpg,"[104.0, 158.0, 28.0, 20.0]","In other words, 'handle' is = "
-62,frame0603_zednode.jpg,"[1231.0, 171.0, 42.0, 36.0]","In other words, 'toy_cat' is = "
-62,frame0603_zednode.jpg,"[1077.0, 157.0, 142.0, 102.0]","In other words, 'garlic' is = "
-62,frame0603_zednode.jpg,"[312.0, 207.0, 253.0, 60.0]","In other words, 'tomato' is = "
-62,frame0603_zednode.jpg,"[253.0, 213.0, 48.0, 50.0]","In other words, 'floor' is = "
-62,frame0603_zednode.jpg,"[47.0, 171.0, 124.0, 56.0]","In other words, 'wall' is = "
-62,frame0603_zednode.jpg,"[326.0, 225.0, 31.0, 41.0]","In other words, 'key' is = "
-62,frame0603_zednode.jpg,"[449.0, 368.0, 28.0, 29.0]","In other words, 'gripper' is = "
-62,frame0603_zednode.jpg,"[360.0, 382.0, 64.0, 14.0]","In other words, 'door' is = "
-62,frame0603_zednode.jpg,"[477.0, 379.0, 72.0, 14.0]","In other words, 'poster' is = "
-62,frame0603_zednode.jpg,"[687.0, 330.0, 61.0, 54.0]","In other words, 'table' is = "
-62,frame0603_zednode.jpg,"[199.0, 376.0, 685.0, 344.0]","In other words, 'ceiling' is = "
-63,frame0251_zednode.jpg,"[436.0, 446.0, 358.0, 274.0]","In other words, 'floor' is = "
-63,frame0251_zednode.jpg,"[1027.0, 91.0, 253.0, 164.0]","In other words, 'wall' is = "
-63,frame0251_zednode.jpg,"[0.0, 0.0, 1023.0, 289.0]","In other words, 'person' is = "
-63,frame0251_zednode.jpg,"[0.0, 67.0, 1280.0, 644.0]","In other words, 'gripper' is = "
-63,frame0251_zednode.jpg,"[3.0, 548.0, 1274.0, 172.0]","In other words, 'door' is = "
-63,frame0251_zednode.jpg,"[0.0, 44.0, 190.0, 232.0]","In other words, 'poster' is = "
-63,frame0251_zednode.jpg,"[1133.0, 193.0, 147.0, 55.0]","In other words, 'ceiling' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[0.0, 181.0, 1191.0, 539.0]","In other words, 'carrot' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[742.0, 513.0, 89.0, 119.0]","In other words, 'green bell pepper' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[421.0, 329.0, 72.0, 70.0]","In other words, 'green chili pepper' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[793.0, 452.0, 66.0, 61.0]","In other words, 'red chili pepper' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[284.0, 351.0, 150.0, 172.0]","In other words, 'eggplant' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[354.0, 450.0, 103.0, 84.0]","In other words, 'floor' is = "
-64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[514.0, 215.0, 60.0, 49.0]","In other words, 'wall' is = "
-65,frame0463_zednode.jpg,"[0.0, 262.0, 1280.0, 453.0]","In other words, 'tomato' is = "
-65,frame0463_zednode.jpg,"[40.0, 0.0, 1240.0, 292.0]","In other words, 'floor' is = "
-65,frame0463_zednode.jpg,"[0.0, 12.0, 959.0, 275.0]","In other words, 'wall' is = "
-65,frame0463_zednode.jpg,"[861.0, 586.0, 29.0, 24.0]","In other words, 'person' is = "
-65,frame0463_zednode.jpg,"[961.0, 535.0, 25.0, 20.0]","In other words, 'gripper' is = "
-65,frame0463_zednode.jpg,"[13.0, 496.0, 1267.0, 224.0]","In other words, 'door' is = "
-65,frame0463_zednode.jpg,"[737.0, 175.0, 67.0, 117.0]","In other words, 'poster' is = "
-65,frame0463_zednode.jpg,"[0.0, 0.0, 970.0, 200.0]","In other words, 'ceiling' is = "
-66,frame0000_zednode.jpg,"[152.0, 0.0, 1128.0, 214.0]","In other words, 'carrot' is = "
-66,frame0000_zednode.jpg,"[997.0, 656.0, 45.0, 23.0]","In other words, 'green bell pepper' is = "
-66,frame0000_zednode.jpg,"[800.0, 647.0, 31.0, 38.0]","In other words, 'green chili pepper' is = "
-66,frame0000_zednode.jpg,"[940.0, 557.0, 38.0, 11.0]","In other words, 'red bell pepper' is = "
-66,frame0000_zednode.jpg,"[1008.0, 604.0, 68.0, 14.0]","In other words, 'eggplant' is = "
-66,frame0000_zednode.jpg,"[1097.0, 573.0, 18.0, 22.0]","In other words, 'corn' is = "
-66,frame0000_zednode.jpg,"[846.0, 363.0, 268.0, 230.0]","In other words, 'drawer' is = "
-66,frame0000_zednode.jpg,"[852.0, 488.0, 82.0, 60.0]","In other words, 'chest of drawers' is = "
-66,frame0000_zednode.jpg,"[851.0, 376.0, 81.0, 45.0]","In other words, 'handle' is = "
-66,frame0000_zednode.jpg,"[851.0, 410.0, 82.0, 78.0]","In other words, 'toy_cat' is = "
-66,frame0000_zednode.jpg,"[852.0, 450.0, 81.0, 56.0]","In other words, 'toy block' is = "
-66,frame0000_zednode.jpg,"[870.19, 390.68, 39.45, 14.8]","In other words, 'garlic' is = "
-66,frame0000_zednode.jpg,"[870.19, 428.49, 41.1, 19.73]","In other words, 'tomato' is = "
-66,frame0000_zednode.jpg,"[873.48, 471.73, 37.81, 11.5]","In other words, 'potato' is = "
-66,frame0000_zednode.jpg,"[875.12, 507.89, 34.52, 19.73]","In other words, 'floor' is = "
-66,frame0000_zednode.jpg,"[845.0, 631.0, 34.0, 33.0]","In other words, 'wall' is = "
-66,frame0000_zednode.jpg,"[762.0, 686.0, 39.0, 34.0]","In other words, 'person' is = "
-66,frame0000_zednode.jpg,"[892.0, 614.0, 35.0, 24.0]","In other words, 'key' is = "
-66,frame0000_zednode.jpg,"[649.0, 349.0, 261.0, 189.0]","In other words, 'gripper' is = "
-66,frame0000_zednode.jpg,"[810.0, 223.0, 76.0, 67.0]","In other words, 'door' is = "
-66,frame0000_zednode.jpg,"[1023.0, 199.0, 85.0, 73.0]","In other words, 'table' is = "
-66,frame0000_zednode.jpg,"[962.0, 222.0, 60.0, 54.0]","In other words, 'ceiling' is = "
-67,frame0512_zednode.jpg,"[185.0, 659.0, 35.0, 33.0]","In other words, 'carrot' is = "
-67,frame0512_zednode.jpg,"[283.0, 683.0, 32.0, 37.0]","In other words, 'cucumber' is = "
-67,frame0512_zednode.jpg,"[370.0, 688.0, 45.0, 24.0]","In other words, 'green bell pepper' is = "
-67,frame0512_zednode.jpg,"[346.0, 640.0, 31.0, 34.0]","In other words, 'red bell pepper' is = "
-67,frame0512_zednode.jpg,"[283.0, 645.0, 28.0, 28.0]","In other words, 'floor' is = "
-67,frame0512_zednode.jpg,"[0.0, 563.0, 733.0, 157.0]","In other words, 'wall' is = "
-67,frame0512_zednode.jpg,"[0.0, 206.0, 1280.0, 511.0]","In other words, 'gripper' is = "
-67,frame0512_zednode.jpg,"[352.0, 0.0, 847.0, 284.0]","In other words, 'door' is = "
-67,frame0512_zednode.jpg,"[0.0, 72.0, 538.0, 211.0]","In other words, 'poster' is = "
-67,frame0512_zednode.jpg,"[170.0, 234.0, 81.0, 46.0]","In other words, 'ceiling' is = "
-68,frame0535_zednode.jpg,"[442.0, 444.0, 351.0, 276.0]","In other words, 'green chili pepper' is = "
-68,frame0535_zednode.jpg,"[342.0, 628.0, 62.0, 15.0]","In other words, 'red chili pepper' is = "
-68,frame0535_zednode.jpg,"[251.0, 586.0, 38.0, 18.0]","In other words, 'corn' is = "
-68,frame0535_zednode.jpg,"[314.0, 580.0, 20.0, 20.0]","In other words, 'drawer' is = "
-68,frame0535_zednode.jpg,"[358.0, 596.0, 19.0, 18.0]","In other words, 'chest of drawers' is = "
-68,frame0535_zednode.jpg,"[955.0, 596.0, 78.0, 63.0]","In other words, 'handle' is = "
-68,frame0535_zednode.jpg,"[43.0, 312.0, 1237.0, 408.0]","In other words, 'toy_cat' is = "
-68,frame0535_zednode.jpg,"[502.0, 184.0, 59.0, 114.0]","In other words, 'garlic' is = "
-68,frame0535_zednode.jpg,"[0.0, 270.0, 1280.0, 348.0]","In other words, 'floor' is = "
-68,frame0535_zednode.jpg,"[0.0, 0.0, 1280.0, 305.0]","In other words, 'wall' is = "
-68,frame0535_zednode.jpg,"[596.0, 150.0, 180.0, 145.0]","In other words, 'key' is = "
-68,frame0535_zednode.jpg,"[262.0, 208.0, 97.0, 100.0]","In other words, 'gripper' is = "
-68,frame0535_zednode.jpg,"[0.0, 407.0, 114.0, 313.0]","In other words, 'door' is = "
-68,frame0535_zednode.jpg,"[0.0, 0.0, 812.0, 161.0]","In other words, 'poster' is = "
-68,frame0535_zednode.jpg,"[0.0, 615.0, 102.0, 100.0]","In other words, 'ceiling' is = "
-69,frame1059.jpg,"[386.0, 545.0, 96.0, 129.0]","In other words, 'carrot' is = "
-69,frame1059.jpg,"[571.0, 408.0, 82.0, 61.0]","In other words, 'cucumber' is = "
-69,frame1059.jpg,"[421.0, 415.0, 94.0, 88.0]","In other words, 'green bell pepper' is = "
-69,frame1059.jpg,"[201.0, 520.0, 315.0, 65.0]","In other words, 'green chili pepper' is = "
-69,frame1059.jpg,"[367.0, 398.0, 67.0, 45.0]","In other words, 'red bell pepper' is = "
-69,frame1059.jpg,"[617.0, 407.0, 105.0, 101.0]","In other words, 'red chili pepper' is = "
-69,frame1059.jpg,"[302.0, 468.0, 249.0, 78.0]","In other words, 'eggplant' is = "
-69,frame1059.jpg,"[504.0, 405.0, 98.0, 46.0]","In other words, 'corn' is = "
-69,frame1059.jpg,"[453.0, 395.0, 71.0, 64.0]","In other words, 'garlic' is = "
-69,frame1059.jpg,"[366.0, 398.0, 68.0, 46.0]","In other words, 'tomato' is = "
-69,frame1059.jpg,"[224.0, 409.0, 105.0, 83.0]","In other words, 'potato' is = "
-69,frame1059.jpg,"[302.0, 428.0, 118.0, 59.0]","In other words, 'wall' is = "
-69,frame1059.jpg,"[147.0, 448.0, 135.0, 103.0]","In other words, 'door' is = "
-69,frame1059.jpg,"[0.0, 77.0, 1280.0, 402.0]","In other words, 'table' is = "
-70,frame0455_zednode.jpg,"[232.0, 0.0, 1048.0, 252.0]","In other words, 'green bell pepper' is = "
-70,frame0455_zednode.jpg,"[441.0, 445.0, 351.0, 275.0]","In other words, 'eggplant' is = "
-70,frame0455_zednode.jpg,"[0.0, 261.0, 294.0, 459.0]","In other words, 'floor' is = "
-70,frame0455_zednode.jpg,"[279.0, 289.0, 481.0, 288.0]","In other words, 'wall' is = "
-70,frame0455_zednode.jpg,"[758.0, 220.0, 522.0, 497.0]","In other words, 'gripper' is = "
-70,frame0455_zednode.jpg,"[0.0, 0.0, 663.0, 304.0]","In other words, 'door' is = "
-70,frame0455_zednode.jpg,"[665.0, 77.0, 615.0, 224.0]","In other words, 'poster' is = "
-70,frame0455_zednode.jpg,"[1195.0, 175.0, 50.0, 44.0]","In other words, 'ceiling' is = "
-71,frame1621_gripper.jpg,"[730.0, 432.0, 79.0, 168.0]","In other words, 'cucumber' is = "
-71,frame1621_gripper.jpg,"[0.0, 0.0, 1280.0, 659.0]","In other words, 'floor' is = "
-71,frame1621_gripper.jpg,"[0.0, 569.0, 194.0, 151.0]","In other words, 'wall' is = "
-71,frame1621_gripper.jpg,"[0.0, 551.0, 1280.0, 169.0]","In other words, 'toy_cat' is = "
-72,frame0288_zednode.jpg,"[1123.0, 562.0, 157.0, 146.0]","In other words, 'carrot' is = "
-72,frame0288_zednode.jpg,"[1259.13, 443.98, 20.87, 52.23]","In other words, 'cucumber' is = "
-72,frame0288_zednode.jpg,"[1167.37, 456.68, 100.23, 36.71]","In other words, 'corn' is = "
-72,frame0288_zednode.jpg,"[1167.37, 532.21, 90.35, 36.71]","In other words, 'drawer' is = "
-72,frame0288_zednode.jpg,"[1163.13, 599.98, 101.65, 58.16]","In other words, 'chest of drawers' is = "
-72,frame0288_zednode.jpg,"[1161.72, 683.41, 73.41, 35.3]","In other words, 'handle' is = "
-72,frame0288_zednode.jpg,"[1123.0, 482.0, 157.0, 134.0]","In other words, 'garlic' is = "
-72,frame0288_zednode.jpg,"[1122.0, 636.0, 158.0, 84.0]","In other words, 'potato' is = "
-72,frame0288_zednode.jpg,"[555.0, 0.0, 725.0, 205.0]","In other words, 'floor' is = "
-72,frame0288_zednode.jpg,"[1042.0, 185.0, 172.0, 79.0]","In other words, 'wall' is = "
-72,frame0288_zednode.jpg,"[0.0, 544.0, 1120.0, 176.0]","In other words, 'person' is = "
-72,frame0288_zednode.jpg,"[799.0, 359.0, 481.0, 361.0]","In other words, 'key' is = "
-72,frame0288_zednode.jpg,"[442.0, 446.0, 358.0, 274.0]","In other words, 'gripper' is = "
-72,frame0288_zednode.jpg,"[1112.0, 396.0, 168.0, 324.0]","In other words, 'door' is = "
-72,frame0288_zednode.jpg,"[1123.0, 418.0, 157.0, 109.0]","In other words, 'table' is = "
-72,frame0288_zednode.jpg,"[966.0, 347.0, 61.0, 23.0]","In other words, 'ceiling' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[457.0, 563.0, 53.0, 52.0]","In other words, 'carrot' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[588.0, 381.0, 112.0, 47.0]","In other words, 'cucumber' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[590.0, 421.0, 110.0, 52.0]","In other words, 'green chili pepper' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[591.0, 470.0, 109.0, 46.0]","In other words, 'red chili pepper' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[597.0, 516.0, 104.0, 46.0]","In other words, 'eggplant' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[581.0, 363.0, 126.0, 211.0]","In other words, 'corn' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[619.53, 398.33, 53.31, 12.37]","In other words, 'drawer' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[622.12, 442.87, 47.01, 13.6]","In other words, 'chest of drawers' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[625.71, 488.64, 43.42, 14.84]","In other words, 'handle' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[620.76, 533.17, 54.56, 16.09]","In other words, 'box, basket, case, bin, container' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[671.48, 379.77, 22.4, 29.69]","In other words, 'toy_cat' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 136.0, 1280.0, 584.0]","In other words, 'tomato' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 20.0, 581.0, 272.0]","In other words, 'potato' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 0.0, 1280.0, 195.0]","In other words, 'floor' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[18.0, 42.0, 203.0, 251.0]","In other words, 'wall' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[700.0, 62.0, 580.0, 211.0]","In other words, 'key' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 531.0, 1129.0, 189.0]","In other words, 'gripper' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[1093.0, 185.0, 105.0, 52.0]","In other words, 'door' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[380.0, 488.0, 119.0, 78.0]","In other words, 'poster' is = "
-73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[385.0, 639.0, 60.0, 22.0]","In other words, 'ceiling' is = "
-74,frame1219_gripper.jpg,"[709.0, 139.0, 187.0, 250.0]","In other words, 'green bell pepper' is = "
-74,frame1219_gripper.jpg,"[1128.0, 394.0, 152.0, 219.0]","In other words, 'potato' is = "
-74,frame1219_gripper.jpg,"[0.0, 0.0, 1280.0, 720.0]","In other words, 'floor' is = "
-74,frame1219_gripper.jpg,"[98.0, 116.0, 232.0, 228.0]","In other words, 'red bell pepper' is = "
-75,frame0459.jpg,"[1018.0, 0.0, 262.0, 218.0]","In other words, 'box, basket, case, bin, container' is = "
-75,frame0459.jpg,"[0.0, 0.0, 909.0, 79.0]","In other words, 'floor' is = "
-75,frame0459.jpg,"[0.0, 606.0, 218.0, 114.0]","In other words, 'wall' is = "
-75,frame0459.jpg,"[515.0, 585.0, 203.0, 135.0]","In other words, 'door' is = "
-75,frame0459.jpg,"[202.0, 666.0, 790.0, 54.0]","In other words, 'ceiling' is = "
-81,frame1078.jpg,"[0.0, 0.0, 1280.0, 329.0]","In other words, 'carrot' is = "
-81,frame1078.jpg,"[0.0, 294.0, 1280.0, 423.0]","In other words, 'cucumber' is = "
-81,frame1078.jpg,"[785.0, 349.0, 220.0, 45.0]","In other words, 'green bell pepper' is = "
-81,frame1078.jpg,"[863.0, 271.0, 95.0, 91.0]","In other words, 'green chili pepper' is = "
-81,frame1078.jpg,"[696.0, 357.0, 70.0, 81.0]","In other words, 'red bell pepper' is = "
-81,frame1078.jpg,"[391.0, 288.0, 310.0, 312.0]","In other words, 'red chili pepper' is = "
-81,frame1078.jpg,"[428.0, 263.0, 55.0, 91.0]","In other words, 'eggplant' is = "
-81,frame1078.jpg,"[77.0, 331.0, 136.0, 101.0]","In other words, 'corn' is = "
-81,frame1078.jpg,"[235.0, 308.0, 115.0, 62.0]","In other words, 'toy_cat' is = "
-81,frame1078.jpg,"[163.0, 280.0, 104.0, 84.0]","In other words, 'garlic' is = "
-81,frame1078.jpg,"[836.0, 352.0, 218.0, 94.0]","In other words, 'tomato' is = "
-81,frame1078.jpg,"[347.0, 294.0, 97.0, 93.0]","In other words, 'potato' is = "
-81,frame1078.jpg,"[127.0, 409.0, 262.0, 55.0]","In other words, 'wall' is = "
-81,frame1078.jpg,"[236.0, 433.0, 111.0, 142.0]","In other words, 'table' is = "
-82,frame1084_gripper.jpg,"[842.0, 280.0, 243.0, 128.0]","In other words, 'carrot' is = "
-82,frame1084_gripper.jpg,"[300.0, 207.0, 112.0, 125.0]","In other words, 'cucumber' is = "
-82,frame1084_gripper.jpg,"[0.0, 124.0, 1280.0, 593.0]","In other words, 'green bell pepper' is = "
-82,frame1084_gripper.jpg,"[15.0, 272.0, 146.0, 125.0]","In other words, 'green chili pepper' is = "
-82,frame1084_gripper.jpg,"[179.0, 223.0, 127.0, 91.0]","In other words, 'red bell pepper' is = "
-82,frame1084_gripper.jpg,"[98.0, 173.0, 120.0, 103.0]","In other words, 'red chili pepper' is = "
-82,frame1084_gripper.jpg,"[0.0, 0.0, 1280.0, 178.0]","In other words, 'eggplant' is = "
-82,frame1084_gripper.jpg,"[204.0, 410.0, 112.0, 212.0]","In other words, 'corn' is = "
-82,frame1084_gripper.jpg,"[80.0, 378.0, 324.0, 66.0]","In other words, 'toy_cat' is = "
-82,frame1084_gripper.jpg,"[875.0, 150.0, 107.0, 120.0]","In other words, 'garlic' is = "
-82,frame1084_gripper.jpg,"[788.0, 241.0, 275.0, 75.0]","In other words, 'tomato' is = "
-82,frame1084_gripper.jpg,"[172.0, 299.0, 254.0, 87.0]","In other words, 'potato' is = "
-82,frame1084_gripper.jpg,"[668.0, 275.0, 100.0, 119.0]","In other words, 'wall' is = "
-82,frame1084_gripper.jpg,"[352.0, 233.0, 341.0, 422.0]","In other words, 'table' is = "
-85,frame0015_gripper.jpg,"[358.0, 130.0, 114.0, 107.0]","In other words, 'carrot' is = "
-85,frame0015_gripper.jpg,"[94.0, 299.0, 123.0, 109.0]","In other words, 'cucumber' is = "
-85,frame0015_gripper.jpg,"[0.0, 0.0, 1280.0, 109.0]","In other words, 'red bell pepper' is = "
-85,frame0015_gripper.jpg,"[0.0, 54.0, 1280.0, 657.0]","In other words, 'corn' is = "
-85,frame0015_gripper.jpg,"[1013.0, 37.0, 123.0, 174.0]","In other words, 'garlic' is = "
-85,frame0015_gripper.jpg,"[67.0, 108.0, 91.0, 89.0]","In other words, 'tomato' is = "
-85,frame0015_gripper.jpg,"[645.0, 32.0, 90.0, 107.0]","In other words, 'wall' is = "
-85,frame0015_gripper.jpg,"[1017.0, 24.0, 163.0, 71.0]","In other words, 'table' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[972.23, 382.12, 48.12, 17.32]","In other words, 'carrot' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 374.0, 106.0, 39.0]","In other words, 'cucumber' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 409.0, 107.0, 44.0]","In other words, 'green bell pepper' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 446.0, 106.0, 47.0]","In other words, 'red chili pepper' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 483.0, 106.0, 50.0]","In other words, 'eggplant' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[974.58, 424.19, 49.48, 12.37]","In other words, 'corn' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[970.99, 467.48, 44.54, 8.66]","In other words, 'drawer' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[969.75, 498.41, 53.07, 19.8]","In other words, 'chest of drawers' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[1022.82, 374.7, 13.61, 19.79]","In other words, 'handle' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 224.0, 396.0, 66.0]","In other words, 'box, basket, case, bin, container' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 144.0, 403.0, 150.0]","In other words, 'toy_cat' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[402.0, 21.0, 866.0, 278.0]","In other words, 'tomato' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 271.0, 1280.0, 338.0]","In other words, 'potato' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[111.0, 366.0, 357.0, 303.0]","In other words, 'floor' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[532.0, 212.0, 43.0, 88.0]","In other words, 'wall' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 0.0, 1280.0, 243.0]","In other words, 'key' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 461.0, 1280.0, 259.0]","In other words, 'gripper' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[457.0, 497.0, 306.0, 223.0]","In other words, 'door' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[938.0, 360.0, 126.0, 188.0]","In other words, 'poster' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[961.0, 540.0, 19.0, 21.0]","In other words, 'table' is = "
-87,exploration_zed_node_left_image_rect_color_990.jpg,"[768.0, 539.0, 40.0, 17.0]","In other words, 'ceiling' is = "
-88,frame1035_gripper.jpg,"[428.0, 231.0, 163.0, 56.0]","In other words, 'cucumber' is = "
-88,frame1035_gripper.jpg,"[332.0, 289.0, 81.0, 90.0]","In other words, 'green bell pepper' is = "
-88,frame1035_gripper.jpg,"[207.0, 296.0, 135.0, 116.0]","In other words, 'red bell pepper' is = "
-88,frame1035_gripper.jpg,"[6.0, 310.0, 166.0, 143.0]","In other words, 'red chili pepper' is = "
-88,frame1035_gripper.jpg,"[16.0, 317.0, 268.0, 223.0]","In other words, 'eggplant' is = "
-88,frame1035_gripper.jpg,"[74.0, 534.0, 299.0, 111.0]","In other words, 'corn' is = "
-88,frame1035_gripper.jpg,"[0.0, 476.0, 78.0, 167.0]","In other words, 'toy_cat' is = "
-88,frame1035_gripper.jpg,"[0.0, 7.0, 1280.0, 713.0]","In other words, 'garlic' is = "
-88,frame1035_gripper.jpg,"[0.0, 0.0, 1280.0, 292.0]","In other words, 'tomato' is = "
-88,frame1035_gripper.jpg,"[599.0, 273.0, 122.0, 207.0]","In other words, 'potato' is = "
-88,frame1035_gripper.jpg,"[338.0, 283.0, 428.0, 433.0]","In other words, 'wall' is = "
-88,frame1035_gripper.jpg,"[552.0, 226.0, 89.0, 77.0]","In other words, 'table' is = "
-89,frame0046.jpg,"[473.55, 498.41, 17.44, 11.14]","In other words, 'eggplant' is = "
-89,frame0046.jpg,"[478.62, 614.7, 27.09, 19.79]","In other words, 'corn' is = "
-89,frame0046.jpg,"[473.55, 557.79, 22.39, 18.56]","In other words, 'drawer' is = "
-89,frame0046.jpg,"[466.25, 437.79, 74.22, 11.14]","In other words, 'chest of drawers' is = "
-89,frame0046.jpg,"[536.64, 413.17, 29.81, 41.7]","In other words, 'handle' is = "
-89,frame0046.jpg,"[423.0, 386.0, 201.0, 275.0]","In other words, 'box, basket, case, bin, container' is = "
-89,frame0046.jpg,"[441.0, 537.0, 57.0, 114.0]","In other words, 'toy_cat' is = "
-89,frame0046.jpg,"[439.0, 520.0, 59.0, 118.0]","In other words, 'white toy' is = "
-89,frame0046.jpg,"[437.0, 472.0, 77.0, 57.0]","In other words, 'toy block' is = "
-89,frame0046.jpg,"[436.0, 414.0, 139.0, 58.0]","In other words, 'garlic' is = "
-89,frame0046.jpg,"[436.0, 444.0, 358.0, 276.0]","In other words, 'tomato' is = "
-89,frame0046.jpg,"[0.0, 462.0, 1280.0, 258.0]","In other words, 'potato' is = "
-89,frame0046.jpg,"[394.0, 357.0, 23.0, 19.0]","In other words, 'floor' is = "
-89,frame0046.jpg,"[0.0, 294.0, 479.0, 399.0]","In other words, 'wall' is = "
-89,frame0046.jpg,"[201.0, 356.0, 44.0, 22.0]","In other words, 'key' is = "
-89,frame0046.jpg,"[49.0, 324.0, 78.0, 61.0]","In other words, 'gripper' is = "
-89,frame0046.jpg,"[861.0, 557.0, 58.0, 86.0]","In other words, 'door' is = "
-89,frame0046.jpg,"[0.0, 263.0, 1267.0, 376.0]","In other words, 'table' is = "
-90,frame0895_gripper.jpg,"[269.0, 0.0, 1011.0, 195.0]","In other words, 'red chili pepper' is = "
-90,frame0895_gripper.jpg,"[936.0, 439.0, 344.0, 281.0]","In other words, 'garlic' is = "
-90,frame0895_gripper.jpg,"[1125.0, 426.0, 92.0, 15.0]","In other words, 'wall' is = "
-90,frame0895_gripper.jpg,"[1221.0, 407.0, 39.0, 33.0]","In other words, 'door' is = "
-90,frame0895_gripper.jpg,"[464.0, 50.0, 816.0, 253.0]","In other words, 'table' is = "
-90,frame0895_gripper.jpg,"[0.0, 0.0, 270.0, 164.0]","In other words, 'ceiling' is = "
-91,frame0841.jpg,"[0.0, 452.0, 1280.0, 268.0]","In other words, 'cucumber' is = "
-91,frame0841.jpg,"[0.0, 0.0, 1280.0, 210.0]","In other words, 'red chili pepper' is = "
-91,frame0841.jpg,"[0.0, 86.0, 215.0, 99.0]","In other words, 'toy_cat' is = "
-91,frame0841.jpg,"[1108.0, 131.0, 172.0, 88.0]","In other words, 'garlic' is = "
-91,frame0841.jpg,"[339.0, 380.0, 74.0, 72.0]","In other words, 'tomato' is = "
-91,frame0841.jpg,"[727.0, 413.0, 382.0, 307.0]","In other words, 'wall' is = "
-91,frame0841.jpg,"[420.0, 417.0, 175.0, 34.0]","In other words, 'table' is = "
-91,frame0841.jpg,"[100.0, 417.0, 195.0, 34.0]","In other words, 'ceiling' is = "
-92,frame1960_gripper.jpg,"[985.0, 371.0, 124.0, 49.0]","In other words, 'cucumber' is = "
-92,frame1960_gripper.jpg,"[352.0, 357.0, 90.0, 56.0]","In other words, 'green chili pepper' is = "
-92,frame1960_gripper.jpg,"[486.0, 371.0, 42.0, 48.0]","In other words, 'corn' is = "
-92,frame1960_gripper.jpg,"[110.0, 0.0, 1170.0, 79.0]","In other words, 'potato' is = "
-92,frame1960_gripper.jpg,"[0.0, 0.0, 1280.0, 126.0]","In other words, 'wall' is = "
-92,frame1960_gripper.jpg,"[0.0, 600.0, 1280.0, 120.0]","In other words, 'table' is = "
-92,frame1960_gripper.jpg,"[0.0, 408.0, 1280.0, 198.0]","In other words, 'ceiling' is = "
-93,frame1426.jpg,"[0.0, 213.0, 176.0, 106.0]","In other words, 'cucumber' is = "
-93,frame1426.jpg,"[727.0, 411.0, 384.0, 309.0]","In other words, 'green chili pepper' is = "
-93,frame1426.jpg,"[296.0, 161.0, 122.0, 103.0]","In other words, 'red chili pepper' is = "
-93,frame1426.jpg,"[217.0, 265.0, 105.0, 123.0]","In other words, 'toy_cat' is = "
-93,frame1426.jpg,"[978.0, 3.0, 261.0, 216.0]","In other words, 'garlic' is = "
-93,frame1426.jpg,"[0.0, 104.0, 1280.0, 613.0]","In other words, 'tomato' is = "
-93,frame1426.jpg,"[0.0, 0.0, 1280.0, 160.0]","In other words, 'wall' is = "
-93,frame1426.jpg,"[335.0, 237.0, 235.0, 70.0]","In other words, 'table' is = "
+1,frame0031_zednode.jpg,"[1165.0, 133.0, 115.0, 146.0]",cucumber
+1,frame0031_zednode.jpg,"[42.0, 320.0, 80.0, 67.0]",drawer
+1,frame0031_zednode.jpg,"[917.0, 425.0, 71.0, 45.0]",chest of drawers
+1,frame0031_zednode.jpg,"[862.0, 557.0, 59.0, 86.0]",handle
+1,frame0031_zednode.jpg,"[338.0, 364.0, 36.0, 20.0]","box, basket, case, bin, container"
+1,frame0031_zednode.jpg,"[395.0, 359.0, 19.0, 17.0]",toy_cat
+1,frame0031_zednode.jpg,"[0.0, 374.0, 478.0, 318.0]",white toy
+1,frame0031_zednode.jpg,"[540.0, 417.0, 15.0, 27.0]",garlic
+1,frame0031_zednode.jpg,"[424.0, 386.0, 215.0, 276.0]",tomato
+1,frame0031_zednode.jpg,"[185.0, 213.0, 94.0, 77.0]",potato
+1,frame0031_zednode.jpg,"[411.0, 213.0, 226.0, 65.0]",floor
+1,frame0031_zednode.jpg,"[359.0, 231.0, 50.0, 51.0]",wall
+1,frame0031_zednode.jpg,"[65.0, 204.0, 70.0, 58.0]",key
+1,frame0031_zednode.jpg,"[314.0, 358.0, 28.0, 20.0]",gripper
+1,frame0031_zednode.jpg,"[160.0, 263.0, 20.0, 27.0]",door
+1,frame0031_zednode.jpg,"[137.0, 254.0, 18.0, 25.0]",poster
+1,frame0031_zednode.jpg,"[444.0, 527.0, 51.0, 111.0]",table
+1,frame0031_zednode.jpg,"[444.0, 589.0, 53.0, 62.0]",ceiling
+2,frame1544.jpg,"[467.0, 397.0, 53.0, 27.0]",green bell pepper
+2,frame1544.jpg,"[339.0, 391.0, 115.0, 34.0]",red chili pepper
+2,frame1544.jpg,"[536.0, 350.0, 97.0, 74.0]",eggplant
+2,frame1544.jpg,"[911.0, 340.0, 106.0, 85.0]",corn
+2,frame1544.jpg,"[856.0, 366.0, 62.0, 59.0]",garlic
+2,frame1544.jpg,"[712.0, 362.0, 106.0, 62.0]",tomato
+2,frame1544.jpg,"[0.0, 0.0, 1280.0, 173.0]",potato
+2,frame1544.jpg,"[153.0, 107.0, 148.0, 66.0]",wall
+2,frame1544.jpg,"[0.0, 19.0, 245.0, 698.0]",ceiling
+3,frame0680_zednode.jpg,"[395.0, 189.0, 13.0, 40.0]",red bell pepper
+3,frame0680_zednode.jpg,"[656.0, 141.0, 598.0, 155.0]",toy_cat
+3,frame0680_zednode.jpg,"[1097.0, 467.0, 36.0, 25.0]",toy block
+3,frame0680_zednode.jpg,"[580.0, 286.0, 621.0, 185.0]",floor
+3,frame0680_zednode.jpg,"[471.0, 206.0, 94.0, 92.0]",wall
+3,frame0680_zednode.jpg,"[453.0, 218.0, 17.0, 28.0]",gripper
+3,frame0680_zednode.jpg,"[712.0, 532.0, 52.0, 37.0]",door
+3,frame0680_zednode.jpg,"[1200.0, 93.0, 80.0, 627.0]",poster
+3,frame0680_zednode.jpg,"[1019.0, 233.0, 68.0, 56.0]",ceiling
+4,frame0944_gripper.jpg,"[60.0, 0.0, 1220.0, 99.0]",cucumber
+4,frame0944_gripper.jpg,"[458.0, 506.0, 52.0, 70.0]",corn
+4,frame0944_gripper.jpg,"[307.0, 491.0, 105.0, 69.0]",toy_cat
+4,frame0944_gripper.jpg,"[0.0, 130.0, 86.0, 88.0]",potato
+4,frame0944_gripper.jpg,"[202.0, 172.0, 72.0, 49.0]",wall
+4,frame0944_gripper.jpg,"[442.0, 187.0, 61.0, 34.0]",door
+4,frame0944_gripper.jpg,"[1039.0, 517.0, 136.0, 62.0]",poster
+4,frame0944_gripper.jpg,"[404.0, 186.0, 74.0, 38.0]",table
+4,frame0944_gripper.jpg,"[87.0, 97.0, 1142.0, 128.0]",ceiling
+5,frame0003.jpg,"[952.0, 261.0, 328.0, 260.0]",carrot
+5,frame0003.jpg,"[627.0, 210.0, 57.0, 82.0]",red bell pepper
+5,frame0003.jpg,"[0.0, 0.0, 1280.0, 211.0]",drawer
+5,frame0003.jpg,"[1059.0, 203.0, 106.0, 76.0]",chest of drawers
+5,frame0003.jpg,"[0.0, 164.0, 96.0, 116.0]",handle
+5,frame0003.jpg,"[46.0, 27.0, 235.0, 128.0]",toy_cat
+5,frame0003.jpg,"[1015.0, 248.0, 15.0, 20.0]",toy block
+5,frame0003.jpg,"[1034.0, 253.0, 17.0, 27.0]",garlic
+5,frame0003.jpg,"[960.0, 216.0, 54.0, 41.0]",tomato
+5,frame0003.jpg,"[757.0, 104.0, 523.0, 182.0]",potato
+5,frame0003.jpg,"[887.0, 99.0, 49.0, 189.0]",floor
+5,frame0003.jpg,"[440.0, 447.0, 365.0, 273.0]",wall
+5,frame0003.jpg,"[0.0, 25.0, 625.0, 268.0]",key
+5,frame0003.jpg,"[0.0, 272.0, 294.0, 444.0]",gripper
+5,frame0003.jpg,"[11.0, 485.0, 1269.0, 235.0]",door
+5,frame0003.jpg,"[1114.0, 445.0, 54.0, 18.0]",poster
+5,frame0003.jpg,"[1112.0, 538.0, 58.0, 25.0]",table
+5,frame0003.jpg,"[1112.0, 493.0, 55.0, 19.0]",ceiling
+6,frame0721_gripper.jpg,"[146.0, 432.0, 45.0, 41.0]",green bell pepper
+6,frame0721_gripper.jpg,"[29.0, 447.0, 77.0, 26.0]",red bell pepper
+6,frame0721_gripper.jpg,"[0.0, 471.0, 393.0, 249.0]",corn
+6,frame0721_gripper.jpg,"[0.0, 261.0, 57.0, 78.0]",drawer
+6,frame0721_gripper.jpg,"[100.0, 445.0, 23.0, 28.0]",chest of drawers
+6,frame0721_gripper.jpg,"[66.0, 439.0, 34.0, 18.0]",handle
+6,frame0721_gripper.jpg,"[0.0, 443.0, 42.0, 28.0]",tomato
+6,frame0721_gripper.jpg,"[0.0, 0.0, 1280.0, 269.0]",potato
+6,frame0721_gripper.jpg,"[0.0, 337.0, 167.0, 136.0]",wall
+6,frame0721_gripper.jpg,"[170.0, 10.0, 1110.0, 707.0]",key
+6,frame0721_gripper.jpg,"[50.0, 502.0, 525.0, 218.0]",table
+6,frame0721_gripper.jpg,"[312.0, 135.0, 322.0, 168.0]",ceiling
+7,frame1056_gripper.jpg,"[395.0, 621.0, 367.0, 99.0]",carrot
+7,frame1056_gripper.jpg,"[346.0, 631.0, 71.0, 89.0]",cucumber
+7,frame1056_gripper.jpg,"[567.0, 397.0, 96.0, 81.0]",green bell pepper
+7,frame1056_gripper.jpg,"[0.0, 17.0, 1280.0, 440.0]",green chili pepper
+7,frame1056_gripper.jpg,"[0.0, 428.0, 1280.0, 289.0]",red bell pepper
+7,frame1056_gripper.jpg,"[246.0, 515.0, 296.0, 101.0]",red chili pepper
+7,frame1056_gripper.jpg,"[622.0, 407.0, 121.0, 138.0]",eggplant
+7,frame1056_gripper.jpg,"[494.0, 395.0, 124.0, 52.0]",corn
+7,frame1056_gripper.jpg,"[330.0, 404.0, 86.0, 66.0]",white toy
+7,frame1056_gripper.jpg,"[390.0, 436.0, 113.0, 167.0]",garlic
+7,frame1056_gripper.jpg,"[121.0, 595.0, 344.0, 70.0]",tomato
+7,frame1056_gripper.jpg,"[180.0, 0.0, 81.0, 73.0]",potato
+7,frame1056_gripper.jpg,"[432.0, 401.0, 84.0, 89.0]",wall
+7,frame1056_gripper.jpg,"[254.0, 454.0, 135.0, 79.0]",door
+7,frame1056_gripper.jpg,"[60.0, 487.0, 168.0, 132.0]",poster
+7,frame1056_gripper.jpg,"[330.0, 404.0, 86.0, 66.0]",table
+8,frame1590_gripper.jpg,"[0.0, 0.0, 1280.0, 720.0]",carrot
+8,frame1590_gripper.jpg,"[285.0, 134.0, 248.0, 229.0]",cucumber
+8,frame1590_gripper.jpg,"[0.0, 362.0, 33.0, 152.0]",red chili pepper
+8,frame1590_gripper.jpg,"[0.0, 134.0, 131.0, 379.0]",eggplant
+8,frame1590_gripper.jpg,"[191.0, 418.0, 293.0, 302.0]",corn
+8,frame1590_gripper.jpg,"[1179.0, 150.0, 101.0, 230.0]",garlic
+8,frame1590_gripper.jpg,"[1019.0, 0.0, 160.0, 70.0]",tomato
+8,frame1590_gripper.jpg,"[644.0, 259.0, 414.0, 461.0]",potato
+8,frame1590_gripper.jpg,"[789.0, 0.0, 158.0, 133.0]",table
+9,frame0509_zednode.jpg,"[0.0, 0.0, 1210.0, 214.0]",toy_cat
+9,frame0509_zednode.jpg,"[439.0, 254.0, 425.0, 466.0]",toy block
+9,frame0509_zednode.jpg,"[1040.0, 394.0, 64.0, 36.0]",floor
+9,frame0509_zednode.jpg,"[0.0, 309.0, 440.0, 196.0]",wall
+9,frame0509_zednode.jpg,"[440.0, 445.0, 354.0, 275.0]",gripper
+9,frame0509_zednode.jpg,"[0.0, 439.0, 1280.0, 281.0]",door
+9,frame0509_zednode.jpg,"[854.0, 538.0, 26.0, 24.0]",poster
+9,frame0509_zednode.jpg,"[724.0, 610.0, 37.0, 40.0]",table
+9,frame0509_zednode.jpg,"[984.0, 331.0, 170.0, 247.0]",ceiling
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1095.0, 152.0, 185.0, 174.0]",red bell pepper
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[0.0, 0.0, 1065.0, 435.0]",drawer
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[987.0, 0.0, 293.0, 632.0]",chest of drawers
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1149.0, 516.0, 131.0, 45.0]",handle
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1191.0, 388.0, 89.0, 37.0]","box, basket, case, bin, container"
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1238.0, 234.0, 42.0, 25.0]",toy_cat
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[465.0, 259.0, 301.0, 339.0]",tomato
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[1064.0, 308.0, 216.0, 167.0]",potato
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[0.0, 288.0, 1280.0, 432.0]",floor
+10,exploration_realsense_gripper_color_image_raw_198.jpg,"[296.0, 424.0, 54.0, 52.0]",wall
+11,frame1430_gripper.jpg,"[0.0, 0.0, 1280.0, 370.0]",green bell pepper
+11,frame1430_gripper.jpg,"[1017.0, 206.0, 263.0, 259.0]",green chili pepper
+11,frame1430_gripper.jpg,"[0.0, 312.0, 1280.0, 405.0]",red chili pepper
+11,frame1430_gripper.jpg,"[210.0, 398.0, 154.0, 129.0]",toy_cat
+11,frame1430_gripper.jpg,"[727.0, 412.0, 383.0, 308.0]",garlic
+11,frame1430_gripper.jpg,"[244.0, 487.0, 306.0, 102.0]",tomato
+11,frame1430_gripper.jpg,"[83.0, 552.0, 139.0, 168.0]",wall
+11,frame1430_gripper.jpg,"[0.0, 454.0, 80.0, 75.0]",table
+12,frame0469_zednode.jpg,"[547.0, 373.0, 719.0, 347.0]",cucumber
+12,frame0469_zednode.jpg,"[959.0, 359.0, 71.0, 20.0]",green chili pepper
+12,frame0469_zednode.jpg,"[755.0, 359.0, 20.0, 19.0]",corn
+12,frame0469_zednode.jpg,"[709.0, 354.0, 34.0, 22.0]",chest of drawers
+12,frame0469_zednode.jpg,"[706.0, 627.0, 468.0, 93.0]",toy_cat
+12,frame0469_zednode.jpg,"[371.0, 50.0, 207.0, 205.0]",potato
+12,frame0469_zednode.jpg,"[313.0, 3.0, 62.0, 210.0]",floor
+12,frame0469_zednode.jpg,"[741.0, 212.0, 67.0, 50.0]",wall
+12,frame0469_zednode.jpg,"[0.0, 0.0, 1280.0, 166.0]",gripper
+12,frame0469_zednode.jpg,"[658.0, 94.0, 622.0, 157.0]",door
+12,frame0469_zednode.jpg,"[440.0, 443.0, 352.0, 277.0]",poster
+12,frame0469_zednode.jpg,"[578.0, 464.0, 90.0, 153.0]",table
+12,frame0469_zednode.jpg,"[671.0, 210.0, 67.0, 55.0]",ceiling
+13,frame0041_zednode.jpg,"[0.0, 279.0, 160.0, 387.0]",carrot
+13,frame0041_zednode.jpg,"[708.0, 26.0, 358.0, 249.0]",corn
+13,frame0041_zednode.jpg,"[0.0, 3.0, 708.0, 282.0]","box, basket, case, bin, container"
+13,frame0041_zednode.jpg,"[145.0, 253.0, 1135.0, 445.0]",white toy
+13,frame0041_zednode.jpg,"[1160.0, 337.0, 40.0, 23.0]",toy block
+13,frame0041_zednode.jpg,"[1101.0, 335.0, 60.0, 24.0]",floor
+13,frame0041_zednode.jpg,"[1065.0, 23.0, 70.0, 243.0]",wall
+13,frame0041_zednode.jpg,"[0.0, 572.0, 1280.0, 148.0]",person
+13,frame0041_zednode.jpg,"[1040.0, 304.0, 66.0, 79.0]",gripper
+13,frame0041_zednode.jpg,"[977.0, 359.0, 303.0, 221.0]",poster
+13,frame0041_zednode.jpg,"[1134.0, 32.0, 146.0, 231.0]",table
+13,frame0041_zednode.jpg,"[357.0, 599.0, 46.0, 27.0]",ceiling
+14,frame0088_zednode.jpg,"[331.0, 157.0, 621.0, 108.0]",carrot
+14,frame0088_zednode.jpg,"[881.0, 386.0, 206.0, 334.0]",cucumber
+14,frame0088_zednode.jpg,"[905.0, 418.0, 169.0, 76.0]",green bell pepper
+14,frame0088_zednode.jpg,"[905.0, 489.0, 167.0, 76.0]",red bell pepper
+14,frame0088_zednode.jpg,"[906.0, 629.0, 166.0, 77.0]",eggplant
+14,frame0088_zednode.jpg,"[486.0, 208.0, 97.0, 57.0]",drawer
+14,frame0088_zednode.jpg,"[1105.0, 151.0, 149.0, 104.0]",chest of drawers
+14,frame0088_zednode.jpg,"[0.0, 0.0, 1280.0, 162.0]",handle
+14,frame0088_zednode.jpg,"[335.0, 210.0, 73.0, 58.0]",toy_cat
+14,frame0088_zednode.jpg,"[0.0, 9.0, 218.0, 224.0]",potato
+14,frame0088_zednode.jpg,"[216.0, 124.0, 58.0, 124.0]",floor
+14,frame0088_zednode.jpg,"[265.0, 125.0, 66.0, 125.0]",wall
+14,frame0088_zednode.jpg,"[0.0, 177.0, 345.0, 543.0]",key
+14,frame0088_zednode.jpg,"[338.0, 257.0, 922.0, 413.0]",gripper
+14,frame0088_zednode.jpg,"[325.0, 491.0, 955.0, 229.0]",door
+14,frame0088_zednode.jpg,"[906.0, 558.0, 166.0, 78.0]",table
+14,frame0088_zednode.jpg,"[954.0, 593.0, 74.0, 20.0]",ceiling
+15,frame2007_gripper.jpg,"[1048.0, 482.0, 93.0, 52.0]",cucumber
+15,frame2007_gripper.jpg,"[0.0, 165.0, 133.0, 390.0]",corn
+15,frame2007_gripper.jpg,"[135.0, 209.0, 1145.0, 308.0]",toy_cat
+15,frame2007_gripper.jpg,"[474.0, 476.0, 47.0, 58.0]",potato
+15,frame2007_gripper.jpg,"[675.0, 387.0, 432.0, 251.0]",wall
+15,frame2007_gripper.jpg,"[21.0, 0.0, 1259.0, 203.0]",table
+15,frame2007_gripper.jpg,"[0.0, 0.0, 1280.0, 216.0]",ceiling
+16,frame1747_gripper.jpg,"[570.0, 189.0, 147.0, 330.0]",cucumber
+16,frame1747_gripper.jpg,"[290.0, 7.0, 763.0, 706.0]",floor
+16,frame1747_gripper.jpg,"[0.0, 3.0, 1280.0, 714.0]","box, basket, case, bin, container"
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[533.0, 273.0, 41.0, 44.0]",cucumber
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[0.0, 154.0, 1280.0, 566.0]",green bell pepper
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[14.0, 0.0, 420.0, 487.0]",eggplant
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[1002.0, 300.0, 80.0, 35.0]",corn
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[474.0, 195.0, 29.0, 26.0]","box, basket, case, bin, container"
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[0.0, 0.0, 1280.0, 267.0]",toy_cat
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[580.0, 184.0, 20.0, 23.0]",toy block
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[629.0, 175.0, 35.0, 15.0]",tomato
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[920.0, 215.0, 24.0, 23.0]",potato
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[1116.0, 245.0, 75.0, 65.0]",floor
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[955.0, 248.0, 35.0, 27.0]",wall
+17,exploration_realsense_gripper_color_image_raw_990.jpg,"[1017.0, 151.0, 181.0, 104.0]",table
+18,frame0028_zednode.jpg,"[0.0, 647.0, 47.0, 73.0]",cucumber
+18,frame0028_zednode.jpg,"[437.0, 446.0, 356.0, 274.0]",green bell pepper
+18,frame0028_zednode.jpg,"[460.0, 536.0, 21.0, 16.0]",toy_cat
+18,frame0028_zednode.jpg,"[0.0, 0.0, 1280.0, 305.0]",tomato
+18,frame0028_zednode.jpg,"[26.0, 252.0, 1254.0, 396.0]",floor
+18,frame0028_zednode.jpg,"[0.0, 262.0, 33.0, 393.0]",wall
+18,frame0028_zednode.jpg,"[679.0, 562.0, 25.0, 26.0]",person
+18,frame0028_zednode.jpg,"[289.0, 510.0, 19.0, 15.0]",gripper
+18,frame0028_zednode.jpg,"[31.0, 490.0, 1249.0, 230.0]",door
+18,frame0028_zednode.jpg,"[146.0, 184.0, 114.0, 119.0]",poster
+18,frame0028_zednode.jpg,"[0.0, 0.0, 493.0, 127.0]",ceiling
+19,frame1527_gripper.jpg,"[189.0, 3.0, 1091.0, 717.0]",carrot
+19,frame1527_gripper.jpg,"[0.0, 7.0, 361.0, 710.0]",cucumber
+19,frame1527_gripper.jpg,"[949.0, 65.0, 88.0, 144.0]",red bell pepper
+19,frame1527_gripper.jpg,"[1151.0, 548.0, 100.0, 172.0]",corn
+19,frame1527_gripper.jpg,"[1147.0, 301.0, 133.0, 112.0]","box, basket, case, bin, container"
+19,frame1527_gripper.jpg,"[4.0, 0.0, 423.0, 106.0]",potato
+19,frame1527_gripper.jpg,"[809.0, 0.0, 471.0, 133.0]",floor
+19,frame1527_gripper.jpg,"[577.0, 351.0, 414.0, 369.0]",wall
+20,frame0534.jpg,"[405.0, 442.0, 110.0, 61.0]",green bell pepper
+20,frame0534.jpg,"[406.0, 472.0, 107.0, 84.0]",green chili pepper
+20,frame0534.jpg,"[406.0, 542.0, 87.0, 65.0]",red chili pepper
+20,frame0534.jpg,"[496.0, 400.0, 13.0, 24.0]",eggplant
+20,frame0534.jpg,"[440.0, 418.0, 50.0, 16.0]",drawer
+20,frame0534.jpg,"[0.0, 441.0, 1280.0, 279.0]",chest of drawers
+20,frame0534.jpg,"[0.0, 278.0, 670.0, 381.0]",handle
+20,frame0534.jpg,"[0.0, 374.0, 392.0, 285.0]",toy_cat
+20,frame0534.jpg,"[440.0, 465.0, 50.0, 18.0]",toy block
+20,frame0534.jpg,"[929.0, 268.0, 351.0, 294.0]",garlic
+20,frame0534.jpg,"[856.0, 290.0, 74.0, 207.0]",tomato
+20,frame0534.jpg,"[671.0, 295.0, 186.0, 173.0]",potato
+20,frame0534.jpg,"[0.0, 0.0, 1280.0, 299.0]",floor
+20,frame0534.jpg,"[68.0, 197.0, 146.0, 82.0]",wall
+20,frame0534.jpg,"[681.0, 207.0, 79.0, 96.0]",key
+20,frame0534.jpg,"[1017.0, 78.0, 263.0, 203.0]",gripper
+20,frame0534.jpg,"[902.0, 158.0, 68.0, 130.0]",door
+20,frame0534.jpg,"[971.0, 175.0, 44.0, 35.0]",poster
+20,frame0534.jpg,"[765.0, 219.0, 21.0, 25.0]",table
+20,frame0534.jpg,"[152.0, 337.0, 67.0, 52.0]",ceiling
+21,frame0497_zednode.jpg,"[0.0, 168.0, 344.0, 105.0]","box, basket, case, bin, container"
+21,frame0497_zednode.jpg,"[0.0, 0.0, 971.0, 104.0]",floor
+21,frame0497_zednode.jpg,"[129.0, 585.0, 236.0, 135.0]",wall
+21,frame0497_zednode.jpg,"[1032.0, 0.0, 248.0, 244.0]",gripper
+21,frame0497_zednode.jpg,"[0.0, 646.0, 1053.0, 74.0]",door
+21,frame0497_zednode.jpg,"[599.0, 574.0, 183.0, 146.0]",ceiling
+22,frame0310.jpg,"[413.0, 449.0, 867.0, 54.0]",carrot
+22,frame0310.jpg,"[0.0, 3.0, 1280.0, 714.0]",cucumber
+22,frame0310.jpg,"[491.0, 164.0, 789.0, 91.0]",green bell pepper
+22,frame0310.jpg,"[830.0, 407.0, 149.0, 43.0]",eggplant
+22,frame0310.jpg,"[701.0, 400.0, 58.0, 48.0]",toy_cat
+22,frame0310.jpg,"[747.0, 421.0, 100.0, 28.0]",potato
+22,frame0310.jpg,"[775.0, 397.0, 66.0, 27.0]",wall
+22,frame0310.jpg,"[839.0, 392.0, 55.0, 29.0]",table
+22,frame0310.jpg,"[886.0, 328.0, 167.0, 120.0]",ceiling
+23,frame0424_zednode.jpg,"[0.0, 0.0, 627.0, 90.0]",carrot
+23,frame0424_zednode.jpg,"[0.0, 497.0, 1280.0, 223.0]",green bell pepper
+23,frame0424_zednode.jpg,"[1051.0, 621.0, 50.0, 18.0]",eggplant
+23,frame0424_zednode.jpg,"[1206.0, 555.0, 31.0, 20.0]",garlic
+23,frame0424_zednode.jpg,"[663.0, 557.0, 45.0, 16.0]",tomato
+23,frame0424_zednode.jpg,"[842.0, 566.0, 26.0, 21.0]",potato
+23,frame0424_zednode.jpg,"[825.0, 539.0, 25.0, 27.0]",floor
+23,frame0424_zednode.jpg,"[823.0, 523.0, 21.0, 22.0]",wall
+23,frame0424_zednode.jpg,"[306.0, 297.0, 113.0, 242.0]",door
+23,frame0424_zednode.jpg,"[411.0, 268.0, 869.0, 283.0]",poster
+23,frame0424_zednode.jpg,"[350.0, 170.0, 73.0, 126.0]",ceiling
+24,frame1104_gripper.jpg,"[13.0, 597.0, 201.0, 123.0]",green bell pepper
+24,frame1104_gripper.jpg,"[0.0, 0.0, 1280.0, 105.0]",red bell pepper
+24,frame1104_gripper.jpg,"[1118.0, 546.0, 162.0, 174.0]",white toy
+24,frame1104_gripper.jpg,"[360.0, 509.0, 109.0, 157.0]",garlic
+24,frame1104_gripper.jpg,"[0.0, 532.0, 131.0, 149.0]",tomato
+24,frame1104_gripper.jpg,"[0.0, 86.0, 1280.0, 476.0]",wall
+24,frame1104_gripper.jpg,"[0.0, 559.0, 1280.0, 161.0]",door
+24,frame1104_gripper.jpg,"[0.0, 32.0, 108.0, 73.0]",table
+25,frame0533_zednode.jpg,"[823.0, 392.0, 19.0, 30.0]",green bell pepper
+25,frame0533_zednode.jpg,"[89.0, 196.0, 62.0, 53.0]",green chili pepper
+25,frame0533_zednode.jpg,"[195.0, 208.0, 73.0, 61.0]",red chili pepper
+25,frame0533_zednode.jpg,"[225.0, 445.0, 1055.0, 275.0]",eggplant
+25,frame0533_zednode.jpg,"[46.0, 0.0, 1234.0, 178.0]",drawer
+25,frame0533_zednode.jpg,"[710.0, 372.0, 149.0, 233.0]",chest of drawers
+25,frame0533_zednode.jpg,"[733.0, 522.0, 119.0, 65.0]",handle
+25,frame0533_zednode.jpg,"[697.0, 489.0, 155.0, 49.0]",toy_cat
+25,frame0533_zednode.jpg,"[732.0, 440.0, 119.0, 49.0]",garlic
+25,frame0533_zednode.jpg,"[732.0, 394.0, 120.0, 47.0]",tomato
+25,frame0533_zednode.jpg,"[764.0, 560.0, 54.0, 12.0]",potato
+25,frame0533_zednode.jpg,"[767.0, 509.0, 52.0, 15.0]",floor
+25,frame0533_zednode.jpg,"[764.0, 459.0, 55.0, 14.0]",wall
+25,frame0533_zednode.jpg,"[763.0, 410.0, 57.0, 14.0]",key
+25,frame0533_zednode.jpg,"[540.0, 330.0, 44.0, 42.0]",gripper
+25,frame0533_zednode.jpg,"[1062.0, 649.0, 73.0, 32.0]",door
+25,frame0533_zednode.jpg,"[298.0, 363.0, 419.0, 264.0]",poster
+25,frame0533_zednode.jpg,"[1075.0, 667.0, 50.0, 41.0]",table
+25,frame0533_zednode.jpg,"[442.0, 444.0, 353.0, 276.0]",ceiling
+26,frame0655_zednode.jpg,"[1009.0, 163.0, 271.0, 104.0]",cucumber
+26,frame0655_zednode.jpg,"[721.0, 217.0, 44.0, 43.0]",green bell pepper
+26,frame0655_zednode.jpg,"[443.0, 447.0, 355.0, 273.0]",red chili pepper
+26,frame0655_zednode.jpg,"[0.0, 0.0, 361.0, 262.0]",drawer
+26,frame0655_zednode.jpg,"[0.0, 251.0, 1280.0, 469.0]",chest of drawers
+26,frame0655_zednode.jpg,"[698.0, 100.0, 582.0, 178.0]",handle
+26,frame0655_zednode.jpg,"[1178.0, 384.0, 102.0, 327.0]",toy_cat
+26,frame0655_zednode.jpg,"[1182.0, 409.0, 98.0, 76.0]",garlic
+26,frame0655_zednode.jpg,"[1181.0, 474.0, 99.0, 83.0]",tomato
+26,frame0655_zednode.jpg,"[1181.0, 539.0, 99.0, 90.0]",floor
+26,frame0655_zednode.jpg,"[1180.0, 606.0, 100.0, 94.0]",wall
+26,frame0655_zednode.jpg,"[1243.0, 652.0, 37.0, 24.0]",gripper
+26,frame0655_zednode.jpg,"[1244.0, 580.0, 36.0, 24.0]",door
+26,frame0655_zednode.jpg,"[1243.0, 512.0, 37.0, 21.0]",poster
+26,frame0655_zednode.jpg,"[1247.0, 442.0, 33.0, 22.0]",table
+26,frame0655_zednode.jpg,"[265.0, 539.0, 1015.0, 181.0]",ceiling
+27,frame0042.jpg,"[690.0, 123.0, 162.0, 154.0]",carrot
+27,frame0042.jpg,"[885.0, 309.0, 51.0, 51.0]",corn
+27,frame0042.jpg,"[930.0, 336.0, 50.0, 23.0]",drawer
+27,frame0042.jpg,"[978.0, 338.0, 32.0, 21.0]",chest of drawers
+27,frame0042.jpg,"[1008.0, 340.0, 42.0, 20.0]","box, basket, case, bin, container"
+27,frame0042.jpg,"[1110.0, 346.0, 51.0, 29.0]",white toy
+27,frame0042.jpg,"[1214.0, 348.0, 37.0, 24.0]",toy block
+27,frame0042.jpg,"[436.0, 445.0, 358.0, 275.0]",garlic
+27,frame0042.jpg,"[0.0, 0.0, 134.0, 114.0]",potato
+27,frame0042.jpg,"[975.0, 200.0, 59.0, 47.0]",floor
+27,frame0042.jpg,"[1108.0, 184.0, 112.0, 76.0]",wall
+27,frame0042.jpg,"[0.0, 244.0, 1280.0, 400.0]",person
+27,frame0042.jpg,"[0.0, 0.0, 576.0, 282.0]",gripper
+27,frame0042.jpg,"[946.0, 74.0, 334.0, 200.0]",door
+27,frame0042.jpg,"[206.0, 629.0, 53.0, 32.0]",poster
+27,frame0042.jpg,"[1214.0, 406.0, 66.0, 314.0]",table
+27,frame0042.jpg,"[1228.0, 424.0, 52.0, 87.0]",ceiling
+28,frame0466_zednode.jpg,"[622.0, 37.0, 350.0, 227.0]",red chili pepper
+28,frame0466_zednode.jpg,"[960.0, 36.0, 60.0, 229.0]",corn
+28,frame0466_zednode.jpg,"[0.0, 256.0, 1280.0, 444.0]",tomato
+28,frame0466_zednode.jpg,"[0.0, 0.0, 629.0, 267.0]",potato
+28,frame0466_zednode.jpg,"[452.0, 652.0, 34.0, 33.0]",floor
+28,frame0466_zednode.jpg,"[955.0, 602.0, 67.0, 25.0]",wall
+28,frame0466_zednode.jpg,"[441.0, 445.0, 352.0, 275.0]",gripper
+28,frame0466_zednode.jpg,"[1018.0, 54.0, 262.0, 211.0]",door
+28,frame0466_zednode.jpg,"[0.0, 586.0, 1280.0, 134.0]",poster
+28,frame0466_zednode.jpg,"[582.0, 359.0, 698.0, 249.0]",table
+28,frame0466_zednode.jpg,"[1209.0, 344.0, 43.0, 22.0]",ceiling
+29,frame0538.jpg,"[0.0, 295.0, 361.0, 303.0]",toy_cat
+29,frame0538.jpg,"[359.0, 222.0, 921.0, 495.0]",tomato
+29,frame0538.jpg,"[0.0, 0.0, 926.0, 296.0]",floor
+29,frame0538.jpg,"[662.0, 81.0, 618.0, 163.0]",wall
+29,frame0538.jpg,"[83.0, 662.0, 91.0, 58.0]",gripper
+29,frame0538.jpg,"[191.0, 555.0, 26.0, 20.0]",door
+29,frame0538.jpg,"[441.0, 445.0, 353.0, 275.0]",poster
+29,frame0538.jpg,"[481.0, 186.0, 131.0, 100.0]",ceiling
+30,frame0692_zednode.jpg,"[1176.0, 588.0, 102.0, 44.0]",cucumber
+30,frame0692_zednode.jpg,"[442.0, 445.0, 352.0, 275.0]",green bell pepper
+30,frame0692_zednode.jpg,"[1177.0, 664.0, 100.0, 47.0]",green chili pepper
+30,frame0692_zednode.jpg,"[1125.0, 479.0, 155.0, 106.0]",red bell pepper
+30,frame0692_zednode.jpg,"[1125.0, 414.0, 155.0, 91.0]",drawer
+30,frame0692_zednode.jpg,"[1125.0, 548.0, 155.0, 115.0]",chest of drawers
+30,frame0692_zednode.jpg,"[0.0, 0.0, 435.0, 275.0]",handle
+30,frame0692_zednode.jpg,"[507.0, 81.0, 271.0, 199.0]",garlic
+30,frame0692_zednode.jpg,"[468.0, 204.0, 39.0, 72.0]",tomato
+30,frame0692_zednode.jpg,"[717.0, 79.0, 65.0, 201.0]",potato
+30,frame0692_zednode.jpg,"[766.0, 96.0, 255.0, 185.0]",floor
+30,frame0692_zednode.jpg,"[1017.0, 121.0, 46.0, 145.0]",wall
+30,frame0692_zednode.jpg,"[1185.0, 518.0, 94.0, 32.0]",person
+30,frame0692_zednode.jpg,"[432.0, 0.0, 848.0, 263.0]",gripper
+30,frame0692_zednode.jpg,"[0.0, 538.0, 1169.0, 182.0]",door
+30,frame0692_zednode.jpg,"[526.0, 240.0, 40.0, 38.0]",poster
+30,frame0692_zednode.jpg,"[805.0, 215.0, 48.0, 45.0]",table
+30,frame0692_zednode.jpg,"[1074.0, 203.0, 68.0, 58.0]",ceiling
+31,frame0022.jpg,"[0.0, 0.0, 1028.0, 264.0]",carrot
+31,frame0022.jpg,"[979.0, 0.0, 238.0, 273.0]",corn
+31,frame0022.jpg,"[775.0, 244.0, 15.0, 34.0]",floor
+31,frame0022.jpg,"[619.0, 239.0, 62.0, 40.0]",wall
+31,frame0022.jpg,"[377.0, 237.0, 162.0, 40.0]",gripper
+31,frame0022.jpg,"[0.0, 126.0, 292.0, 148.0]",door
+31,frame0022.jpg,"[289.0, 158.0, 500.0, 120.0]",poster
+31,frame0022.jpg,"[788.0, 0.0, 492.0, 277.0]",ceiling
+32,frame0552_zednode.jpg,"[13.0, 176.0, 192.0, 118.0]",carrot
+32,frame0552_zednode.jpg,"[473.0, 472.0, 41.0, 53.0]",green bell pepper
+32,frame0552_zednode.jpg,"[36.0, 506.0, 964.0, 214.0]","box, basket, case, bin, container"
+32,frame0552_zednode.jpg,"[772.0, 128.0, 111.0, 147.0]",floor
+32,frame0552_zednode.jpg,"[1176.0, 0.0, 104.0, 173.0]",wall
+32,frame0552_zednode.jpg,"[0.0, 0.0, 841.0, 142.0]",gripper
+32,frame0552_zednode.jpg,"[892.0, 142.0, 36.0, 44.0]",door
+32,frame0552_zednode.jpg,"[0.0, 0.0, 1176.0, 558.0]",poster
+32,frame0552_zednode.jpg,"[689.0, 528.0, 23.0, 18.0]",ceiling
+33,frame0271_zednode.jpg,"[825.0, 266.0, 14.0, 31.0]",toy_cat
+33,frame0271_zednode.jpg,"[876.0, 275.0, 64.0, 20.0]",white toy
+33,frame0271_zednode.jpg,"[662.0, 225.0, 13.0, 23.0]",floor
+33,frame0271_zednode.jpg,"[442.0, 448.0, 358.0, 272.0]",wall
+33,frame0271_zednode.jpg,"[677.0, 212.0, 44.0, 81.0]",gripper
+33,frame0271_zednode.jpg,"[671.0, 476.0, 48.0, 44.0]",door
+33,frame0271_zednode.jpg,"[1030.0, 470.0, 59.0, 33.0]",poster
+33,frame0271_zednode.jpg,"[107.0, 0.0, 1173.0, 298.0]",ceiling
+34,frame0711_gripper.jpg,"[364.0, 398.0, 86.0, 53.0]",cucumber
+34,frame0711_gripper.jpg,"[491.0, 411.0, 42.0, 40.0]",green chili pepper
+34,frame0711_gripper.jpg,"[0.0, 452.0, 1280.0, 268.0]",corn
+34,frame0711_gripper.jpg,"[0.0, 0.0, 1280.0, 185.0]",potato
+34,frame0711_gripper.jpg,"[971.0, 405.0, 122.0, 46.0]",wall
+34,frame0711_gripper.jpg,"[1220.0, 157.0, 60.0, 31.0]",table
+34,frame0711_gripper.jpg,"[1201.0, 415.0, 79.0, 36.0]",ceiling
+35,frame0419_zednode.jpg,"[50.0, 622.0, 38.0, 28.0]",carrot
+35,frame0419_zednode.jpg,"[31.0, 599.0, 30.0, 29.0]",green bell pepper
+35,frame0419_zednode.jpg,"[410.0, 516.0, 18.0, 16.0]",white toy
+35,frame0419_zednode.jpg,"[347.0, 171.0, 22.0, 46.0]",garlic
+35,frame0419_zednode.jpg,"[88.0, 637.0, 39.0, 31.0]",tomato
+35,frame0419_zednode.jpg,"[465.0, 542.0, 32.0, 35.0]",floor
+35,frame0419_zednode.jpg,"[441.0, 444.0, 351.0, 276.0]",wall
+35,frame0419_zednode.jpg,"[337.0, 602.0, 34.0, 24.0]",gripper
+35,frame0419_zednode.jpg,"[0.0, 242.0, 1280.0, 468.0]",door
+35,frame0419_zednode.jpg,"[512.0, 186.0, 106.0, 102.0]",poster
+35,frame0419_zednode.jpg,"[335.0, 0.0, 945.0, 263.0]",ceiling
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[971.0, 0.0, 309.0, 45.0]",red bell pepper
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[878.0, 156.0, 21.0, 47.0]",white toy
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[1171.0, 388.0, 109.0, 332.0]",garlic
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[824.0, 585.0, 27.0, 24.0]",tomato
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[1069.0, 584.0, 27.0, 22.0]",floor
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[923.0, 588.0, 33.0, 28.0]",wall
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[1012.0, 173.0, 33.0, 32.0]",gripper
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[0.0, 524.0, 1280.0, 196.0]",door
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[457.0, 496.0, 306.0, 224.0]",poster
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[701.0, 524.0, 46.0, 66.0]",table
+36,exploration_zed_node_left_image_rect_color_594.jpg,"[87.0, 83.0, 321.0, 196.0]",ceiling
+37,frame1484_gripper.jpg,"[969.0, 205.0, 81.0, 66.0]",carrot
+37,frame1484_gripper.jpg,"[558.0, 402.0, 78.0, 79.0]",cucumber
+37,frame1484_gripper.jpg,"[756.0, 437.0, 40.0, 117.0]",green bell pepper
+37,frame1484_gripper.jpg,"[0.0, 241.0, 324.0, 479.0]",corn
+37,frame1484_gripper.jpg,"[473.0, 671.0, 67.0, 49.0]","box, basket, case, bin, container"
+37,frame1484_gripper.jpg,"[674.0, 92.0, 53.0, 112.0]",tomato
+37,frame1484_gripper.jpg,"[774.0, 283.0, 81.0, 61.0]",potato
+37,frame1484_gripper.jpg,"[0.0, 0.0, 1280.0, 276.0]",floor
+37,frame1484_gripper.jpg,"[163.0, 3.0, 1117.0, 717.0]",wall
+38,frame0033_zednode.jpg,"[1157.0, 638.0, 123.0, 82.0]",carrot
+38,frame0033_zednode.jpg,"[436.0, 445.0, 358.0, 275.0]",drawer
+38,frame0033_zednode.jpg,"[1145.0, 377.0, 135.0, 343.0]",chest of drawers
+38,frame0033_zednode.jpg,"[1157.0, 517.0, 123.0, 171.0]",handle
+38,frame0033_zednode.jpg,"[144.0, 647.0, 56.0, 35.0]",white toy
+38,frame0033_zednode.jpg,"[1138.0, 349.0, 30.0, 21.0]",garlic
+38,frame0033_zednode.jpg,"[829.0, 307.0, 56.0, 53.0]",tomato
+38,frame0033_zednode.jpg,"[1045.0, 346.0, 46.0, 29.0]",floor
+38,frame0033_zednode.jpg,"[0.0, 541.0, 1147.0, 179.0]",wall
+38,frame0033_zednode.jpg,"[1065.0, 168.0, 27.0, 12.0]",person
+38,frame0033_zednode.jpg,"[967.0, 243.0, 13.0, 21.0]",gripper
+38,frame0033_zednode.jpg,"[909.0, 206.0, 56.0, 45.0]",door
+38,frame0033_zednode.jpg,"[1211.0, 463.0, 69.0, 19.0]",poster
+38,frame0033_zednode.jpg,"[1156.0, 419.0, 124.0, 100.0]",table
+38,frame0033_zednode.jpg,"[1157.0, 492.0, 123.0, 110.0]",ceiling
+39,frame0574_zednode.jpg,"[0.0, 0.0, 1280.0, 266.0]",eggplant
+39,frame0574_zednode.jpg,"[0.0, 154.0, 218.0, 114.0]","box, basket, case, bin, container"
+39,frame0574_zednode.jpg,"[0.0, 603.0, 251.0, 117.0]",tomato
+39,frame0574_zednode.jpg,"[0.0, 0.0, 878.0, 107.0]",floor
+39,frame0574_zednode.jpg,"[0.0, 199.0, 1280.0, 518.0]",wall
+39,frame0574_zednode.jpg,"[581.0, 567.0, 118.0, 50.0]",gripper
+39,frame0574_zednode.jpg,"[440.0, 434.0, 352.0, 286.0]",door
+39,frame0574_zednode.jpg,"[231.0, 624.0, 751.0, 96.0]",poster
+39,frame0574_zednode.jpg,"[932.0, 707.0, 24.0, 13.0]",ceiling
+40,frame0746_gripper.jpg,"[757.0, 538.0, 86.0, 57.0]",green bell pepper
+40,frame0746_gripper.jpg,"[1119.0, 340.0, 26.0, 31.0]",red chili pepper
+40,frame0746_gripper.jpg,"[1006.0, 287.0, 107.0, 66.0]",toy_cat
+40,frame0746_gripper.jpg,"[408.0, 259.0, 56.0, 105.0]",garlic
+40,frame0746_gripper.jpg,"[711.0, 572.0, 35.0, 14.0]",wall
+40,frame0746_gripper.jpg,"[743.0, 569.0, 25.0, 22.0]",door
+40,frame0746_gripper.jpg,"[824.0, 557.0, 25.0, 31.0]",poster
+40,frame0746_gripper.jpg,"[1161.0, 348.0, 32.0, 22.0]",ceiling
+41,frame0084_zednode.jpg,"[652.0, 590.0, 513.0, 130.0]",carrot
+41,frame0084_zednode.jpg,"[1187.0, 646.0, 93.0, 74.0]",green bell pepper
+41,frame0084_zednode.jpg,"[689.0, 193.0, 246.0, 80.0]",green chili pepper
+41,frame0084_zednode.jpg,"[0.0, 163.0, 1280.0, 557.0]",eggplant
+41,frame0084_zednode.jpg,"[441.0, 444.0, 360.0, 276.0]",drawer
+41,frame0084_zednode.jpg,"[700.0, 353.0, 33.0, 22.0]",chest of drawers
+41,frame0084_zednode.jpg,"[733.0, 360.0, 29.0, 9.0]",handle
+41,frame0084_zednode.jpg,"[715.0, 347.0, 68.0, 15.0]",toy_cat
+41,frame0084_zednode.jpg,"[764.0, 350.0, 20.0, 15.0]",tomato
+41,frame0084_zednode.jpg,"[720.0, 364.0, 38.0, 14.0]",potato
+41,frame0084_zednode.jpg,"[754.0, 363.0, 46.0, 17.0]",floor
+41,frame0084_zednode.jpg,"[1188.0, 571.0, 92.0, 87.0]",wall
+41,frame0084_zednode.jpg,"[1189.0, 496.0, 91.0, 84.0]",gripper
+41,frame0084_zednode.jpg,"[1189.0, 422.0, 91.0, 80.0]",door
+41,frame0084_zednode.jpg,"[1260.0, 460.0, 20.0, 9.0]",poster
+41,frame0084_zednode.jpg,"[1260.0, 537.0, 20.0, 10.0]",table
+41,frame0084_zednode.jpg,"[1258.0, 615.0, 22.0, 18.0]",ceiling
+42,frame0786_gripper.jpg,"[0.0, 0.0, 1252.0, 366.0]",carrot
+42,frame0786_gripper.jpg,"[0.0, 232.0, 1280.0, 488.0]",green bell pepper
+42,frame0786_gripper.jpg,"[595.0, 205.0, 123.0, 145.0]","box, basket, case, bin, container"
+42,frame0786_gripper.jpg,"[1243.0, 0.0, 37.0, 235.0]",floor
+42,frame0786_gripper.jpg,"[729.0, 224.0, 35.0, 47.0]",wall
+42,frame0786_gripper.jpg,"[0.0, 637.0, 657.0, 83.0]",door
+42,frame0786_gripper.jpg,"[495.0, 652.0, 28.0, 24.0]",poster
+42,frame0786_gripper.jpg,"[545.0, 671.0, 27.0, 27.0]",ceiling
+43,frame0609_zednode.jpg,"[0.0, 0.0, 1280.0, 294.0]",green bell pepper
+43,frame0609_zednode.jpg,"[351.0, 166.0, 163.0, 129.0]",eggplant
+43,frame0609_zednode.jpg,"[372.0, 490.0, 115.0, 90.0]",corn
+43,frame0609_zednode.jpg,"[0.0, 262.0, 1280.0, 458.0]","box, basket, case, bin, container"
+43,frame0609_zednode.jpg,"[606.0, 522.0, 21.0, 14.0]",white toy
+43,frame0609_zednode.jpg,"[658.0, 511.0, 20.0, 17.0]",potato
+43,frame0609_zednode.jpg,"[597.0, 537.0, 13.0, 19.0]",floor
+43,frame0609_zednode.jpg,"[298.0, 612.0, 58.0, 17.0]",wall
+43,frame0609_zednode.jpg,"[951.0, 519.0, 57.0, 46.0]",gripper
+43,frame0609_zednode.jpg,"[245.0, 516.0, 1035.0, 204.0]",door
+43,frame0609_zednode.jpg,"[440.0, 445.0, 354.0, 275.0]",poster
+43,frame0609_zednode.jpg,"[851.0, 160.0, 52.0, 37.0]",ceiling
+44,frame1409_gripper.jpg,"[0.0, 0.0, 1280.0, 162.0]",cucumber
+44,frame1409_gripper.jpg,"[312.0, 364.0, 80.0, 83.0]",green chili pepper
+44,frame1409_gripper.jpg,"[10.0, 0.0, 1270.0, 123.0]",red chili pepper
+44,frame1409_gripper.jpg,"[0.0, 414.0, 1280.0, 287.0]",toy_cat
+44,frame1409_gripper.jpg,"[385.0, 357.0, 86.0, 69.0]",garlic
+44,frame1409_gripper.jpg,"[401.0, 399.0, 190.0, 37.0]",tomato
+44,frame1409_gripper.jpg,"[726.0, 409.0, 385.0, 311.0]",wall
+44,frame1409_gripper.jpg,"[906.0, 290.0, 193.0, 141.0]",table
+44,frame1409_gripper.jpg,"[0.0, 118.0, 1280.0, 599.0]",ceiling
+45,frame1976.jpg,"[417.0, 196.0, 58.0, 108.0]",cucumber
+45,frame1976.jpg,"[244.0, 178.0, 117.0, 88.0]",corn
+45,frame1976.jpg,"[0.0, 0.0, 1280.0, 262.0]",white toy
+45,frame1976.jpg,"[0.0, 185.0, 1280.0, 535.0]",potato
+45,frame1976.jpg,"[925.0, 634.0, 272.0, 86.0]",wall
+45,frame1976.jpg,"[1065.0, 197.0, 160.0, 95.0]",table
+46,frame0617_zednode.jpg,"[465.0, 667.0, 23.0, 41.0]",carrot
+46,frame0617_zednode.jpg,"[226.0, 646.0, 795.0, 74.0]","box, basket, case, bin, container"
+46,frame0617_zednode.jpg,"[44.0, 672.0, 207.0, 48.0]",tomato
+46,frame0617_zednode.jpg,"[277.0, 691.0, 40.0, 29.0]",potato
+46,frame0617_zednode.jpg,"[427.0, 127.0, 54.0, 45.0]",floor
+46,frame0617_zednode.jpg,"[979.0, 0.0, 301.0, 243.0]",wall
+46,frame0617_zednode.jpg,"[191.0, 82.0, 223.0, 189.0]",gripper
+46,frame0617_zednode.jpg,"[0.0, 0.0, 1191.0, 653.0]",door
+46,frame0617_zednode.jpg,"[371.0, 702.0, 41.0, 18.0]",poster
+47,frame0032_zednode.jpg,"[649.0, 351.0, 32.0, 21.0]",drawer
+47,frame0032_zednode.jpg,"[640.0, 346.0, 22.0, 18.0]",chest of drawers
+47,frame0032_zednode.jpg,"[452.0, 313.0, 52.0, 51.0]",handle
+47,frame0032_zednode.jpg,"[726.0, 380.0, 212.0, 305.0]",white toy
+47,frame0032_zednode.jpg,"[705.0, 349.0, 19.0, 16.0]",garlic
+47,frame0032_zednode.jpg,"[0.0, 0.0, 1280.0, 287.0]",tomato
+47,frame0032_zednode.jpg,"[0.0, 117.0, 1280.0, 600.0]",potato
+47,frame0032_zednode.jpg,"[834.0, 212.0, 135.0, 54.0]",floor
+47,frame0032_zednode.jpg,"[556.0, 220.0, 88.0, 66.0]",wall
+47,frame0032_zednode.jpg,"[761.0, 186.0, 258.0, 85.0]",key
+47,frame0032_zednode.jpg,"[714.0, 227.0, 47.0, 44.0]",gripper
+47,frame0032_zednode.jpg,"[491.0, 221.0, 46.0, 44.0]",door
+47,frame0032_zednode.jpg,"[538.0, 258.0, 11.0, 20.0]",poster
+47,frame0032_zednode.jpg,"[553.0, 264.0, 17.0, 23.0]",table
+47,frame0032_zednode.jpg,"[610.0, 202.0, 18.0, 11.0]",ceiling
+48,frame0126_zednode.jpg,"[0.0, 171.0, 1280.0, 549.0]",cucumber
+48,frame0126_zednode.jpg,"[0.0, 0.0, 1136.0, 291.0]","box, basket, case, bin, container"
+48,frame0126_zednode.jpg,"[0.0, 166.0, 129.0, 125.0]",toy_cat
+48,frame0126_zednode.jpg,"[720.0, 132.0, 109.0, 145.0]",floor
+48,frame0126_zednode.jpg,"[838.0, 147.0, 35.0, 43.0]",wall
+48,frame0126_zednode.jpg,"[1106.0, 0.0, 174.0, 183.0]",gripper
+48,frame0126_zednode.jpg,"[0.0, 0.0, 796.0, 142.0]",door
+48,frame0126_zednode.jpg,"[95.0, 548.0, 62.0, 83.0]",poster
+48,frame0126_zednode.jpg,"[847.0, 642.0, 35.0, 41.0]",ceiling
+49,frame1031.jpg,"[235.0, 198.0, 125.0, 90.0]",carrot
+49,frame1031.jpg,"[141.0, 148.0, 119.0, 104.0]",cucumber
+49,frame1031.jpg,"[80.0, 249.0, 139.0, 127.0]",green bell pepper
+49,frame1031.jpg,"[0.0, 81.0, 1280.0, 636.0]",green chili pepper
+49,frame1031.jpg,"[289.0, 133.0, 95.0, 80.0]",red bell pepper
+49,frame1031.jpg,"[234.0, 282.0, 228.0, 121.0]",eggplant
+49,frame1031.jpg,"[0.0, 0.0, 1280.0, 159.0]",corn
+49,frame1031.jpg,"[442.0, 93.0, 129.0, 43.0]",toy_cat
+49,frame1031.jpg,"[412.0, 92.0, 279.0, 300.0]",garlic
+49,frame1031.jpg,"[338.0, 383.0, 219.0, 100.0]",tomato
+49,frame1031.jpg,"[356.0, 179.0, 94.0, 107.0]",potato
+49,frame1031.jpg,"[155.0, 352.0, 299.0, 68.0]",wall
+49,frame1031.jpg,"[382.0, 128.0, 64.0, 61.0]",table
+50,frame1905.jpg,"[0.0, 0.0, 1280.0, 720.0]",floor
+50,frame1905.jpg,"[503.0, 473.0, 268.0, 247.0]","box, basket, case, bin, container"
+50,frame1905.jpg,"[1128.0, 222.0, 152.0, 332.0]",toy_cat
+51,frame1556_gripper.jpg,"[433.0, 244.0, 108.0, 48.0]",carrot
+51,frame1556_gripper.jpg,"[748.0, 171.0, 86.0, 133.0]",cucumber
+51,frame1556_gripper.jpg,"[890.0, 213.0, 88.0, 79.0]",green bell pepper
+51,frame1556_gripper.jpg,"[507.0, 277.0, 120.0, 98.0]",red bell pepper
+51,frame1556_gripper.jpg,"[486.0, 165.0, 90.0, 75.0]",red chili pepper
+51,frame1556_gripper.jpg,"[0.0, 0.0, 1280.0, 717.0]",eggplant
+51,frame1556_gripper.jpg,"[958.0, 284.0, 136.0, 117.0]",corn
+51,frame1556_gripper.jpg,"[759.0, 241.0, 87.0, 70.0]",garlic
+51,frame1556_gripper.jpg,"[277.0, 269.0, 138.0, 112.0]",tomato
+51,frame1556_gripper.jpg,"[0.0, 223.0, 1280.0, 491.0]",potato
+51,frame1556_gripper.jpg,"[272.0, 323.0, 112.0, 103.0]",wall
+51,frame1556_gripper.jpg,"[467.0, 365.0, 141.0, 149.0]",table
+52,frame0015_zednode.jpg,"[22.0, 0.0, 1258.0, 163.0]",cucumber
+52,frame0015_zednode.jpg,"[918.0, 417.0, 170.0, 72.0]",red chili pepper
+52,frame0015_zednode.jpg,"[918.0, 482.0, 168.0, 77.0]",corn
+52,frame0015_zednode.jpg,"[918.0, 624.0, 167.0, 74.0]",drawer
+52,frame0015_zednode.jpg,"[919.0, 555.0, 167.0, 74.0]",chest of drawers
+52,frame0015_zednode.jpg,"[835.0, 384.0, 267.0, 329.0]",handle
+52,frame0015_zednode.jpg,"[1180.0, 708.0, 36.0, 12.0]",toy_cat
+52,frame0015_zednode.jpg,"[175.0, 167.0, 22.0, 17.0]",toy block
+52,frame0015_zednode.jpg,"[576.0, 334.0, 81.0, 59.0]",floor
+52,frame0015_zednode.jpg,"[402.0, 442.0, 486.0, 278.0]",wall
+52,frame0015_zednode.jpg,"[967.0, 659.0, 69.0, 11.0]",key
+52,frame0015_zednode.jpg,"[968.0, 590.0, 69.0, 11.0]",gripper
+52,frame0015_zednode.jpg,"[968.0, 519.0, 69.0, 10.0]",door
+52,frame0015_zednode.jpg,"[1139.0, 148.0, 141.0, 106.0]",poster
+52,frame0015_zednode.jpg,"[121.0, 178.0, 112.0, 52.0]",table
+52,frame0015_zednode.jpg,"[969.0, 449.0, 69.0, 8.0]",ceiling
+53,frame1604_gripper.jpg,"[88.0, 0.0, 1192.0, 123.0]",cucumber
+53,frame1604_gripper.jpg,"[0.0, 387.0, 1280.0, 329.0]",green bell pepper
+53,frame1604_gripper.jpg,"[870.0, 340.0, 55.0, 59.0]",red chili pepper
+53,frame1604_gripper.jpg,"[0.0, 5.0, 1280.0, 711.0]",eggplant
+53,frame1604_gripper.jpg,"[509.0, 332.0, 55.0, 39.0]",corn
+53,frame1604_gripper.jpg,"[4.0, 0.0, 1276.0, 128.0]",garlic
+53,frame1604_gripper.jpg,"[494.0, 356.0, 122.0, 69.0]",tomato
+53,frame1604_gripper.jpg,"[461.0, 337.0, 97.0, 62.0]",potato
+53,frame1604_gripper.jpg,"[529.0, 331.0, 103.0, 77.0]",wall
+53,frame1604_gripper.jpg,"[329.0, 335.0, 93.0, 81.0]",table
+53,frame1604_gripper.jpg,"[409.0, 373.0, 38.0, 38.0]",ceiling
+54,frame0607_zednode.jpg,"[275.0, 597.0, 37.0, 21.0]",carrot
+54,frame0607_zednode.jpg,"[302.0, 560.0, 24.0, 20.0]",cucumber
+54,frame0607_zednode.jpg,"[337.0, 531.0, 18.0, 17.0]",eggplant
+54,frame0607_zednode.jpg,"[364.0, 558.0, 12.0, 20.0]",corn
+54,frame0607_zednode.jpg,"[370.0, 541.0, 23.0, 16.0]","box, basket, case, bin, container"
+54,frame0607_zednode.jpg,"[67.0, 522.0, 167.0, 116.0]",white toy
+54,frame0607_zednode.jpg,"[705.0, 502.0, 45.0, 40.0]",tomato
+54,frame0607_zednode.jpg,"[431.0, 445.0, 363.0, 275.0]",potato
+54,frame0607_zednode.jpg,"[600.0, 177.0, 45.0, 33.0]",floor
+54,frame0607_zednode.jpg,"[0.0, 509.0, 970.0, 211.0]",wall
+54,frame0607_zednode.jpg,"[0.0, 698.0, 55.0, 22.0]",gripper
+54,frame0607_zednode.jpg,"[0.0, 0.0, 1280.0, 295.0]",door
+54,frame0607_zednode.jpg,"[0.0, 190.0, 1280.0, 527.0]",poster
+55,frame1562.jpg,"[911.0, 90.0, 96.0, 94.0]",carrot
+55,frame1562.jpg,"[390.0, 130.0, 150.0, 78.0]",cucumber
+55,frame1562.jpg,"[236.0, 183.0, 157.0, 144.0]",green bell pepper
+55,frame1562.jpg,"[238.0, 286.0, 120.0, 109.0]",red bell pepper
+55,frame1562.jpg,"[0.0, 70.0, 1280.0, 619.0]",red chili pepper
+55,frame1562.jpg,"[0.0, 0.0, 1280.0, 210.0]",eggplant
+55,frame1562.jpg,"[267.0, 675.0, 1013.0, 45.0]",corn
+55,frame1562.jpg,"[0.0, 688.0, 267.0, 32.0]",garlic
+55,frame1562.jpg,"[488.0, 202.0, 130.0, 123.0]",tomato
+55,frame1562.jpg,"[753.0, 26.0, 87.0, 105.0]",potato
+55,frame1562.jpg,"[458.0, 17.0, 102.0, 91.0]",floor
+55,frame1562.jpg,"[765.0, 115.0, 94.0, 100.0]",wall
+55,frame1562.jpg,"[979.0, 213.0, 146.0, 133.0]",table
+56,frame1067_gripper.jpg,"[0.0, 454.0, 1280.0, 266.0]",cucumber
+56,frame1067_gripper.jpg,"[0.0, 122.0, 1280.0, 598.0]",green bell pepper
+56,frame1067_gripper.jpg,"[0.0, 38.0, 297.0, 149.0]",green chili pepper
+56,frame1067_gripper.jpg,"[0.0, 0.0, 1280.0, 189.0]",red bell pepper
+56,frame1067_gripper.jpg,"[448.0, 215.0, 243.0, 238.0]",red chili pepper
+56,frame1067_gripper.jpg,"[312.0, 382.0, 84.0, 71.0]",eggplant
+56,frame1067_gripper.jpg,"[274.0, 389.0, 28.0, 21.0]",corn
+56,frame1067_gripper.jpg,"[292.0, 391.0, 201.0, 51.0]",toy_cat
+56,frame1067_gripper.jpg,"[466.0, 424.0, 45.0, 29.0]",garlic
+56,frame1067_gripper.jpg,"[396.0, 375.0, 77.0, 39.0]",tomato
+56,frame1067_gripper.jpg,"[167.0, 379.0, 112.0, 74.0]",potato
+56,frame1067_gripper.jpg,"[677.0, 396.0, 76.0, 55.0]",wall
+56,frame1067_gripper.jpg,"[848.0, 374.0, 58.0, 20.0]",table
+56,frame1067_gripper.jpg,"[772.0, 429.0, 90.0, 23.0]",ceiling
+57,frame0074_zednode.jpg,"[920.0, 246.0, 32.0, 33.0]",drawer
+57,frame0074_zednode.jpg,"[0.0, 260.0, 1280.0, 438.0]",chest of drawers
+57,frame0074_zednode.jpg,"[0.0, 0.0, 1280.0, 293.0]",handle
+57,frame0074_zednode.jpg,"[898.0, 214.0, 136.0, 65.0]",toy_cat
+57,frame0074_zednode.jpg,"[653.0, 229.0, 62.0, 67.0]",tomato
+57,frame0074_zednode.jpg,"[782.0, 234.0, 44.0, 53.0]",floor
+57,frame0074_zednode.jpg,"[786.0, 190.0, 297.0, 93.0]",wall
+57,frame0074_zednode.jpg,"[862.0, 522.0, 43.0, 15.0]",key
+57,frame0074_zednode.jpg,"[245.0, 0.0, 1035.0, 201.0]",gripper
+57,frame0074_zednode.jpg,"[441.0, 444.0, 360.0, 276.0]",door
+57,frame0074_zednode.jpg,"[0.0, 482.0, 1280.0, 238.0]",table
+57,frame0074_zednode.jpg,"[570.0, 354.0, 264.0, 201.0]",ceiling
+58,frame1014_gripper.jpg,"[0.0, 0.0, 1280.0, 161.0]",carrot
+58,frame1014_gripper.jpg,"[0.0, 88.0, 1280.0, 632.0]",green bell pepper
+58,frame1014_gripper.jpg,"[0.0, 435.0, 1280.0, 285.0]",green chili pepper
+58,frame1014_gripper.jpg,"[0.0, 19.0, 1280.0, 156.0]",red bell pepper
+58,frame1014_gripper.jpg,"[396.0, 364.0, 46.0, 23.0]",red chili pepper
+58,frame1014_gripper.jpg,"[360.0, 370.0, 78.0, 25.0]",eggplant
+58,frame1014_gripper.jpg,"[315.0, 375.0, 32.0, 28.0]",toy_cat
+58,frame1014_gripper.jpg,"[439.0, 362.0, 76.0, 42.0]",tomato
+58,frame1014_gripper.jpg,"[341.0, 380.0, 131.0, 33.0]",potato
+58,frame1014_gripper.jpg,"[217.0, 369.0, 110.0, 75.0]",wall
+58,frame1014_gripper.jpg,"[410.0, 388.0, 178.0, 61.0]",table
+58,frame1014_gripper.jpg,"[265.0, 404.0, 167.0, 43.0]",ceiling
+59,frame0000_gripper.jpg,"[0.0, 83.0, 1280.0, 634.0]",cucumber
+59,frame0000_gripper.jpg,"[0.0, 416.0, 1280.0, 301.0]",red bell pepper
+59,frame0000_gripper.jpg,"[0.0, 0.0, 1280.0, 159.0]",corn
+59,frame0000_gripper.jpg,"[0.0, 34.0, 1280.0, 144.0]",garlic
+59,frame0000_gripper.jpg,"[202.0, 381.0, 38.0, 43.0]",tomato
+59,frame0000_gripper.jpg,"[224.0, 350.0, 93.0, 81.0]",wall
+59,frame0000_gripper.jpg,"[654.0, 358.0, 69.0, 65.0]",table
+59,frame0000_gripper.jpg,"[434.0, 359.0, 85.0, 67.0]",ceiling
+60,frame0568.jpg,"[0.0, 235.0, 1280.0, 482.0]",red bell pepper
+60,frame0568.jpg,"[0.0, 0.0, 1280.0, 419.0]",corn
+60,frame0568.jpg,"[537.0, 276.0, 12.0, 29.0]",toy block
+60,frame0568.jpg,"[0.0, 29.0, 42.0, 206.0]",tomato
+60,frame0568.jpg,"[410.0, 216.0, 84.0, 84.0]",floor
+60,frame0568.jpg,"[1092.0, 686.0, 46.0, 34.0]",wall
+60,frame0568.jpg,"[473.0, 551.0, 17.0, 28.0]",gripper
+60,frame0568.jpg,"[261.0, 0.0, 1019.0, 253.0]",door
+60,frame0568.jpg,"[1142.0, 190.0, 46.0, 55.0]",poster
+60,frame0568.jpg,"[701.0, 252.0, 117.0, 49.0]",ceiling
+61,frame0625_zednode.jpg,"[347.0, 286.0, 72.0, 19.0]",toy block
+61,frame0625_zednode.jpg,"[160.0, 200.0, 107.0, 55.0]",floor
+61,frame0625_zednode.jpg,"[60.0, 0.0, 1166.0, 252.0]",wall
+61,frame0625_zednode.jpg,"[0.0, 0.0, 1280.0, 304.0]",door
+61,frame0625_zednode.jpg,"[0.0, 254.0, 1280.0, 466.0]",poster
+61,frame0625_zednode.jpg,"[1022.0, 617.0, 44.0, 39.0]",ceiling
+62,frame0603_zednode.jpg,"[0.0, 0.0, 1275.0, 263.0]",green chili pepper
+62,frame0603_zednode.jpg,"[391.0, 218.0, 69.0, 48.0]",red chili pepper
+62,frame0603_zednode.jpg,"[0.0, 4.0, 1280.0, 278.0]",drawer
+62,frame0603_zednode.jpg,"[0.0, 183.0, 1280.0, 537.0]",chest of drawers
+62,frame0603_zednode.jpg,"[104.0, 158.0, 28.0, 20.0]",handle
+62,frame0603_zednode.jpg,"[1231.0, 171.0, 42.0, 36.0]",toy_cat
+62,frame0603_zednode.jpg,"[1077.0, 157.0, 142.0, 102.0]",garlic
+62,frame0603_zednode.jpg,"[312.0, 207.0, 253.0, 60.0]",tomato
+62,frame0603_zednode.jpg,"[253.0, 213.0, 48.0, 50.0]",floor
+62,frame0603_zednode.jpg,"[47.0, 171.0, 124.0, 56.0]",wall
+62,frame0603_zednode.jpg,"[326.0, 225.0, 31.0, 41.0]",key
+62,frame0603_zednode.jpg,"[449.0, 368.0, 28.0, 29.0]",gripper
+62,frame0603_zednode.jpg,"[360.0, 382.0, 64.0, 14.0]",door
+62,frame0603_zednode.jpg,"[477.0, 379.0, 72.0, 14.0]",poster
+62,frame0603_zednode.jpg,"[687.0, 330.0, 61.0, 54.0]",table
+62,frame0603_zednode.jpg,"[199.0, 376.0, 685.0, 344.0]",ceiling
+63,frame0251_zednode.jpg,"[436.0, 446.0, 358.0, 274.0]",floor
+63,frame0251_zednode.jpg,"[1027.0, 91.0, 253.0, 164.0]",wall
+63,frame0251_zednode.jpg,"[0.0, 0.0, 1023.0, 289.0]",person
+63,frame0251_zednode.jpg,"[0.0, 67.0, 1280.0, 644.0]",gripper
+63,frame0251_zednode.jpg,"[3.0, 548.0, 1274.0, 172.0]",door
+63,frame0251_zednode.jpg,"[0.0, 44.0, 190.0, 232.0]",poster
+63,frame0251_zednode.jpg,"[1133.0, 193.0, 147.0, 55.0]",ceiling
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[0.0, 181.0, 1191.0, 539.0]",carrot
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[742.0, 513.0, 89.0, 119.0]",green bell pepper
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[421.0, 329.0, 72.0, 70.0]",green chili pepper
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[793.0, 452.0, 66.0, 61.0]",red chili pepper
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[284.0, 351.0, 150.0, 172.0]",eggplant
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[354.0, 450.0, 103.0, 84.0]",floor
+64,pick_cucumber_realsense_gripper_color_image_raw_1188.jpg,"[514.0, 215.0, 60.0, 49.0]",wall
+65,frame0463_zednode.jpg,"[0.0, 262.0, 1280.0, 453.0]",tomato
+65,frame0463_zednode.jpg,"[40.0, 0.0, 1240.0, 292.0]",floor
+65,frame0463_zednode.jpg,"[0.0, 12.0, 959.0, 275.0]",wall
+65,frame0463_zednode.jpg,"[861.0, 586.0, 29.0, 24.0]",person
+65,frame0463_zednode.jpg,"[961.0, 535.0, 25.0, 20.0]",gripper
+65,frame0463_zednode.jpg,"[13.0, 496.0, 1267.0, 224.0]",door
+65,frame0463_zednode.jpg,"[737.0, 175.0, 67.0, 117.0]",poster
+65,frame0463_zednode.jpg,"[0.0, 0.0, 970.0, 200.0]",ceiling
+66,frame0000_zednode.jpg,"[152.0, 0.0, 1128.0, 214.0]",carrot
+66,frame0000_zednode.jpg,"[997.0, 656.0, 45.0, 23.0]",green bell pepper
+66,frame0000_zednode.jpg,"[800.0, 647.0, 31.0, 38.0]",green chili pepper
+66,frame0000_zednode.jpg,"[940.0, 557.0, 38.0, 11.0]",red bell pepper
+66,frame0000_zednode.jpg,"[1008.0, 604.0, 68.0, 14.0]",eggplant
+66,frame0000_zednode.jpg,"[1097.0, 573.0, 18.0, 22.0]",corn
+66,frame0000_zednode.jpg,"[846.0, 363.0, 268.0, 230.0]",drawer
+66,frame0000_zednode.jpg,"[852.0, 488.0, 82.0, 60.0]",chest of drawers
+66,frame0000_zednode.jpg,"[851.0, 376.0, 81.0, 45.0]",handle
+66,frame0000_zednode.jpg,"[851.0, 410.0, 82.0, 78.0]",toy_cat
+66,frame0000_zednode.jpg,"[852.0, 450.0, 81.0, 56.0]",toy block
+66,frame0000_zednode.jpg,"[870.19, 390.68, 39.45, 14.8]",garlic
+66,frame0000_zednode.jpg,"[870.19, 428.49, 41.1, 19.73]",tomato
+66,frame0000_zednode.jpg,"[873.48, 471.73, 37.81, 11.5]",potato
+66,frame0000_zednode.jpg,"[875.12, 507.89, 34.52, 19.73]",floor
+66,frame0000_zednode.jpg,"[845.0, 631.0, 34.0, 33.0]",wall
+66,frame0000_zednode.jpg,"[762.0, 686.0, 39.0, 34.0]",person
+66,frame0000_zednode.jpg,"[892.0, 614.0, 35.0, 24.0]",key
+66,frame0000_zednode.jpg,"[649.0, 349.0, 261.0, 189.0]",gripper
+66,frame0000_zednode.jpg,"[810.0, 223.0, 76.0, 67.0]",door
+66,frame0000_zednode.jpg,"[1023.0, 199.0, 85.0, 73.0]",table
+66,frame0000_zednode.jpg,"[962.0, 222.0, 60.0, 54.0]",ceiling
+67,frame0512_zednode.jpg,"[185.0, 659.0, 35.0, 33.0]",carrot
+67,frame0512_zednode.jpg,"[283.0, 683.0, 32.0, 37.0]",cucumber
+67,frame0512_zednode.jpg,"[370.0, 688.0, 45.0, 24.0]",green bell pepper
+67,frame0512_zednode.jpg,"[346.0, 640.0, 31.0, 34.0]",red bell pepper
+67,frame0512_zednode.jpg,"[283.0, 645.0, 28.0, 28.0]",floor
+67,frame0512_zednode.jpg,"[0.0, 563.0, 733.0, 157.0]",wall
+67,frame0512_zednode.jpg,"[0.0, 206.0, 1280.0, 511.0]",gripper
+67,frame0512_zednode.jpg,"[352.0, 0.0, 847.0, 284.0]",door
+67,frame0512_zednode.jpg,"[0.0, 72.0, 538.0, 211.0]",poster
+67,frame0512_zednode.jpg,"[170.0, 234.0, 81.0, 46.0]",ceiling
+68,frame0535_zednode.jpg,"[442.0, 444.0, 351.0, 276.0]",green chili pepper
+68,frame0535_zednode.jpg,"[342.0, 628.0, 62.0, 15.0]",red chili pepper
+68,frame0535_zednode.jpg,"[251.0, 586.0, 38.0, 18.0]",corn
+68,frame0535_zednode.jpg,"[314.0, 580.0, 20.0, 20.0]",drawer
+68,frame0535_zednode.jpg,"[358.0, 596.0, 19.0, 18.0]",chest of drawers
+68,frame0535_zednode.jpg,"[955.0, 596.0, 78.0, 63.0]",handle
+68,frame0535_zednode.jpg,"[43.0, 312.0, 1237.0, 408.0]",toy_cat
+68,frame0535_zednode.jpg,"[502.0, 184.0, 59.0, 114.0]",garlic
+68,frame0535_zednode.jpg,"[0.0, 270.0, 1280.0, 348.0]",floor
+68,frame0535_zednode.jpg,"[0.0, 0.0, 1280.0, 305.0]",wall
+68,frame0535_zednode.jpg,"[596.0, 150.0, 180.0, 145.0]",key
+68,frame0535_zednode.jpg,"[262.0, 208.0, 97.0, 100.0]",gripper
+68,frame0535_zednode.jpg,"[0.0, 407.0, 114.0, 313.0]",door
+68,frame0535_zednode.jpg,"[0.0, 0.0, 812.0, 161.0]",poster
+68,frame0535_zednode.jpg,"[0.0, 615.0, 102.0, 100.0]",ceiling
+69,frame1059.jpg,"[386.0, 545.0, 96.0, 129.0]",carrot
+69,frame1059.jpg,"[571.0, 408.0, 82.0, 61.0]",cucumber
+69,frame1059.jpg,"[421.0, 415.0, 94.0, 88.0]",green bell pepper
+69,frame1059.jpg,"[201.0, 520.0, 315.0, 65.0]",green chili pepper
+69,frame1059.jpg,"[367.0, 398.0, 67.0, 45.0]",red bell pepper
+69,frame1059.jpg,"[617.0, 407.0, 105.0, 101.0]",red chili pepper
+69,frame1059.jpg,"[302.0, 468.0, 249.0, 78.0]",eggplant
+69,frame1059.jpg,"[504.0, 405.0, 98.0, 46.0]",corn
+69,frame1059.jpg,"[453.0, 395.0, 71.0, 64.0]",garlic
+69,frame1059.jpg,"[366.0, 398.0, 68.0, 46.0]",tomato
+69,frame1059.jpg,"[224.0, 409.0, 105.0, 83.0]",potato
+69,frame1059.jpg,"[302.0, 428.0, 118.0, 59.0]",wall
+69,frame1059.jpg,"[147.0, 448.0, 135.0, 103.0]",door
+69,frame1059.jpg,"[0.0, 77.0, 1280.0, 402.0]",table
+70,frame0455_zednode.jpg,"[232.0, 0.0, 1048.0, 252.0]",green bell pepper
+70,frame0455_zednode.jpg,"[441.0, 445.0, 351.0, 275.0]",eggplant
+70,frame0455_zednode.jpg,"[0.0, 261.0, 294.0, 459.0]",floor
+70,frame0455_zednode.jpg,"[279.0, 289.0, 481.0, 288.0]",wall
+70,frame0455_zednode.jpg,"[758.0, 220.0, 522.0, 497.0]",gripper
+70,frame0455_zednode.jpg,"[0.0, 0.0, 663.0, 304.0]",door
+70,frame0455_zednode.jpg,"[665.0, 77.0, 615.0, 224.0]",poster
+70,frame0455_zednode.jpg,"[1195.0, 175.0, 50.0, 44.0]",ceiling
+71,frame1621_gripper.jpg,"[730.0, 432.0, 79.0, 168.0]",cucumber
+71,frame1621_gripper.jpg,"[0.0, 0.0, 1280.0, 659.0]",floor
+71,frame1621_gripper.jpg,"[0.0, 569.0, 194.0, 151.0]",wall
+71,frame1621_gripper.jpg,"[0.0, 551.0, 1280.0, 169.0]",toy_cat
+72,frame0288_zednode.jpg,"[1123.0, 562.0, 157.0, 146.0]",carrot
+72,frame0288_zednode.jpg,"[1259.13, 443.98, 20.87, 52.23]",cucumber
+72,frame0288_zednode.jpg,"[1167.37, 456.68, 100.23, 36.71]",corn
+72,frame0288_zednode.jpg,"[1167.37, 532.21, 90.35, 36.71]",drawer
+72,frame0288_zednode.jpg,"[1163.13, 599.98, 101.65, 58.16]",chest of drawers
+72,frame0288_zednode.jpg,"[1161.72, 683.41, 73.41, 35.3]",handle
+72,frame0288_zednode.jpg,"[1123.0, 482.0, 157.0, 134.0]",garlic
+72,frame0288_zednode.jpg,"[1122.0, 636.0, 158.0, 84.0]",potato
+72,frame0288_zednode.jpg,"[555.0, 0.0, 725.0, 205.0]",floor
+72,frame0288_zednode.jpg,"[1042.0, 185.0, 172.0, 79.0]",wall
+72,frame0288_zednode.jpg,"[0.0, 544.0, 1120.0, 176.0]",person
+72,frame0288_zednode.jpg,"[799.0, 359.0, 481.0, 361.0]",key
+72,frame0288_zednode.jpg,"[442.0, 446.0, 358.0, 274.0]",gripper
+72,frame0288_zednode.jpg,"[1112.0, 396.0, 168.0, 324.0]",door
+72,frame0288_zednode.jpg,"[1123.0, 418.0, 157.0, 109.0]",table
+72,frame0288_zednode.jpg,"[966.0, 347.0, 61.0, 23.0]",ceiling
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[457.0, 563.0, 53.0, 52.0]",carrot
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[588.0, 381.0, 112.0, 47.0]",cucumber
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[590.0, 421.0, 110.0, 52.0]",green chili pepper
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[591.0, 470.0, 109.0, 46.0]",red chili pepper
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[597.0, 516.0, 104.0, 46.0]",eggplant
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[581.0, 363.0, 126.0, 211.0]",corn
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[619.53, 398.33, 53.31, 12.37]",drawer
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[622.12, 442.87, 47.01, 13.6]",chest of drawers
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[625.71, 488.64, 43.42, 14.84]",handle
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[620.76, 533.17, 54.56, 16.09]","box, basket, case, bin, container"
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[671.48, 379.77, 22.4, 29.69]",toy_cat
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 136.0, 1280.0, 584.0]",tomato
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 20.0, 581.0, 272.0]",potato
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 0.0, 1280.0, 195.0]",floor
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[18.0, 42.0, 203.0, 251.0]",wall
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[700.0, 62.0, 580.0, 211.0]",key
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[0.0, 531.0, 1129.0, 189.0]",gripper
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[1093.0, 185.0, 105.0, 52.0]",door
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[380.0, 488.0, 119.0, 78.0]",poster
+73,exploration_zed_node_rgb_raw_image_raw_color_0.jpg,"[385.0, 639.0, 60.0, 22.0]",ceiling
+74,frame1219_gripper.jpg,"[709.0, 139.0, 187.0, 250.0]",green bell pepper
+74,frame1219_gripper.jpg,"[1128.0, 394.0, 152.0, 219.0]",potato
+74,frame1219_gripper.jpg,"[0.0, 0.0, 1280.0, 720.0]",floor
+74,frame1219_gripper.jpg,"[98.0, 116.0, 232.0, 228.0]",red bell pepper
+75,frame0459.jpg,"[1018.0, 0.0, 262.0, 218.0]","box, basket, case, bin, container"
+75,frame0459.jpg,"[0.0, 0.0, 909.0, 79.0]",floor
+75,frame0459.jpg,"[0.0, 606.0, 218.0, 114.0]",wall
+75,frame0459.jpg,"[515.0, 585.0, 203.0, 135.0]",door
+75,frame0459.jpg,"[202.0, 666.0, 790.0, 54.0]",ceiling
+81,frame1078.jpg,"[0.0, 0.0, 1280.0, 329.0]",carrot
+81,frame1078.jpg,"[0.0, 294.0, 1280.0, 423.0]",cucumber
+81,frame1078.jpg,"[785.0, 349.0, 220.0, 45.0]",green bell pepper
+81,frame1078.jpg,"[863.0, 271.0, 95.0, 91.0]",green chili pepper
+81,frame1078.jpg,"[696.0, 357.0, 70.0, 81.0]",red bell pepper
+81,frame1078.jpg,"[391.0, 288.0, 310.0, 312.0]",red chili pepper
+81,frame1078.jpg,"[428.0, 263.0, 55.0, 91.0]",eggplant
+81,frame1078.jpg,"[77.0, 331.0, 136.0, 101.0]",corn
+81,frame1078.jpg,"[235.0, 308.0, 115.0, 62.0]",toy_cat
+81,frame1078.jpg,"[163.0, 280.0, 104.0, 84.0]",garlic
+81,frame1078.jpg,"[836.0, 352.0, 218.0, 94.0]",tomato
+81,frame1078.jpg,"[347.0, 294.0, 97.0, 93.0]",potato
+81,frame1078.jpg,"[127.0, 409.0, 262.0, 55.0]",wall
+81,frame1078.jpg,"[236.0, 433.0, 111.0, 142.0]",table
+82,frame1084_gripper.jpg,"[842.0, 280.0, 243.0, 128.0]",carrot
+82,frame1084_gripper.jpg,"[300.0, 207.0, 112.0, 125.0]",cucumber
+82,frame1084_gripper.jpg,"[0.0, 124.0, 1280.0, 593.0]",green bell pepper
+82,frame1084_gripper.jpg,"[15.0, 272.0, 146.0, 125.0]",green chili pepper
+82,frame1084_gripper.jpg,"[179.0, 223.0, 127.0, 91.0]",red bell pepper
+82,frame1084_gripper.jpg,"[98.0, 173.0, 120.0, 103.0]",red chili pepper
+82,frame1084_gripper.jpg,"[0.0, 0.0, 1280.0, 178.0]",eggplant
+82,frame1084_gripper.jpg,"[204.0, 410.0, 112.0, 212.0]",corn
+82,frame1084_gripper.jpg,"[80.0, 378.0, 324.0, 66.0]",toy_cat
+82,frame1084_gripper.jpg,"[875.0, 150.0, 107.0, 120.0]",garlic
+82,frame1084_gripper.jpg,"[788.0, 241.0, 275.0, 75.0]",tomato
+82,frame1084_gripper.jpg,"[172.0, 299.0, 254.0, 87.0]",potato
+82,frame1084_gripper.jpg,"[668.0, 275.0, 100.0, 119.0]",wall
+82,frame1084_gripper.jpg,"[352.0, 233.0, 341.0, 422.0]",table
+85,frame0015_gripper.jpg,"[358.0, 130.0, 114.0, 107.0]",carrot
+85,frame0015_gripper.jpg,"[94.0, 299.0, 123.0, 109.0]",cucumber
+85,frame0015_gripper.jpg,"[0.0, 0.0, 1280.0, 109.0]",red bell pepper
+85,frame0015_gripper.jpg,"[0.0, 54.0, 1280.0, 657.0]",corn
+85,frame0015_gripper.jpg,"[1013.0, 37.0, 123.0, 174.0]",garlic
+85,frame0015_gripper.jpg,"[67.0, 108.0, 91.0, 89.0]",tomato
+85,frame0015_gripper.jpg,"[645.0, 32.0, 90.0, 107.0]",wall
+85,frame0015_gripper.jpg,"[1017.0, 24.0, 163.0, 71.0]",table
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[972.23, 382.12, 48.12, 17.32]",carrot
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 374.0, 106.0, 39.0]",cucumber
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 409.0, 107.0, 44.0]",green bell pepper
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 446.0, 106.0, 47.0]",red chili pepper
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[945.0, 483.0, 106.0, 50.0]",eggplant
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[974.58, 424.19, 49.48, 12.37]",corn
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[970.99, 467.48, 44.54, 8.66]",drawer
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[969.75, 498.41, 53.07, 19.8]",chest of drawers
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[1022.82, 374.7, 13.61, 19.79]",handle
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 224.0, 396.0, 66.0]","box, basket, case, bin, container"
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 144.0, 403.0, 150.0]",toy_cat
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[402.0, 21.0, 866.0, 278.0]",tomato
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 271.0, 1280.0, 338.0]",potato
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[111.0, 366.0, 357.0, 303.0]",floor
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[532.0, 212.0, 43.0, 88.0]",wall
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 0.0, 1280.0, 243.0]",key
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[0.0, 461.0, 1280.0, 259.0]",gripper
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[457.0, 497.0, 306.0, 223.0]",door
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[938.0, 360.0, 126.0, 188.0]",poster
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[961.0, 540.0, 19.0, 21.0]",table
+87,exploration_zed_node_left_image_rect_color_990.jpg,"[768.0, 539.0, 40.0, 17.0]",ceiling
+88,frame1035_gripper.jpg,"[428.0, 231.0, 163.0, 56.0]",cucumber
+88,frame1035_gripper.jpg,"[332.0, 289.0, 81.0, 90.0]",green bell pepper
+88,frame1035_gripper.jpg,"[207.0, 296.0, 135.0, 116.0]",red bell pepper
+88,frame1035_gripper.jpg,"[6.0, 310.0, 166.0, 143.0]",red chili pepper
+88,frame1035_gripper.jpg,"[16.0, 317.0, 268.0, 223.0]",eggplant
+88,frame1035_gripper.jpg,"[74.0, 534.0, 299.0, 111.0]",corn
+88,frame1035_gripper.jpg,"[0.0, 476.0, 78.0, 167.0]",toy_cat
+88,frame1035_gripper.jpg,"[0.0, 7.0, 1280.0, 713.0]",garlic
+88,frame1035_gripper.jpg,"[0.0, 0.0, 1280.0, 292.0]",tomato
+88,frame1035_gripper.jpg,"[599.0, 273.0, 122.0, 207.0]",potato
+88,frame1035_gripper.jpg,"[338.0, 283.0, 428.0, 433.0]",wall
+88,frame1035_gripper.jpg,"[552.0, 226.0, 89.0, 77.0]",table
+89,frame0046.jpg,"[473.55, 498.41, 17.44, 11.14]",eggplant
+89,frame0046.jpg,"[478.62, 614.7, 27.09, 19.79]",corn
+89,frame0046.jpg,"[473.55, 557.79, 22.39, 18.56]",drawer
+89,frame0046.jpg,"[466.25, 437.79, 74.22, 11.14]",chest of drawers
+89,frame0046.jpg,"[536.64, 413.17, 29.81, 41.7]",handle
+89,frame0046.jpg,"[423.0, 386.0, 201.0, 275.0]","box, basket, case, bin, container"
+89,frame0046.jpg,"[441.0, 537.0, 57.0, 114.0]",toy_cat
+89,frame0046.jpg,"[439.0, 520.0, 59.0, 118.0]",white toy
+89,frame0046.jpg,"[437.0, 472.0, 77.0, 57.0]",toy block
+89,frame0046.jpg,"[436.0, 414.0, 139.0, 58.0]",garlic
+89,frame0046.jpg,"[436.0, 444.0, 358.0, 276.0]",tomato
+89,frame0046.jpg,"[0.0, 462.0, 1280.0, 258.0]",potato
+89,frame0046.jpg,"[394.0, 357.0, 23.0, 19.0]",floor
+89,frame0046.jpg,"[0.0, 294.0, 479.0, 399.0]",wall
+89,frame0046.jpg,"[201.0, 356.0, 44.0, 22.0]",key
+89,frame0046.jpg,"[49.0, 324.0, 78.0, 61.0]",gripper
+89,frame0046.jpg,"[861.0, 557.0, 58.0, 86.0]",door
+89,frame0046.jpg,"[0.0, 263.0, 1267.0, 376.0]",table
+90,frame0895_gripper.jpg,"[269.0, 0.0, 1011.0, 195.0]",red chili pepper
+90,frame0895_gripper.jpg,"[936.0, 439.0, 344.0, 281.0]",garlic
+90,frame0895_gripper.jpg,"[1125.0, 426.0, 92.0, 15.0]",wall
+90,frame0895_gripper.jpg,"[1221.0, 407.0, 39.0, 33.0]",door
+90,frame0895_gripper.jpg,"[464.0, 50.0, 816.0, 253.0]",table
+90,frame0895_gripper.jpg,"[0.0, 0.0, 270.0, 164.0]",ceiling
+91,frame0841.jpg,"[0.0, 452.0, 1280.0, 268.0]",cucumber
+91,frame0841.jpg,"[0.0, 0.0, 1280.0, 210.0]",red chili pepper
+91,frame0841.jpg,"[0.0, 86.0, 215.0, 99.0]",toy_cat
+91,frame0841.jpg,"[1108.0, 131.0, 172.0, 88.0]",garlic
+91,frame0841.jpg,"[339.0, 380.0, 74.0, 72.0]",tomato
+91,frame0841.jpg,"[727.0, 413.0, 382.0, 307.0]",wall
+91,frame0841.jpg,"[420.0, 417.0, 175.0, 34.0]",table
+91,frame0841.jpg,"[100.0, 417.0, 195.0, 34.0]",ceiling
+92,frame1960_gripper.jpg,"[985.0, 371.0, 124.0, 49.0]",cucumber
+92,frame1960_gripper.jpg,"[352.0, 357.0, 90.0, 56.0]",green chili pepper
+92,frame1960_gripper.jpg,"[486.0, 371.0, 42.0, 48.0]",corn
+92,frame1960_gripper.jpg,"[110.0, 0.0, 1170.0, 79.0]",potato
+92,frame1960_gripper.jpg,"[0.0, 0.0, 1280.0, 126.0]",wall
+92,frame1960_gripper.jpg,"[0.0, 600.0, 1280.0, 120.0]",table
+92,frame1960_gripper.jpg,"[0.0, 408.0, 1280.0, 198.0]",ceiling
+93,frame1426.jpg,"[0.0, 213.0, 176.0, 106.0]",cucumber
+93,frame1426.jpg,"[727.0, 411.0, 384.0, 309.0]",green chili pepper
+93,frame1426.jpg,"[296.0, 161.0, 122.0, 103.0]",red chili pepper
+93,frame1426.jpg,"[217.0, 265.0, 105.0, 123.0]",toy_cat
+93,frame1426.jpg,"[978.0, 3.0, 261.0, 216.0]",garlic
+93,frame1426.jpg,"[0.0, 104.0, 1280.0, 613.0]",tomato
+93,frame1426.jpg,"[0.0, 0.0, 1280.0, 160.0]",wall
+93,frame1426.jpg,"[335.0, 237.0, 235.0, 70.0]",table
