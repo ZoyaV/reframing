@@ -2,7 +2,7 @@ import numpy as np
 import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer
-from trl import AutoModelForCausalLMWithValueHead
+from trl import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead
 from transformers import AutoModelForSeq2SeqLM
 from trl import PPOTrainer, create_reference_model
 
@@ -63,7 +63,7 @@ def main():
     detection_model = OwlViTDetector("google/owlvit-base-patch32")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
-    model = AutoModelForCausalLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
+    model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
     model_ref = create_reference_model(model)
     model.cuda()
     tokenizer.pad_token = tokenizer.eos_token
