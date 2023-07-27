@@ -11,7 +11,7 @@ sys.path.append("../")
 from detectors.owlvit import OwlViTDetector
 from data_loaders import SegmentationsDataset
 from options import TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL, config, generation_kwargs, INPUT, OUTPUT, PROMPTS
-from rewarding import reinforce_loss
+from rewarding import detector_based_reward
 import matplotlib.pyplot as plt
 
 tqdm.pandas()
@@ -48,7 +48,7 @@ def run_epoch(ppo_trainer, tokenizer, batch, model):
 
     images = get_images(batch['file_name'])
     # Calculate rewards
-    rewards = [torch.from_numpy(np.array([r])) for r in reinforce_loss(game_data["response"], batch[OUTPUT], model, images)]
+    rewards = [torch.from_numpy(np.array([r])) for r in detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
 
     # Perform a PPO training step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
