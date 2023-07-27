@@ -88,7 +88,7 @@ def main():
     model_ref = create_reference_model(model)
     model.cuda()
     tokenizer.pad_token = tokenizer.eos_token
-    reward_tokenizer.pad_token = reward_tokenizer.eos_token
+    reward_tokenizer.pad_token = tokenizer.eos_token
 
 
     # Update the pad_token_id in generation kwargs
@@ -107,7 +107,7 @@ def main():
     # Execute training for several epochs
     for epoch in range(2):
         for batch in tqdm(ppo_trainer.dataloader):
-            run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
+            run_epoch(ppo_trainer, tokenizer, batch, reward_model, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
 
     path_to_save = f"checkpoint/{MODEL_NAME.split('/')[1]}"
     model.save_pretrained(path_to_save)
