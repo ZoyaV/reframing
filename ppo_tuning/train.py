@@ -50,9 +50,10 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = "detector", r
         response_tensors.append(response.squeeze()[-TXT_OUT_LEN:])
     game_data["response"] = [tokenizer.decode(r.squeeze()) for r in response_tensors]
 
-    images = get_images(batch['file_name'])
+
     # Calculate rewards
     if reward_model == "detector":
+        images = get_images(batch['file_name'])
         rewards = [torch.from_numpy(np.array([r])) for r in
                    detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
     elif reward_model == "hf":
