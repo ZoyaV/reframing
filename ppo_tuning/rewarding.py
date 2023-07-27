@@ -34,7 +34,8 @@ def detector_based_reward(logits, labels, model, images):
 def get_score(model, tokenizer, prompt, response):
     # Tokenize the input sequences
 
-    print(prompt, response)
+    print(prompt)
+    print(response)
     inputs = tokenizer.encode_plus(prompt, response, truncation=True, padding="max_length", max_length=512, return_tensors="pt")
  #   print(model)
     # Perform forward pass
