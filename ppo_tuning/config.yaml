@@ -8,8 +8,8 @@ data:
   out: 'bbox'
 
 model:
-  txt_in_len: 10
-  txt_out_len: 15
+  txt_in_len: 100
+  txt_out_len: 100
   seed: 2
   model_name: 'google/flan-t5-base'
   pretrained_model: 'google/flan-t5-base'
