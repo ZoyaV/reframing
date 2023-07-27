@@ -59,7 +59,7 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = "detector", r
     elif reward_model == "hf":
         prompt = batch["query"]
         rewards = [torch.from_numpy(np.array([r])) for r in
-                   hf_based_reward( batch[OUTPUT], model, reward_tokenizer, prompt)]
+                   hf_based_reward( game_data["response"], model, reward_tokenizer, prompt)]
 
     # Perform a PPO training step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
