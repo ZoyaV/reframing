@@ -86,6 +86,7 @@ def hf_based_reward(logits, reward_model, tokenizer, prompt):
         prediction = max(logit_parts, key=len)
        # print(prediction)
         sim_score = calculate_similarity(prompt[i].replace("</s>", ""), prediction)
+        print("SIM SCORE: ", sim_score)
         hf_score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)/7
         score = hf_score*0.5 + sim_score
         reward_metrics.append(score)
