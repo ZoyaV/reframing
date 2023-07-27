@@ -33,7 +33,7 @@ def calculate_similarity(original, predicted):
 
     similarity_score = common_nouns_count / max(len(nouns1), len(nouns2))
 
-    return similarity_score
+    return similarity_score - 1
 
 
 def detector_based_reward(logits, labels, model, images):
