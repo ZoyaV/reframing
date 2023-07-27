@@ -105,7 +105,7 @@ def main():
     # Execute training for several epochs
     for epoch in range(2):
         for batch in tqdm(ppo_trainer.dataloader):
-            run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = REWARD_MODEL)
+            run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = REWARD_MODEL, tokenizer=reward_tokenizer)
 
     path_to_save = f"checkpoint/{MODEL_NAME.split('/')[1]}"
     model.save_pretrained(path_to_save)
