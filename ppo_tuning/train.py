@@ -74,7 +74,7 @@ def init_detector_model():
 def init_hf_model():
     tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-1000")
     model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-1000")
-    return model, tokenizer
+    return model.cuda(), tokenizer
 # Main function to execute the training
 def main():
     # Initialize the tokenizer, model and reference model
