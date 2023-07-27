@@ -34,7 +34,7 @@ def detector_based_reward(logits, labels, model, images):
 def get_score(model, tokenizer, prompt, response):
     # Tokenize the input sequences
     inputs = tokenizer.encode_plus(prompt, response, truncation=True, padding="max_length", max_length=512, return_tensors="pt")
-    print(model)
+ #   print(model)
     # Perform forward pass
     with torch.no_grad():
         outputs = model(**inputs)
@@ -51,7 +51,7 @@ def hf_based_reward(logits, model, tokenizer, prompt):
         logit_parts = logit.split("</s>")
         prediction = max(logit_parts, key=len)
 
-        score = get_score(model, tokenizer, prompt[i], prediction)
+        score = get_score(model.cpu(), tokenizer, prompt[i], prediction)
         reward_metrics.append(score)
 
     print(f"Reward metrics: {reward_metrics}")
