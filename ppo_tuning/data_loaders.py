@@ -59,6 +59,15 @@ class SegmentationsDataset(CustomDataset):
         super(SegmentationsDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
 
 
+class HFDataset(CustomDataset):
+    def __init__(self, tokenizer, txt_in_len, inp_column, out_column):
+        data = pd.read_csv('./dataset/hf_prompts.csv')
+        data['prompt'] = data['text'].map(lambda x: f"Paraphrase logically: {x}")
+       # prompt = lambda x: f"""In other words, '{x}' is = """
+
+        super(SegmentationsDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
+
+
 class IgluDataset(CustomDataset):
     def __init__(self, tokenizer, txt_in_len, inp_column, out_column):
         data = get_messages()

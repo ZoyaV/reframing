@@ -8,7 +8,7 @@ from trl import PPOTrainer, create_reference_model
 
 sys.path.append("../")
 from detectors.owlvit import OwlViTDetector
-from data_loaders import SegmentationsDataset
+from data_loaders import SegmentationsDataset, HFDataset
 from options import (TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL,
                      config, generation_kwargs, INPUT, OUTPUT, PROMPTS, REWARD_MODEL)
 from rewarding import detector_based_reward
@@ -91,9 +91,13 @@ def main():
     # Update the pad_token_id in generation kwargs
     generation_kwargs["pad_token_id"] = tokenizer.eos_token_id
 
-    # Initialize the dataset and the PPO Trainer
-    dataset = SegmentationsDataset(tokenizer=tokenizer, txt_in_len=TXT_IN_LEN,
-                                   inp_column=INPUT, out_column=OUTPUT, prompts=PROMPTS).prepare_dataset()
+    if REWARD_MODEL == 'detector':
+        # Initialize the dataset and the PPO Trainer
+        dataset = SegmentationsDataset(tokenizer=tokenizer, txt_in_len=TXT_IN_LEN,
+                                       inp_column=INPUT, out_column=OUTPUT, prompts=PROMPTS).prepare_dataset()
+    else:
+        dataset = HFDataset(tokenizer=tokenizer, txt_in_len=TXT_IN_LEN,
+                                       inp_column=INPUT, out_column=OUTPUT).prepare_dataset()
    # print(dataset)
     ppo_trainer = PPOTrainer(config, model, model_ref, tokenizer, dataset, data_collator=collator)
 

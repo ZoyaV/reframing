@@ -16,6 +16,7 @@ parser.add_argument('--model_name', default=None, type=str, help='MODEL_NAME par
 parser.add_argument('--pretrained_model', default=None, type=str, help='PRETRAINED_MODEL parameter.')
 parser.add_argument('--inp', default=None, type=str, help='INPUT parameter.')
 parser.add_argument('--out', default=None, type=str, help='OUTPUT parameter.')
+parser.add_argument('--reward_model', default='detector', type=str, help='reward_model parameter.') #detector or hf
 
 # Parse the arguments
 args = parser.parse_args()
@@ -74,5 +75,6 @@ config = PPOConfig(
     batch_size=configs['ppo_trainer']['config']['batch_size']
 )
 
+REWARD_MODEL = args.reward_model
 # Set generation configs
 generation_kwargs = configs['text_generation']['parameters']

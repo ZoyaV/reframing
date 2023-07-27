@@ -2,6 +2,7 @@ wandb:
   entity: 'babycar27'
   project: 'curman'
 
+
 data:
   inp: 'category_id'
   out: 'bbox'
