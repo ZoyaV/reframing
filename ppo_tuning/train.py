@@ -88,6 +88,7 @@ def main():
     model_ref = create_reference_model(model)
     model.cuda()
     tokenizer.pad_token = tokenizer.eos_token
+    reward_tokenizer.pad_token = reward_tokenizer.eos_token
 
 
     # Update the pad_token_id in generation kwargs
