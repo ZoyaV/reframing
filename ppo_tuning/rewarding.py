@@ -33,6 +33,8 @@ def detector_based_reward(logits, labels, model, images):
 
 def get_score(model, tokenizer, prompt, response):
     # Tokenize the input sequences
+
+    print(prompt, response)
     inputs = tokenizer.encode_plus(prompt, response, truncation=True, padding="max_length", max_length=512, return_tensors="pt")
  #   print(model)
     # Perform forward pass
@@ -50,7 +52,7 @@ def hf_based_reward(logits, model, tokenizer, prompt):
         logit = logit.lower().replace("<pad>", "")
         logit_parts = logit.split("</s>")
         prediction = max(logit_parts, key=len)
-        print(prediction)
+       # print(prediction)
         score = get_score(model.cpu(), tokenizer, prompt[i], prediction)
         reward_metrics.append(score)
 
