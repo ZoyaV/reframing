@@ -1,19 +1,23 @@
+import sys
+
 import numpy as np
 import torch
 from tqdm import tqdm
-from transformers import AutoTokenizer
-from trl import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead
-from transformers import AutoModelForSeq2SeqLM
+from trl import AutoModelForSeq2SeqLMWithValueHead
 from trl import PPOTrainer, create_reference_model
 
-import sys
 sys.path.append("../")
 from detectors.owlvit import OwlViTDetector
 from data_loaders import SegmentationsDataset
-from options import TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL, config, generation_kwargs, INPUT, OUTPUT, PROMPTS
+from options import (TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL,
+                     config, generation_kwargs, INPUT, OUTPUT, PROMPTS, REWARD_MODEL)
 from rewarding import detector_based_reward
 import matplotlib.pyplot as plt
 
+from transformers import (
+    AutoModelForSequenceClassification,
+    AutoTokenizer,
+)
 tqdm.pandas()
 
 
@@ -29,7 +33,7 @@ def get_images(paths):
         imgs.append(img)
     return imgs
 # Function to run an epoch of training with PPO loss
-def run_epoch(ppo_trainer, tokenizer, batch, model):
+def run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = "detector", reward_tokenizer = None):
     # Prepare empty logs and game data
     logs, game_data = {}, {}
 
@@ -48,7 +52,12 @@ def run_epoch(ppo_trainer, tokenizer, batch, model):
 
     images = get_images(batch['file_name'])
     # Calculate rewards
-    rewards = [torch.from_numpy(np.array([r])) for r in detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
+    if reward_model == "detector":
+        rewards = [torch.from_numpy(np.array([r])) for r in
+                   detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
+    elif reward_model == "hf":
+        rewards = [torch.from_numpy(np.array([r])) for r in
+                   detector_based_reward( batch[OUTPUT], model, reward_tokenizer, tokenizer.decode(batch["query"]))]
 
     # Perform a PPO training step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
@@ -56,13 +65,23 @@ def run_epoch(ppo_trainer, tokenizer, batch, model):
     # Log the stats
     ppo_trainer.log_stats(stats, game_data, rewards)
 
+
+def init_detector_model():
+    return OwlViTDetector("google/owlvit-base-patch32")
+
+def init_hf_model():
+    tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-1000")
+    model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-1000")
+    return model, tokenizer
 # Main function to execute the training
 def main():
     # Initialize the tokenizer, model and reference model
+    if REWARD_MODEL == 'detector':
+        reward_model = init_detector_model()
+    elif REWARD_MODEL == 'hf':
+        reward_model, reward_tokenizer = init_hf_model()
 
-    detection_model = OwlViTDetector("google/owlvit-base-patch32")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-
     model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
     model_ref = create_reference_model(model)
     model.cuda()
@@ -81,7 +100,7 @@ def main():
     # Execute training for several epochs
     for epoch in range(2):
         for batch in tqdm(ppo_trainer.dataloader):
-            run_epoch(ppo_trainer, tokenizer, batch, detection_model)
+            run_epoch(ppo_trainer, tokenizer, batch, reward_model)
 
     path_to_save = f"checkpoint/{MODEL_NAME.split('/')[1]}"
     model.save_pretrained(path_to_save)
