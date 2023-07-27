@@ -51,7 +51,7 @@ def hf_based_reward(logits, model, tokenizer, prompt):
         logit_parts = logit.split("</s>")
         prediction = max(logit_parts, key=len)
 
-        score = get_score(model, tokenizer, prompt, prediction)
+        score = get_score(model, tokenizer, prompt[i], prediction)
         reward_metrics.append(score)
 
     print(f"Reward metrics: {reward_metrics}")
