@@ -65,7 +65,7 @@ class HFDataset(CustomDataset):
         data['prompt'] = data['text'].map(lambda x: f"Paraphrase logically: {x}")
        # prompt = lambda x: f"""In other words, '{x}' is = """
 
-        super(SegmentationsDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
+        super(HFDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
 
 
 class IgluDataset(CustomDataset):
