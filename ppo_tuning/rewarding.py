@@ -4,6 +4,32 @@ from detectors.owlvit import OwlViTDetector
 import torch
 import re
 
+import nltk
+from nltk.corpus import wordnet as wn
+
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+
+def is_noun(tag):
+    return tag in ['NN', 'NNS', 'NNP', 'NNPS']
+
+def extract_nouns(sentence):
+    tokens = nltk.word_tokenize(sentence)
+    tagged = nltk.pos_tag(tokens)
+    return [word.lower() for word, tag in tagged if is_noun(tag)]
+
+def calculate_similarity(str1, str2):
+    nouns1 = extract_nouns(str1)
+    nouns2 = extract_nouns(str2)
+
+    if not nouns1 or not nouns2:
+        return 0.0
+
+    common_nouns_count = len(set(nouns1).intersection(set(nouns2)))
+    similarity_score = common_nouns_count / max(len(set(nouns1).union(set(nouns2))), 1)
+
+    return similarity_score - 1
 
 def detector_based_reward(logits, labels, model, images):
     reward_metrics = []
@@ -54,7 +80,8 @@ def hf_based_reward(logits, reward_model, tokenizer, prompt):
         logit_parts = logit.split("</s>")
         prediction = max(logit_parts, key=len)
        # print(prediction)
-        score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)
+        sim_score = calculate_similarity(prompt[i].replace("</s>", ""), prediction)
+        score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)/7 + sim_score
         reward_metrics.append(score)
 
     print(f"Reward metrics: {reward_metrics}")
