@@ -11,7 +11,7 @@ from detectors.owlvit import OwlViTDetector
 from data_loaders import SegmentationsDataset, HFDataset
 from options import (TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL,
                      config, generation_kwargs, INPUT, OUTPUT, PROMPTS, REWARD_MODEL)
-from rewarding import detector_based_reward
+from rewarding import detector_based_reward, hf_based_reward
 import matplotlib.pyplot as plt
 
 from transformers import (
@@ -58,7 +58,7 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = "detector", r
                    detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
     elif reward_model == "hf":
         rewards = [torch.from_numpy(np.array([r])) for r in
-                   detector_based_reward( batch[OUTPUT], model, reward_tokenizer, tokenizer.decode(batch["query"]))]
+                   hf_based_reward( batch[OUTPUT], model, reward_tokenizer, tokenizer.decode(batch["query"]))]
 
     # Perform a PPO training step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
