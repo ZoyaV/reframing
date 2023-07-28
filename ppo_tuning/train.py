@@ -113,7 +113,7 @@ def main():
         for batch in tqdm(ppo_trainer.dataloader):
             t+=1
             run_epoch(ppo_trainer, tokenizer, batch, reward_model, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
-            if t%300 == 0:
+            if t%30 == 0:
                 path_to_save = f"checkpoint/{t}_{configs['wandb']['project']}"
                 model.save_pretrained(path_to_save)
                 tokenizer.save_pretrained(path_to_save)
