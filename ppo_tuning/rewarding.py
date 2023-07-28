@@ -47,8 +47,10 @@ def detector_based_reward(logits, labels, model, images):
         if len(prediction) == 0 or prediction == "word":
             prediction = "object"
         else:
-            prediction = prediction[1:]
-
+            prediction = prediction.replace("or ", "")
+            prediction = prediction.replace("of ", "")
+            predcition = prediction.replace("to ", "")
+        print(prediction)
         try:
             true_bbox = eval(labels[i])
             predicted_bbox = model.get_bboxes(images[i], [prediction])[0]
