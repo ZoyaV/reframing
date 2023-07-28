@@ -87,8 +87,8 @@ def detector_based_reward(logits, labels, model, images):
 def get_score(model, tokenizer, prompt, response):
     # Tokenize the input sequences
 
-    print(prompt)
-    print(response)
+  #  print(prompt)
+  #  print(response)
     inputs = tokenizer.encode_plus(prompt, response, truncation=True, padding="max_length", max_length=512, return_tensors="pt")
  #   print(model)
     # Perform forward pass
@@ -108,9 +108,9 @@ def hf_based_reward(logits, reward_model, tokenizer, prompt):
         prediction = max(logit_parts, key=len)
        # print(prediction)
         sim_score = calculate_similarity(prompt[i].replace("</s>", ""), prediction)
-        print("SIM SCORE: ", sim_score)
+        #print("SIM SCORE: ", sim_score)
         hf_score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)/8
-        print("HF SCORE: ", hf_score)
+       # print("HF SCORE: ", hf_score)
         score = hf_score + sim_score
         reward_metrics.append(score)
 
