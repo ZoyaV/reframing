@@ -28,7 +28,7 @@ class OwlViTDetector(BaseDetector):
         boxes, scores, labels = results[0]["boxes"], results[0]["scores"], results[0]["labels"]
 
         # Filter out low score predictions
-        score_threshold = 0.1
+        score_threshold = 0.0
         result_boxes = [(score, box, label) for score, box, label in zip(scores, boxes, labels) if
                         score >= score_threshold]
 
