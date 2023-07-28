@@ -8,8 +8,8 @@ data:
   out: 'bbox'
 
 model:
-  txt_in_len: 10 #300
-  txt_out_len: 15 #300
+  txt_in_len: 15 #300
+  txt_out_len: 5 #300
   seed: 2
   model_name: 'google/flan-t5-base'
   pretrained_model: 'google/flan-t5-base'
@@ -27,6 +27,7 @@ text_generation:
     top_k: 1
     top_p: 1.0
     do_sample: true
-    eos_token_id: -1
+    min_length: 5
+    #eos_token_id: -1
    # max_new_tokens: 15
 
