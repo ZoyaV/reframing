@@ -72,8 +72,8 @@ def init_detector_model():
     return OwlViTDetector("google/owlvit-base-patch32")
 
 def init_hf_model():
-    tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-1000")
-    model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-1000")
+    tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-1500")
+    model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-1500")
     return model.cuda(), tokenizer
 # Main function to execute the training
 def main():
