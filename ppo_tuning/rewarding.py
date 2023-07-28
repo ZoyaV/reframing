@@ -106,7 +106,7 @@ def hf_based_reward(logits, reward_model, tokenizer, prompt):
         logit = logit.lower().replace("<pad>", "")
         logit_parts = logit.split("</s>")
         prediction = max(logit_parts, key=len)
-       # print(prediction)
+       # nt(prediction)
         sim_score = calculate_similarity(prompt[i].replace("</s>", ""), prediction)
         #print("SIM SCORE: ", sim_score)
         hf_score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)/8
@@ -114,7 +114,7 @@ def hf_based_reward(logits, reward_model, tokenizer, prompt):
         score = hf_score + sim_score
         reward_metrics.append(score)
 
-    print(f"Reward metrics: {reward_metrics}")
+   # print(f"Reward metrics: {reward_metrics}")
     return reward_metrics
 
 
