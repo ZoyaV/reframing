@@ -1,4 +1,4 @@
-# Text Query Manipulator for Improved Detection
+# CANMAN - Text Query Manipulator for Improved Detection
 
 This repository contains an experiment aimed at enhancing the performance of a text query-based detection model using an NLP-based manipulator. The manipulator is designed to modify the user's text query in such a way that the detection results are improved. The training of this manipulator is implemented using the "trl" library, which facilitates training with either human feedback or the IoU (Intersection over Union) metric evaluation.
 
@@ -13,11 +13,11 @@ To set up the environment and dependencies required to run the code, follow thes
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone git@github.com:ZoyaV/cunning_manipulator.git
+cd cunning_manipulator
 ```
 
-2. Install the required packages using pip:
+2. Install the required packages using pip (settings for python3.9):
 
 ```bash
 pip install -r requirements.txt
@@ -25,69 +25,39 @@ pip install -r requirements.txt
 
 ## Getting Started
 
-The experiment consists of three main parts: training the detection model, training the NLP-based manipulator with reward modeling, and training the NLP-based manipulator using Proximal Policy Optimization (PPO) tuning.
+The experiment consists of two main parts: training NLP-based manipulator using Proximal Policy Optimization (PPO) tuning with **feedback from detector**, training the NLP-based manipulator with reward based on human feedback.
 
-### Training the Detection Model
 
-To train the detection model, follow these steps:
-
-1. Prepare the Dataset:
-   - Ensure that you have the dataset ready for your specific detection task.
-   - Organize the data in a format compatible with the model training script.
-
-2. Train the Model:
-   - Use the relevant detection model implementation and train it on your dataset.
-   - Save the trained model checkpoint for later evaluation.
-
-### Training the NLP-based Manipulator with Reward Modeling
+### Training the NLP-based Manipulator with Reward from Detector Feedback
 
 To train the NLP-based manipulator using reward modeling, proceed as follows:
 
-1. Prepare the Manipulator Dataset:
-   - Generate a dataset of text queries and corresponding rewards (feedback) based on the detection model's performance.
-   - Ensure that the rewards represent the quality of detection results for each modified query.
+```bash
+cd ppo_tuning
+```
+Traing with your own config or setup parametrs in console
 
-2. Train the Manipulator:
-   - Utilize the "trl" library to train the manipulator using the reward dataset.
-   - Adjust the hyperparameters as needed based on your experiment's requirements.
-   - Save the trained manipulator model checkpoint.
+```bash
+python3.9 train.py --config config.yaml --reward_model detector --project cunman_detection_feedback
+```
 
-### Training the NLP-based Manipulator with PPO Tuning
-
-To train the NLP-based manipulator using Proximal Policy Optimization (PPO) tuning, proceed as follows:
-
-1. Prepare the Manipulator Dataset:
-   - Generate a dataset of text queries and their corresponding rewards by evaluating them with the detection model.
-   - The rewards should be based on the detection model's performance for each modified query.
-
-2. Train the Manipulator:
-   - Utilize the "trl" library and PPO algorithm to train the manipulator on the reward dataset.
-   - Adjust the hyperparameters as needed based on your experiment's requirements.
-   - Save the trained manipulator model checkpoint.
 
 ## Running the Models
 
-After training the detection model and the NLP-based manipulators, you can run them for evaluation or real-world use.
+Run the mine script from the root directory
 
-1. Evaluation:
-   - Load the trained detection model and manipulator models.
-   - Use the manipulator to modify text queries for the evaluation dataset.
-   - Evaluate the performance of the enhanced detection results using appropriate metrics.
-
-2. Real-world Use:
-   - Load the trained detection model and manipulator models.
-   - Integrate the manipulator into your text query-based detection system.
-   - Use the manipulator to preprocess user queries before passing them to the detection model for real-world use.
+```bash
+python3.9 main.py 
+```
 
 ## File Structure
 
 The repository is organized as follows:
 
 ```
-|- data/              # Directory for dataset files
-|- models/            # Directory for saved model checkpoints
-|- scripts/           # Scripts for training and evaluation
-|- README.md          # This readme file
+|- detectors/              # Detectors models under which the manipulator is trained
+|- metrics/            # Metrics calculation such as IOU using for Detector feedback calculation
+|- ppo_tuning/           # Main code for PPO_loss tuning
 |- requirements.txt   # List of required Python packages
 ```
 
