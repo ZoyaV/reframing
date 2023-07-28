@@ -107,13 +107,16 @@ def main():
     ppo_trainer = PPOTrainer(config, model, model_ref, tokenizer, dataset, data_collator=collator)
 
     # Execute training for several epochs
+    t = 0
+
     for epoch in range(2):
         for batch in tqdm(ppo_trainer.dataloader):
+            t+=1
             run_epoch(ppo_trainer, tokenizer, batch, reward_model, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
-
-    path_to_save = f"checkpoint/{configs['wandb']['project'] }"
-    model.save_pretrained(path_to_save)
-    tokenizer.save_pretrained(path_to_save)
+            if t%300 == 0:
+                path_to_save = f"checkpoint/{t}_{configs['wandb']['project']}"
+                model.save_pretrained(path_to_save)
+                tokenizer.save_pretrained(path_to_save)
 
 if __name__ == "__main__":
     main()
