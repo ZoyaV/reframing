@@ -82,13 +82,14 @@ def main():
         reward_model = init_detector_model()
     elif REWARD_MODEL == 'hf':
         reward_model, reward_tokenizer = init_hf_model()
+        reward_tokenizer.pad_token = reward_tokenizer.eos_token
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
     model_ref = create_reference_model(model)
     model.cuda()
     tokenizer.pad_token = tokenizer.eos_token
-    reward_tokenizer.pad_token = tokenizer.eos_token
+
 
 
     # Update the pad_token_id in generation kwargs
