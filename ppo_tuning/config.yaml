@@ -24,7 +24,7 @@ ppo_trainer:
 
 text_generation:
   parameters:
-    top_k: 3
+    top_k: 1
     top_p: 1.0
     do_sample: true
     eos_token_id: -1
