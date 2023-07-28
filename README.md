@@ -1,4 +1,4 @@
-# CANMAN - Text Query Manipulator for Improved Detection
+# :smirk: CANMAN - Text Query Manipulator for Improved Detection
 
 This repository contains an experiment aimed at enhancing the performance of a text query-based detection model using an NLP-based manipulator. The manipulator is designed to modify the user's text query in such a way that the detection results are improved. The training of this manipulator is implemented using the "trl" library, which facilitates training with either human feedback or the IoU (Intersection over Union) metric evaluation.
 
