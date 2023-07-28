@@ -62,9 +62,9 @@ TXT_OUT_LEN = configs['model']['txt_out_len']
 SEED = configs['model']['seed']
 MODEL_NAME = configs['model']['model_name']
 PRETRAINED_MODEL = configs['model']['pretrained_model']
-PROMPTS = [ lambda x: f"In other words, '{x}' is = ",
-            lambda x: f"A synonym for the word '{x}' is = ",
-            lambda x: f"In general, '{x}' is a subclass of = "]
+PROMPTS = [  "In other words, '{}' is = ",
+            "A synonym for the word '{}' is = ",
+             "In general, '{}' is a subclass of = "] [1:2]
 # Set PPO trainer configs
 config = PPOConfig(
     model_name=MODEL_NAME,
