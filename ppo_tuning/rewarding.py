@@ -3,8 +3,11 @@ from detectors.owlvit import OwlViTDetector
 
 import torch
 import re
+
+import numpy as np
 import nltk
 from nltk.corpus import wordnet as wn
+from collections import Counter
 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -25,15 +28,24 @@ def calculate_similarity(original, predicted):
     if not nouns1 or not nouns2:
         return 0.0
 
-    common_nouns_count = 0
+    pred_words_set = dict(Counter(nouns2).most_common())
+    repeats = np.mean([ value-1 for value in pred_words_set.values()])
+    repeat_coaf = repeats/len(nouns2)
+    sim_coef = len(set(nouns2))/len(set(nouns1))
+    return sim_coef-repeat_coaf*3
 
-    for noun in nouns1:
-        if noun in nouns2:
-            common_nouns_count += 1
+def calculate_similarity(original, predicted):
+    nouns1 = extract_nouns(original)
+    nouns2 = extract_nouns(predicted)
 
-    similarity_score = common_nouns_count / max(len(nouns1), len(nouns2))
+    if not nouns1 or not nouns2:
+        return 0.0
 
-    return similarity_score - 1
+    pred_words_set = dict(Counter(nouns2).most_common())
+    repeats = np.mean([ value-1 for value in pred_words_set.values()])
+    repeat_coaf = repeats/len(nouns2)
+    sim_coef = len(set(nouns2))/len(set(nouns1))
+    return sim_coef-repeat_coaf
 
 
 def detector_based_reward(logits, labels, model, images):
@@ -49,7 +61,7 @@ def detector_based_reward(logits, labels, model, images):
         else:
             prediction = prediction.replace("or ", "")
             prediction = prediction.replace("of ", "")
-            predcition = prediction.replace("to ", "")
+            prediction = prediction.replace("to ", "")
         print(prediction)
         try:
             true_bbox = eval(labels[i])
@@ -89,8 +101,9 @@ def hf_based_reward(logits, reward_model, tokenizer, prompt):
        # print(prediction)
         sim_score = calculate_similarity(prompt[i].replace("</s>", ""), prediction)
         print("SIM SCORE: ", sim_score)
-        hf_score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)/7
-        score = hf_score*0.5 + sim_score
+        hf_score = get_score(reward_model.cpu(), tokenizer, prompt[i].replace("</s>", ""), prediction)
+        print("HF SCORE: ", sim_score)
+        score = hf_score + sim_score
         reward_metrics.append(score)
 
     print(f"Reward metrics: {reward_metrics}")
