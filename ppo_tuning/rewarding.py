@@ -69,7 +69,8 @@ def detector_based_reward(logits, labels, model, images):
         else:
             prediction = prediction.replace("or ", "")
             prediction = prediction.replace("of ", "")
-            prediction = prediction.replace("to ", "")
+            prediction = prediction.replace("to ", "").strip()
+
         print(prediction)
         try:
             true_bbox = eval(labels[i])
