@@ -22,8 +22,8 @@ class OwlViTDetector(BaseDetector):
         with torch.no_grad():
             outputs = self.model(**inputs)
             target_sizes = torch.Tensor([image.shape[:2]]).to(self.device)
-            results = self.processor.post_process_object_detection(outputs=outputs, target_sizes=target_sizes, threshold=0.1)
-       # print(results)
+            results = self.processor.post_process_object_detection(outputs=outputs, target_sizes=target_sizes, threshold=0.0001)
+    #    print(results)
         # Get prediction logits
         boxes, scores, labels = results[0]["boxes"], results[0]["scores"], results[0]["labels"]
 
