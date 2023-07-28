@@ -63,7 +63,7 @@ class HFDataset(CustomDataset):
     def __init__(self, tokenizer, txt_in_len, inp_column, out_column):
         data = pd.read_csv('./dataset/hf_prompts.csv')
         data['prompt'] = data['text'].map(lambda x: f"The fixed version of sentence: '{x}' is")
-
+        data = data[data['is_correct'] == 0]
         super(HFDataset, self).__init__(data, tokenizer, txt_in_len, inp_column, out_column)
 
 
