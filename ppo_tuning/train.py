@@ -10,7 +10,7 @@ sys.path.append("../")
 from detectors.owlvit import OwlViTDetector
 from data_loaders import SegmentationsDataset, HFDataset
 from options import (TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL,
-                     config, generation_kwargs, INPUT, OUTPUT, PROMPTS, REWARD_MODEL)
+                     config, configs, generation_kwargs, INPUT, OUTPUT, PROMPTS, REWARD_MODEL)
 from rewarding import detector_based_reward, hf_based_reward
 import matplotlib.pyplot as plt
 
@@ -109,7 +109,7 @@ def main():
         for batch in tqdm(ppo_trainer.dataloader):
             run_epoch(ppo_trainer, tokenizer, batch, reward_model, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
 
-    path_to_save = f"checkpoint/{MODEL_NAME.split('/')[1]}"
+    path_to_save = f"checkpoint/{configs['wandb']['project'] }"
     model.save_pretrained(path_to_save)
     tokenizer.save_pretrained(path_to_save)
 
