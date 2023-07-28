@@ -42,7 +42,7 @@ def calculate_similarity(original, predicted):
 
     return sim_coef-repeat_coaf*3 - 1
 
-def calculate_similarity(original, predicted):
+def calculate_similarity2(original, predicted):
     nouns1 = extract_nouns(original)
     nouns2 = extract_nouns(predicted)
 
