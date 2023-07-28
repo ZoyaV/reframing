@@ -32,6 +32,14 @@ def calculate_similarity(original, predicted):
     repeats = np.mean([ value-1 for value in pred_words_set.values()])
     repeat_coaf = repeats/len(nouns2)
     sim_coef = len(set(nouns2))/len(set(nouns1))
+
+    t = 0
+    for word in pred_words_set:
+        if word in nouns1:
+            t += 1
+    if t == 0:
+        return -1
+
     return sim_coef-repeat_coaf*3
 
 def calculate_similarity(original, predicted):
