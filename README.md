@@ -42,6 +42,22 @@ python3.9 train.py --config config.yaml --reward_model detector --project cunman
 ```
 
 
+### Training the NLP-based Manipulator with Reward from Human Feedback
+
+1. At First train Human Feedback model *ppo_tuning/human_feedback/HFModel.ipynb*
+
+2. To train the NLP-based manipulator using reward modeling, proceed as follows:
+
+```bash
+cd ppo_tuning
+```
+Traing with your own config or setup parametrs in console
+
+```bash
+python3.9 train.py --config config.yaml --reward_model hf --inp prompt --out text --txt_in_len 30 --txt_out_len 30 --project cunman_human_feedback
+```
+
+
 ## Running the Models
 
 Run the mine script from the root directory
