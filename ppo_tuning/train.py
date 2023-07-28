@@ -78,6 +78,7 @@ def init_hf_model():
 # Main function to execute the training
 def main():
     # Initialize the tokenizer, model and reference model
+    reward_tokenizer = None
     if REWARD_MODEL == 'detector':
         reward_model = init_detector_model()
     elif REWARD_MODEL == 'hf':
