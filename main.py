@@ -33,7 +33,7 @@ def plot_bbox(im, true_bbox, predicted_bbox):
     plt.show()
 
 
-def average_metric(manipulator = None, prompt_f = lambda x: f"The synonym for {x}  "):
+def average_metric(manipulator = None, prompt_f = lambda x: f"A synonym for the word '{x}' is = "):
     if manipulator:
         manipulation_model, tokenizer = manipulator
     model = OwlViTDetector("google/owlvit-base-patch32")
@@ -47,11 +47,12 @@ def average_metric(manipulator = None, prompt_f = lambda x: f"The synonym for {x
                 text_queries = [category_dict[j]]
             else:
                 text_prompt = prompt_f(category_dict[j])
-             #   print("Inp: ", text_prompt)
+              #  print("Inp: ", text_prompt)
                 prompt = tokenizer.encode(text_prompt)
 
-                manipulator_responce = manipulation_model.generate(torch.from_numpy(np.array(prompt).reshape(1, -1)), top_k = 3)
-                responce = tokenizer.decode(manipulator_responce.squeeze()).replace("<pad>", "").replace("</s>", "")
+                manipulator_responce = manipulation_model.generate(torch.from_numpy(np.array(prompt).reshape(1, -1)), top_k = 1,
+                                                                   min_length =5, top_p = 1.0, do_sample = True)
+                responce = "a " + tokenizer.decode(manipulator_responce.squeeze()).replace("<pad>", "").replace("</s>", "")
               #  print("Outp: ", responce)
                # print(responce)
                 text_queries = [responce]
@@ -106,8 +107,12 @@ from transformers import (
 from trl import AutoModelForSeq2SeqLMWithValueHead
 
 if __name__ == "__main__":
-    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
+    #tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
     model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained('google/flan-t5-base')
+    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
+   # model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained('ppo_tuning/checkpoints/manipulator_v1')
+
+    tokenizer.pad_token = tokenizer.eos_token
 
     manipulator = model, tokenizer
     print(average_metric(manipulator))
