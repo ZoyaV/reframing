@@ -108,9 +108,9 @@ from trl import AutoModelForSeq2SeqLMWithValueHead
 
 if __name__ == "__main__":
     #tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
-    model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained('google/flan-t5-base')
+    #model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained('google/flan-t5-base')
     tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
-   # model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained('ppo_tuning/checkpoints/manipulator_v1')
+    model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained('ppo_tuning/checkpoints/manipulator_v1')
 
     tokenizer.pad_token = tokenizer.eos_token
 
