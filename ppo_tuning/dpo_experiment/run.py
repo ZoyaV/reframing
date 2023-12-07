@@ -32,7 +32,7 @@ def main():
             name for name, buffer in model.named_buffers() if buffer.dtype == torch.bool
         ]
 
-    model_ref = AutoModelForCausalLM.from_pretrained(
+    model_ref  = AutoModelForCausalLM.from_pretrained(
         script_args.model_name_or_path,
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
