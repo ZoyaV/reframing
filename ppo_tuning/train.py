@@ -3,8 +3,10 @@ import sys
 import numpy as np
 import torch
 from tqdm import tqdm
-from trl import AutoModelForSeq2SeqLMWithValueHead
+from trl import AutoModelForSeq2SeqLMWithValueHead, AutoModelForCausalLMWithValueHead
 from trl import PPOTrainer, create_reference_model
+import wandb
+from peft import LoraConfig, PeftModel
 
 sys.path.append("../")
 from detectors.owlvit import OwlViTDetector
@@ -18,9 +20,10 @@ from transformers import (
     AutoModelForSequenceClassification,
     AutoTokenizer,
 )
+
 tqdm.pandas()
-
-
+wandb.init(dir="./wandb")
+log_query = wandb.Table(columns=["query", "response"])
 # Collate function to be used for gathering batch data
 def collator(data):
     return {key: [d[key] for d in data] for key in data[0]}
@@ -29,11 +32,11 @@ def collator(data):
 def get_images(paths):
     imgs = []
     for path in paths:
-        img = plt.imread(f"../dataset/imgs/{path}")
+        img = plt.imread(f"./dataset/imgs/{path}")
         imgs.append(img)
     return imgs
 # Function to run an epoch of training with PPO loss
-def run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = "detector", reward_tokenizer = None):
+def run_epoch(ppo_trainer, tokenizer, batch, model, co, reward_model = "detector", reward_tokenizer = None):
     # Prepare empty logs and game data
     logs, game_data = {}, {}
 
@@ -54,27 +57,34 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, reward_model = "detector", r
     # Calculate rewards
     if reward_model == "detector":
         images = get_images(batch['file_name'])
+        print(game_data["response"], "|||", images)
         rewards = [torch.from_numpy(np.array([r])) for r in
                    detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
     elif reward_model == "hf":
         prompt = batch["query"]
         rewards = [torch.from_numpy(np.array([r])) for r in
-                   hf_based_reward( game_data["response"], model, reward_tokenizer, prompt)]
+                   hf_based_reward( game_data["response"], model, reward_tokenizer, prompt)
 
     # Perform a PPO training step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
-
+    if co%100 == 0:
+        if reward_model == "detector":
+            with open('./input_output_nonpadded.txt', 'a') as f:
+                f.write("{} ||| {} ||| {} ||| {}\n".format(co, game_data["query"], game_data["response"], rewards[0].item()))
+        elif reward_model == "hf":
+            with open('./input_output_nonpadded.txt', 'a') as f:
+                f.write("{} ||| {} ||| {} ||| {}\n".format(co, game_data["query"], game_data["response"], rewards[0].item()))
     # Log the stats
     ppo_trainer.log_stats(stats, game_data, rewards)
-
 
 def init_detector_model():
     return OwlViTDetector("google/owlvit-base-patch32")
 
 def init_hf_model():
-    tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-1500")
-    model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-1500")
+    tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-21500")
+    model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-21500")
     return model.cuda(), tokenizer
+
 # Main function to execute the training
 def main():
     # Initialize the tokenizer, model and reference model
@@ -85,11 +95,12 @@ def main():
         reward_model, reward_tokenizer = init_hf_model()
         reward_tokenizer.pad_token = reward_tokenizer.eos_token
 
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForSeq2SeqLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    model = AutoModelForCausalLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
     model_ref = create_reference_model(model)
     model.cuda()
     tokenizer.pad_token = tokenizer.eos_token
+
 
 
 
@@ -108,12 +119,19 @@ def main():
 
     # Execute training for several epochs
     t = 0
+    co = 0
+    num_epochs = 0
 
-    for epoch in range(2):
+    if REWARD_MODEL == 'detector':
+        num_epochs = 10
+    elif REWARD_MODEL == 'hf':
+        num_epochs = 2
+    for epoch in range(num_epochs):
         for batch in tqdm(ppo_trainer.dataloader):
             t+=1
-            run_epoch(ppo_trainer, tokenizer, batch, reward_model, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
-            if t%30 == 0:
+            co+=1
+            run_epoch(ppo_trainer, tokenizer, batch,reward_model, co, reward_model = REWARD_MODEL, reward_tokenizer=reward_tokenizer)
+            if t%1000 == 0:
                 path_to_save = f"checkpoint/{t}_{configs['wandb']['project']}"
                 model.save_pretrained(path_to_save)
                 tokenizer.save_pretrained(path_to_save)
