@@ -4,7 +4,20 @@ import torch
 from dataclasses import dataclass, field
 from datasets import Dataset, load_dataset
 from typing import Dict, Optional
+import pandas as pd
 
+def prepare_data(path):
+    data = pd.read_csv(path)
+    data['prompt'] = data['rejected'].apply(lambda row: f"Send ONLY a single sentence - a rewording of '{row}'")
+    data['chosen'] = data['preferenced']
+    print(data.size)
+    data = data.dropna()
+    print(data.size)
+    dataset = Dataset.from_pandas(data)
+    formatted_dataset = dataset.train_test_split()
+    print(data.head())
+    return formatted_dataset
+    
 def get_stack_exchange_paired(
     data_dir: str = "data/rl",
     sanity_check: bool = False,
