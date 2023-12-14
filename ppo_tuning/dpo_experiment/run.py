@@ -11,7 +11,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser, 
 from trl import DPOTrainer
 
 from training_arguments import ScriptArguments
-
+from utils import prepare_data
 
 def main():
     parser = HfArgumentParser(ScriptArguments)
@@ -21,7 +21,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         script_args.model_name_or_path,
         low_cpu_mem_usage=True,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.float32,
         load_in_4bit=False,
     )
     model.config.use_cache = False
@@ -35,25 +35,14 @@ def main():
     model_ref  = AutoModelForCausalLM.from_pretrained(
         script_args.model_name_or_path,
         low_cpu_mem_usage=True,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.float32,
         load_in_4bit=False,
     )
     tokenizer = AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf")
     tokenizer.pad_token = tokenizer.eos_token
 
     # 2. Load the Stack-exchange paired dataset
-    train_dataset = get_stack_exchange_paired(data_dir="data/rl", sanity_check=script_args.sanity_check)
-    train_dataset = train_dataset.filter(
-        lambda x: len(x["prompt"]) + len(x["chosen"]) <= script_args.max_length
-                  and len(x["prompt"]) + len(x["rejected"]) <= script_args.max_length
-    )
-
-    # 3. Load evaluation dataset
-    eval_dataset = get_stack_exchange_paired(data_dir="data/evaluation", sanity_check=True)
-    eval_dataset = eval_dataset.filter(
-        lambda x: len(x["prompt"]) + len(x["chosen"]) <= script_args.max_length
-                  and len(x["prompt"]) + len(x["rejected"]) <= script_args.max_length
-    )
+    data = prepare_data("modified_output.csv")
 
     # 4. initialize training arguments:
     training_args = TrainingArguments(
@@ -72,7 +61,7 @@ def main():
         lr_scheduler_type=script_args.lr_scheduler_type,
         warmup_steps=script_args.warmup_steps,
         optim=script_args.optimizer_type,
-        bf16=False,
+        bf16=True,
         remove_unused_columns=False,
         run_name="dpo_llama2",
     )
@@ -100,8 +89,8 @@ def main():
         model_ref,
         args=training_args,
         beta=script_args.beta,
-        train_dataset=train_dataset,
-        eval_dataset=eval_dataset,
+        train_dataset=data['train'],
+        eval_dataset=data['test'],
         tokenizer=tokenizer,
         peft_config=peft_config,
         max_prompt_length=script_args.max_prompt_length,
