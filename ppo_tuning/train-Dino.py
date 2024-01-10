@@ -35,10 +35,12 @@ def collator(data):
 
 def get_images(paths):
     imgs = []
+    img_sources = []
     for path in paths:
-        _, image = load_image('./dataset/imgs/'+path)
+        img_source, image = load_image('./dataset/imgs/'+path)
         imgs.append(image)
-    return imgs
+        img_sources.append(img_source)
+    return imgs, img_sources
 # Function to run an epoch of training with PPO loss
 def run_epoch(ppo_trainer, tokenizer, batch, model, co, reward_model = "detector", reward_tokenizer = None):
     # Prepare empty logs and game data
@@ -60,9 +62,9 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, co, reward_model = "detector
 
     # Calculate rewards
     if reward_model == "detector":
-        images = get_images(batch['file_name'])
+        images, img_sources = get_images(batch['file_name'])
         rewards = [torch.from_numpy(np.array([r])) for r in
-                   Dino_detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
+                   Dino_detector_based_reward(game_data["response"], batch[OUTPUT], model, images, img_sources)]
     elif reward_model == "hf":
         prompt = batch["query"]
         rewards = [torch.from_numpy(np.array([r])) for r in

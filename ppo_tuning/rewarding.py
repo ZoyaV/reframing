@@ -1,7 +1,7 @@
 import sys
 sys.path.append("../")
 sys.path.append("../GroundingDINO/")
-from metrics.metrics import calculate_iou, calculate_iou_Dino
+from metrics.metrics import calculate_iou, box_iou
 from detectors.owlvit import OwlViTDetector
 from groundingdino.util.inference import predict, load_image
 from torchvision.ops import box_convert
@@ -22,8 +22,8 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 
-repetition_pen = 0
 prev_prediction = ""
+repetition_pen = 0
 
 def is_noun(tag):
     return tag in ['NN', 'NNS', 'NNP', 'NNPS']
@@ -122,7 +122,7 @@ def detector_based_reward(logits, labels, model, images):
     return reward_metrics
 
 
-def Dino_detector_based_reward(logits, labels, model, images):
+def Dino_detector_based_reward(logits, labels, model, images, img_sources):
     reward_metrics = []
     all_scores = {}
     for i in range(len(logits)):
@@ -140,45 +140,45 @@ def Dino_detector_based_reward(logits, labels, model, images):
 
         print(prediction)
         counter = 0
-        global repetition_pen
         global prev_prediction
+        global repetition_pen
         for pred_word in prediction.split():
             if pred_word in prev_prediction.split():
                 counter+=1
         if counter:
-            repetition_pen -= 1
+            repetition_pen = -0.5
         else:
             repetition_pen = 0
+
+        real_bbox = []
         try:
             boxes, logits_detector, phrases = predict(
-                model=model,
-                image=images[i],
-                caption=prediction,
-                box_threshold=0,
-                text_threshold=0.25
-            )
-            h, w, _ = images[i].shape
-            resized_box = boxes * torch.Tensor([w, h, w, h])
+                 model=model,
+                 image=images[i],
+                 caption=prediction,
+                 box_threshold=0,
+                 text_threshold=0.25
+             )
+            h, w, _ = img_sources[i].shape
+            boxes = boxes * torch.Tensor([w, h, w, h])
             max_pos = np.where(np.max(logits_detector.numpy()))
-            
-            predicted_bbox = box_convert(boxes=resized_box, in_fmt="cxcywh", out_fmt="xyxy").numpy()[max_pos]
-            true_bbox = eval(labels[i])
-            print(f"predicted_bbox = {predicted_bbox}, logits_detector = {logits_detector}, phrases = {phrases}")
-            iou_score = float(calculate_iou_Dino(true_bbox, predicted_bbox)) * 1.5
+            predicted_bbox = box_convert(boxes=boxes[max_pos], in_fmt="cxcywh", out_fmt="xyxy").numpy()[max_pos][0]
+            true_bbox = torch.Tensor(eval(labels[i]))
+            print(true_bbox)
+            real_bbox = box_convert(boxes=true_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()
+            iou_score = float(box_iou(real_bbox, predicted_bbox))
             pred_score = float(logits_detector.numpy()[max_pos])
             all_scores["pred_score"] = pred_score
             all_scores["IOU"] = iou_score
             all_scores["repetition_pen"] = 0
-            total_reward = iou_score + pred_score
+            total_reward = pred_score + iou_score
+            
         except Exception as e:
             total_reward = 0.0
             all_scores["IOU"] = 0
             all_scores["pred_score"] = 0
             all_scores["repetition_pen"] = 0
-            total_reward = 0.0
             print(f"Exception: {e}")
-
-        
         wandb.log(all_scores)
         prev_prediction = prediction
         reward_metrics.append(total_reward)
