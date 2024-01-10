@@ -6,20 +6,24 @@ from tqdm import tqdm
 from trl import AutoModelForSeq2SeqLMWithValueHead, AutoModelForCausalLMWithValueHead
 from trl import PPOTrainer, create_reference_model
 import wandb
-from peft import LoraConfig, PeftModel
+
 
 sys.path.append("../")
-from detectors.owlvit import OwlViTDetector
+sys.path.append("../GroundingDINO/")
 from data_loaders import SegmentationsDataset, HFDataset
 from options import (TXT_IN_LEN, TXT_OUT_LEN, MODEL_NAME, PRETRAINED_MODEL,
                      config, configs, generation_kwargs, INPUT, OUTPUT, PROMPTS, REWARD_MODEL)
-from rewarding import detector_based_reward, hf_based_reward
+from rewarding import hf_based_reward, Dino_detector_based_reward
 import matplotlib.pyplot as plt
 
 from transformers import (
     AutoModelForSequenceClassification,
     AutoTokenizer,
 )
+
+from groundingdino.util.inference import load_model, load_image
+import cv2
+
 
 tqdm.pandas()
 wandb.init(dir="./wandb")
@@ -31,10 +35,12 @@ def collator(data):
 
 def get_images(paths):
     imgs = []
+    img_sources = []
     for path in paths:
-        img = plt.imread(f"./dataset/imgs/{path}")
-        imgs.append(img)
-    return imgs
+        img_source, image = load_image('./dataset/imgs/'+path)
+        imgs.append(image)
+        img_sources.append(img_source)
+    return imgs, img_sources
 # Function to run an epoch of training with PPO loss
 def run_epoch(ppo_trainer, tokenizer, batch, model, co, reward_model = "detector", reward_tokenizer = None):
     # Prepare empty logs and game data
@@ -56,14 +62,14 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, co, reward_model = "detector
 
     # Calculate rewards
     if reward_model == "detector":
-        images = get_images(batch['file_name'])
-        print(game_data["response"], "|||", images)
+        images, img_sources = get_images(batch['file_name'])
         rewards = [torch.from_numpy(np.array([r])) for r in
-                   detector_based_reward(game_data["response"], batch[OUTPUT], model, images)]
+                   Dino_detector_based_reward(game_data["response"], batch[OUTPUT], model, images, img_sources)]
     elif reward_model == "hf":
         prompt = batch["query"]
         rewards = [torch.from_numpy(np.array([r])) for r in
-                   hf_based_reward( game_data["response"], model, reward_tokenizer, prompt)
+                   hf_based_reward( game_data["response"], model, reward_tokenizer, prompt)]
+#['[1139.0, 148.0, 141.0, 106.0]']
 
     # Perform a PPO training step
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
@@ -78,13 +84,13 @@ def run_epoch(ppo_trainer, tokenizer, batch, model, co, reward_model = "detector
     ppo_trainer.log_stats(stats, game_data, rewards)
 
 def init_detector_model():
-    return OwlViTDetector("google/owlvit-base-patch32")
-
+    Dino = load_model("../GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py", "../GroundingDINO/weights/groundingdino_swint_ogc.pth")
+    return Dino
+    
 def init_hf_model():
     tokenizer = AutoTokenizer.from_pretrained("./human_feedback/reward_model/checkpoint-21500")
     model = AutoModelForSequenceClassification.from_pretrained("./human_feedback/reward_model/checkpoint-21500")
     return model.cuda(), tokenizer
-
 # Main function to execute the training
 def main():
     # Initialize the tokenizer, model and reference model
@@ -96,7 +102,7 @@ def main():
         reward_tokenizer.pad_token = reward_tokenizer.eos_token
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
-    model = AutoModelForCausalLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
+    model =  AutoModelForSeq2SeqLMWithValueHead.from_pretrained(PRETRAINED_MODEL)
     model_ref = create_reference_model(model)
     model.cuda()
     tokenizer.pad_token = tokenizer.eos_token
