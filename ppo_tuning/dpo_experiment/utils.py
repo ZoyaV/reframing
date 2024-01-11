@@ -7,15 +7,15 @@ from typing import Dict, Optional
 import pandas as pd
 
 def prepare_data(path):
-    data = pd.read_csv(path)
-    data['prompt'] = data['rejected'].apply(lambda row: f"Send ONLY a single sentence - a rewording of '{row}'")
-    data['chosen'] = data['preferenced']
+    data = pd.read_csv(path)[:25000]
+    data['chosen'] = data['correct']
     print(data.size)
     data = data.dropna()
     print(data.size)
+    print(data.keys())
     dataset = Dataset.from_pandas(data)
     formatted_dataset = dataset.train_test_split()
-    print(data.head())
+    print(data[['prompt', 'chosen', 'rejected']].head())
     return formatted_dataset
     
 def get_stack_exchange_paired(
@@ -48,11 +48,12 @@ def get_stack_exchange_paired(
         dataset = dataset.select(range(min(len(dataset), 1000)))
 
     def return_prompt_and_responses(samples) -> Dict[str, str]:
-        return {
-            "prompt": ["Question: " + question + "\n\nAnswer: " for question in samples["question"]],
-            "chosen": samples["response_j"],
-            "rejected": samples["response_k"],
-        }
+            return {
+                "prompt": [question + "\n\nAnswer: " for question in samples["question"]],
+                "chosen": samples["response_j"],
+                "rejected": samples["response_k"],
+            }
+            
 
     return dataset.map(
         return_prompt_and_responses,
