@@ -42,7 +42,7 @@ def main():
     tokenizer.pad_token = tokenizer.eos_token
 
     # 2. Load the Stack-exchange paired dataset
-    data = prepare_data("modified_output.csv")
+    data = prepare_data("dpo_final_dataset.csv")
 
     # 4. initialize training arguments:
     training_args = TrainingArguments(
