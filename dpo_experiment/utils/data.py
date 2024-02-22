@@ -63,7 +63,7 @@ def get_stack_exchange_paired(
         remove_columns=original_columns,
     )
 
-def get_images(obj):
+def get_images(obj, path):
     obj_split = obj.split('_')
     obj_split_len = len(obj_split)
     if obj_split_len == 3:
@@ -73,7 +73,7 @@ def get_images(obj):
     elif obj_split_len == 5:
         obj_name = obj_split[0] + '_' + obj_split[1] + '_' + obj_split[2]
     name = obj_name+'/'+obj_name+'_'+obj_split[len(obj_split)-2]+'/'+obj+'.png'
-    img_sources, images = load_image('/datasets/gold/images/RGB_raw/'+name)
+    img_sources, images = load_image(path+name)
     return name, img_sources, images
     
     

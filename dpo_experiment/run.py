@@ -96,12 +96,13 @@ class ValidationCallback(WandbCallback):
             ious = []
             scores = []
             data=self.val_dataset
+            path_to_imgs="/datasets/gold/images/RGB_raw/"
             for i in range(50):
                 prompt = tokenizer(data['prompt'][i],return_tensors="pt").input_ids
                 output_tensor = model.generate(input_ids=prompt, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
                 output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True)[0]
                 print("OUTPUT OF LM = ", output)
-                name, img_sources, images = get_images(data['item_id'][i])
+                name, img_sources, images = get_images(data['item_id'][i], path_to_imgs)
                 predicted_bbox, pred_score = get_Dino_predictions(self.detector, images, img_sources, output)
                 true_bbox =  torch.Tensor([float(x) for x in re.split(',', data["true_bbox"][i][1:-1])])
                 real_bbox = box_convert(boxes=true_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()
@@ -113,7 +114,7 @@ class ValidationCallback(WandbCallback):
                 if i==49:
                     with open('./input_output_examples.txt', 'a') as f:
                         f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))
-                        image = plt.imread("/datasets/gold/images/RGB_raw/"+name)
+                        image = plt.imread(path_to_imgs+name)
                         image = cv2.rectangle(image, (int(predicted_bbox[0]), int(predicted_bbox[1])), (int(predicted_bbox[2]), int(predicted_bbox[3])), (0, 0, 0), 2)
                         cv2.putText(image, 'predicted', (int(predicted_bbox[0]), int(predicted_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,0), 2)
                         image = cv2.rectangle(image, (int(real_bbox[0]), int(real_bbox[1])), (int(real_bbox[2]), int(real_bbox[3])), (36,255,12), 2)

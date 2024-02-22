@@ -9,7 +9,7 @@ def get_Dino_predictions(Dino, images, img_sources, output):
     boxes, logits_detector, phrases = predict(
                             model=Dino,
                             image=images,
-                            caption=output,
+                            caption=str(output),
                             box_threshold=0,
                             text_threshold=0.25
                         )

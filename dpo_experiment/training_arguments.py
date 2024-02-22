@@ -64,3 +64,15 @@ class ScriptArguments:
             "https://github.com/huggingface/transformers/issues/22482#issuecomment-1595790992"
         },
     )
+
+@dataclass
+class ProcessingArguments:
+    path_to_source: Optional[str] = field(default='./dataset/modified_output_concatenated_long_with_bboxes.csv',\
+                                           metadata={"help": "path to csv with descriptions, img refs and GT bboxes"})
+    
+    path_to_imgs: Optional[str] = field(default='../ONE-PEACE/gold/images/RGB_raw/',\
+                                         metadata={"help": "path to folder with images"})
+    
+    path_to_output: Optional[str] = field(default="./dataset/dpo_all_pipeline_test.csv", \
+                                            metadata={"help": "path to output file"})
+    model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name"})
