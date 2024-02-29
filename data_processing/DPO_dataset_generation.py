@@ -1,24 +1,39 @@
 import sys
+sys.path.append("../")
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..')) 
 
+os.system('pwd')
 import numpy as np
 import torch
 from torchvision.ops import box_convert
 from groundingdino.util.inference import load_model, load_image, predict
 import pandas as pd
 from transformers import HfArgumentParser
-from training_arguments import ProcessingArguments
+from dpo_experiment.training_arguments import ProcessingArguments
 import statistics
 import re
 import random
-from utils.metrics import box_iou
-from utils.data import prepare_data, get_images
-from utils.detector import get_Dino_predictions
+from dpo_experiment.utils.metrics import box_iou
+from one_peace.models import from_pretrained
+from dpo_experiment.utils.data import prepare_data, get_images
+from dpo_experiment.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
 
 
 def init_detector_model():
-    Dino = load_model("/home/misha/anaconda3/envs/dpo/lib/python3.7/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py",\
-                       "/home/misha/code/cunning_manipulator/GroundingDINO/weights/groundingdino_swint_ogc.pth")
+    Dino = load_model("./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",\
+                       "./GroundingDINO/weights/groundingdino_swint_ogc.pth")
     return Dino
+
+def init_onepeace():
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = from_pretrained(
+	    "ONE-PEACE_Grounding",
+        model_type="one_peace_classify",
+        device=device,
+        dtype="float32"
+        )
+    return model
 
 def get_objects_descriptions(ds: pd.DataFrame):
     object_descriptions = {}
@@ -36,18 +51,31 @@ def main():
     correct_reward_iou = []  
     correct_reward_score = []
     means = []
+    model_name = p_args.model_name
     path_to_source = p_args.path_to_source
     path_to_imgs = p_args.path_to_imgs
     path_to_output = p_args.path_to_output
-    model =init_detector_model()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(device)
-    model.to(device)
+    if model_name == "DINO":
+        model =init_detector_model()
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(device)
+        model.to(device)
+    elif model_name == 'onepeace':
+        model = init_onepeace()
     ds = pd.read_csv(path_to_source, sep=',', header=0)
     for i in range(len(ds)):
-        correct = ds['response'][i]
+        correct = ds['description'][i]
         name, img_sources, images = get_images(ds['item_id'][i], path_to_imgs)
-        predicted_bbox, pred_score = get_Dino_predictions(model, images, img_sources, correct)
+        if ds["score"][i] == -1:
+            correct_reward_iou.append(-1.0)
+            correct_reward_score.append(0.0)
+            means.append(0.0)
+            continue
+        elif model_name == 'DINO':
+            predicted_bbox, pred_score = get_Dino_predictions(model, images, img_sources, correct)
+        elif model_name == 'onepeace':
+            predicted_bbox = get_ONE_PEACE_predictions(model, str(path_to_imgs)+str(name), str(correct))[0]
+            pred_score = 1
         try: 
             dataset_bbox = torch.Tensor([[float(x) for x in re.split(',', ds['true_bbox'][i][1:-1])]])
             real_bbox = box_convert(boxes=dataset_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()[0] 
@@ -71,8 +99,10 @@ def main():
     object_descriptions = get_objects_descriptions(ds)
     for i in range(len(ds)):
         # try:
+        if ds["score"][i]==-1:
+            continue
         resp1 = ds['response'][i]
-        prompt = "Send ONLY a single sentence - a rewording of " + str(resp1)
+        prompt = "Paraphrase sentence: " + str(resp1)
         print(prompt)
         
         while True:     
