@@ -93,4 +93,4 @@ class ValidationArguments:
     v_range: Optional[str] = field(default="train", metadata={"help": "validation range: train/test"})
     path_to_checkpoint: Optional[str] = field(default="./results/checkpoint-1000", metadata={"help": "path to tuned LLM checkpoint"})
     prompt: Optional[str] = field(default="Paraphrase sentence: ", metadata={"help": "prompt used in dataset"})
-    run_name = Optional[str] = field(default="llama2_tuned", metadata={"help": "run name"})
+    run_name: Optional[str] = field(default="llama2_tuned", metadata={"help": "run name"})
