@@ -87,7 +87,7 @@ class ValidationArguments:
     
     path_to_output: Optional[str] = field(default="./dataset/dpo_all_pipeline_test.csv", \
                                             metadata={"help": "path to output file"})
-    ValidationArguments: Optional[str] = field(default="DINO", metadata={"help": "detector model name: None/onepeace/DINO"})
+    detector_model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name: None/onepeace/DINO"})
     language_model_type: Optional[str] = field(default="none", metadata={"help": "none/pretrained/tuned"})
     language_model_name: Optional[str] = field(default="NousResearch/Llama-2-7b-chat-hf", metadata={"help": "path to langauge model or it's name"})
     v_range: Optional[str] = field(default="train", metadata={"help": "validation range: train/test"})
