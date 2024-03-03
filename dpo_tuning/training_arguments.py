@@ -24,6 +24,8 @@ class ScriptArguments:
     optimizer_type: Optional[str] = field(default="paged_adamw_32bit", metadata={"help": "the optimizer type"})
 
     per_device_train_batch_size: Optional[int] = field(default=4, metadata={"help": "train batch size per device"})
+    path_to_source: Optional[str] = field(default='./new_DINO_gold_dataset.csv',\
+                                           metadata={"help": "path to csv with descriptions, img refs and GT bboxes"})
     #per_device_eval_batch_size: Optional[int] = field(default=1, metadata={"help": "eval batch size per device"})
     gradient_accumulation_steps: Optional[int] = field(
         default=4, metadata={"help": "the number of gradient accumulation steps"}
@@ -56,6 +58,8 @@ class ScriptArguments:
             'Use `"all"` to report to all integrations installed, `"none"` for no integrations.'
         },
     )
+    run_name:  Optional[str] = field(default="dpo_llama2", metadata={"help": "wandb run name"})
+    detector_model_name: Optional[str] = field(default="DINO", metadata={"help": "DINO/onepeace"})
     # debug argument for distributed training
     ignore_bias_buffers: Optional[bool] = field(
         default=False,

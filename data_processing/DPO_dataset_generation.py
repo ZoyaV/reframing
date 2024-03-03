@@ -28,7 +28,7 @@ def init_detector_model():
 def init_onepeace():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = from_pretrained(
-	    "ONE-PEACE_Grounding",
+      "ONE-PEACE_Grounding",
         model_type="one_peace_classify",
         device=device,
         dtype="float32"
@@ -39,9 +39,9 @@ def get_objects_descriptions(ds: pd.DataFrame):
     object_descriptions = {}
     for i in range(len(ds)):
         if ds['item_id'][i] in object_descriptions.keys():
-            object_descriptions[ds['item_id'][i]].append([i,ds['response'][i]])
+            object_descriptions[ds['item_id'][i]].append([i,ds['description'][i]])
         else:
-            object_descriptions[ds['item_id'][i]] = [[i, ds['response'][i]]]
+            object_descriptions[ds['item_id'][i]] = [[i, ds['description'][i]]]
     return object_descriptions
 
 def main():
@@ -51,6 +51,7 @@ def main():
     correct_reward_iou = []  
     correct_reward_score = []
     means = []
+    prompt_bboxes = []
     model_name = p_args.model_name
     path_to_source = p_args.path_to_source
     path_to_imgs = p_args.path_to_imgs
@@ -70,6 +71,7 @@ def main():
             correct_reward_iou.append(-1.0)
             correct_reward_score.append(0.0)
             means.append(0.0)
+            prompt_bboxes.append([0,0,0,0])
             continue
         elif model_name == 'DINO':
             predicted_bbox, pred_score = get_Dino_predictions(model, images, img_sources, correct)
@@ -86,22 +88,23 @@ def main():
             print(f"Exception: {e}")
         correct_reward_iou.append(iou_score)
         correct_reward_score.append(pred_score)
+        prompt_bboxes.append(predicted_bbox)
         means.append(statistics.harmonic_mean([iou_score, pred_score]))
         print(i, '\\', iou_score)
-        
-
     ds['response_iou'] = correct_reward_iou
     ds['response_score'] = correct_reward_score
     ds['harmonic_mean'] = means
+    ds['description_bbox'] = prompt_bboxes
+    ds.to_csv(path_to_output, index=False)
     df = pd.DataFrame(columns = ['id', 'item_id', 'true_bbox', 'prompt', 'correct', 'rejected', 
                              'iou_correct', 'score_correct', 'harmonic_correct',
-                             'iou_rejected', 'score_rejected', 'harmonic_rejected'])
+                             'iou_rejected', 'score_rejected', 'harmonic_rejected', 'description_bbox'])
     object_descriptions = get_objects_descriptions(ds)
     for i in range(len(ds)):
         # try:
         if ds["score"][i]==-1:
             continue
-        resp1 = ds['response'][i]
+        resp1 = ds['description'][i]
         prompt = "Paraphrase sentence: " + str(resp1)
         print(prompt)
         
@@ -117,13 +120,13 @@ def main():
                 k2 = object_descriptions[ds['item_id'][i]][n2][0]
                 break
         if ds['harmonic_mean'][k1] >=  ds['harmonic_mean'][k2]:
-            df.loc[len(df)] = [i, ds['item_id'][i], ds['true_bbox'][i], prompt, ds['response'][k1], ds['response'][k2],
+            df.loc[len(df)] = [i, ds['item_id'][i], ds['true_bbox'][i], prompt, ds['description'][k1], ds['description'][k2],
                                ds['response_iou'][k1], ds['response_score'][k1], ds['harmonic_mean'][k1],
-                              ds['response_iou'][k2], ds['response_score'][k2], ds['harmonic_mean'][k2]]
+                              ds['response_iou'][k2], ds['response_score'][k2], ds['harmonic_mean'][k2], ds['description_bbox'][i]]
         else: 
-            df.loc[len(df)] = [i, ds['item_id'][i], ds['true_bbox'][i], prompt, ds['response'][k2], ds['response'][k1],
+            df.loc[len(df)] = [i, ds['item_id'][i], ds['true_bbox'][i], prompt, ds['description'][k2], ds['description'][k1],
                                ds['response_iou'][k2], ds['response_score'][k2], ds['harmonic_mean'][k2], 
-                               ds['response_iou'][k1], ds['response_score'][k1], ds['harmonic_mean'][k1]]
+                               ds['response_iou'][k1], ds['response_score'][k1], ds['harmonic_mean'][k1]], ds['description_bbox'][i]
         # except Exception as e: 
         #     print(e)
         #     continue

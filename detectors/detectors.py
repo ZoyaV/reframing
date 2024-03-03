@@ -9,8 +9,8 @@ from one_peace.models import from_pretrained
 class BaseDetector:
     def __init__(self, detector_class):
         self.detector_class = detector_class
-        if self.detector_class == 'Dyno':
-            self.detector = DynoDetector()
+        if self.detector_class == 'Dino':
+            self.detector = DinoDetector()
         if self.detector_class == 'OnePeace':
             self.detector = OnePeaceDetector()
     def predict(self, image_metadata):
@@ -23,7 +23,7 @@ class BaseDetector:
         raise NotImplementedError
 
 
-class DynoDetector:
+class DinoDetector:
     def __init__(self):
 
         self.detector = load_model("./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",\

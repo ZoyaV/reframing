@@ -25,6 +25,7 @@ from training_arguments import ScriptArguments
 from utils.metrics import box_iou
 from utils.data import prepare_data, get_images
 from utils.detector import get_Dino_predictions
+from utils.callback import ValidationCallback
 
 
 from PIL import Image
@@ -34,106 +35,6 @@ from torch.distributed.elastic.multiprocessing.errors import record
 from transformers.integrations import WandbCallback
 import os
 
-c=0
-
-class ValidationCallback(WandbCallback):
-    """Custom WandbCallback to log model predictions during training.
-
-    This callback logs model predictions and labels to a wandb.Table at each 
-    logging step during training. It allows to visualize the 
-    model predictions as the training progresses.
-
-    Attributes:
-        trainer (Trainer): The Hugging Face Trainer instance.
-        tokenizer (AutoTokenizer): The tokenizer associated with the model.
-        sample_dataset (Dataset): A subset of the validation dataset 
-          for generating predictions.
-        num_samples (int, optional): Number of samples to select from 
-          the validation dataset for generating predictions. Defaults to 100.
-        freq (int, optional): Frequency of logging. Defaults to 2.
-    """
-
-    def __init__(self, val_dataset,accelerator, detector_model, eval_step, seed):
-        """Initializes the WandbPredictionProgressCallback instance.
-
-        Args:
-            trainer (Trainer): The Hugging Face Trainer instance.
-            tokenizer (AutoTokenizer): The tokenizer associated 
-              with the model.
-            val_dataset (Dataset): The validation dataset.
-            num_samples (int, optional): Number of samples to select from 
-              the validation dataset for generating predictions.
-              Defaults to 100.
-            freq (int, optional): Frequency of logging. Defaults to 2.
-        """
-        self.val_dataset=val_dataset
-        self.accelerator=accelerator
-        self.step=eval_step
-        self.detector=detector_model
-        self.seed=seed
-        super().__init__()
-        
-    def on_save(self, args, state, control, **kwargs):
-        super().on_save(args, state, control, **kwargs)
-        # control the frequency of logging by logging the predictions
-        # every `freq` epochs
-            # generate predictions
-        c = state.global_step-self.step
-        print("EVALUATING EVALUATING EVALUATING")
-        if c==0:
-            return
-        else:
-            path="./results/checkpoint-"+str(c)
-            model = AutoModelForCausalLM.from_pretrained(
-            "NousResearch/Llama-2-7b-chat-hf",  #NousResearch/Llama-2-7b-chat-hf
-            low_cpu_mem_usage=True,
-            torch_dtype=torch.float32,
-            load_in_4bit=False,
-            )
-            model = PeftModel.from_pretrained(model,path, torch_dtype=torch.float16)
-            model = model.merge_and_unload()
-            tokenizer = AutoTokenizer.from_pretrained(path)
-            ious = []
-            scores = []
-            data=self.val_dataset
-            path_to_imgs="/datasets/gold/images/RGB_raw/"
-            for i in range(50):
-                prompt = tokenizer(data['prompt'][i],return_tensors="pt").input_ids
-                output_tensor = model.generate(input_ids=prompt, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
-                output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True)[0]
-                print("OUTPUT OF LM = ", output)
-                name, img_sources, images = get_images(data['item_id'][i], path_to_imgs)
-                predicted_bbox, pred_score = get_Dino_predictions(self.detector, images, img_sources, output)
-                true_bbox =  torch.Tensor([float(x) for x in re.split(',', data["true_bbox"][i][1:-1])])
-                real_bbox = box_convert(boxes=true_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()
-                iou_score = float(box_iou(real_bbox, predicted_bbox))
-                print(predicted_bbox)
-                print(f"IOU = {iou_score}, score = {pred_score}")
-                ious.append(iou_score)
-                scores.append(pred_score)
-                if i==49:
-                    with open('./input_output_examples.txt', 'a') as f:
-                        f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))
-                        image = plt.imread(path_to_imgs+name)
-                        image = cv2.rectangle(image, (int(predicted_bbox[0]), int(predicted_bbox[1])), (int(predicted_bbox[2]), int(predicted_bbox[3])), (0, 0, 0), 2)
-                        cv2.putText(image, 'predicted', (int(predicted_bbox[0]), int(predicted_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,0), 2)
-                        image = cv2.rectangle(image, (int(real_bbox[0]), int(real_bbox[1])), (int(real_bbox[2]), int(real_bbox[3])), (36,255,12), 2)
-                        cv2.putText(image, 'dataset', (int(real_bbox[0]), int(real_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
-                        im = Image.fromarray((image * 255).astype(np.uint8)).convert('RGB')
-                        im.save(f"./images/image_{c}.png")
-
-
-            iou = np.mean(ious)
-            iou_std = np.std(ious)
-            score_std = np.std(scores)
-            score = np.mean(scores)
-            all_scores = {}
-            all_scores["metrics/pred_score_mean"] = score
-            all_scores["metrics/pred_score_std"] = score_std
-            all_scores["metrics/IOU_mean"] = iou
-            all_scores["metrics/IOU_std"] = iou_std
-            print(all_scores)
-            self.accelerator.log(all_scores)
 
 @record
 def main():
@@ -144,11 +45,10 @@ def main():
 
 # Instantiate Accelerator with the custom configuration
     accelerator = Accelerator(kwargs_handlers=[process_group_kwargs],log_with="wandb")
-    Dino = load_model("/home/AI/yudin.da/avshalumov_ms/.local/lib/python3.8/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py", "../GroundingDINO/weights/groundingdino_swint_ogc.pth")
     if accelerator.is_main_process:
-        accelerator.init_trackers("dpo_llama2", init_kwargs={
+        accelerator.init_trackers(script_args.run_name, init_kwargs={
             "wandb": {
-                "name": "dpo_llama2_triplet_seed_"+str(script_args.seed)
+                script_args.run_name+"_seed_"+str(script_args.seed)
             }
         })
     # 1. load a pretrained model
@@ -173,11 +73,11 @@ def main():
     #     load_in_4bit = True,
     # )
     # accelerator.prepare(model_ref)
-    tokenizer = AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf")
+    tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path)
     tokenizer.pad_token = tokenizer.eos_token
 
     # 2. Load the Stack-exchange paired dataset
-    data = prepare_data("new_DINO_gold_dataset.csv")
+    data = prepare_data(script_args.path_to_source)
 
     # 4. initialize training arguments:
     training_args = TrainingArguments(
@@ -202,7 +102,7 @@ def main():
         optim=script_args.optimizer_type,
         fp16=True,
         remove_unused_columns=False,
-        run_name="dpo_llama2_triplet_" + str(script_args.seed),
+        run_name=script_args.run_name + str(script_args.seed),
     )
 
     peft_config = LoraConfig(
