@@ -43,7 +43,7 @@ class ScriptArguments:
     save_steps: Optional[int] = field(default=100, metadata={"help": "the saving frequency"})
     #eval_steps: Optional[int] = field(default=1, metadata={"help": "the evaluation frequency"})
 
-    output_dir: Optional[str] = field(default="./results", metadata={"help": "the output directory"})
+    output_dir: Optional[str] = field(default="./results/DINO/", metadata={"help": "the output directory"})
     log_freq: Optional[int] = field(default=100, metadata={"help": "the logging frequency"})
 
     # instrumentation
@@ -77,7 +77,7 @@ class ProcessingArguments:
                                             metadata={"help": "path to output file"})
     model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name"})
 
-
+@dataclass
 class ValidationArguments:
     path_to_source: Optional[str] = field(default='./new_DINO_gold_dataset.csv',\
                                            metadata={"help": "path to csv with descriptions, img refs and GT bboxes"})

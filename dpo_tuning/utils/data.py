@@ -8,7 +8,7 @@ from groundingdino.util.inference import load_image
 
 
 def prepare_data(path):
-    data = pd.read_csv(path)[:50000]
+    data = pd.read_csv(path)[5000:75000]
     data['chosen'] = data['correct']
     print(data.size)
     data = data.dropna()

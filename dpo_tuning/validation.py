@@ -31,8 +31,8 @@ from dpo_tuning.utils.data import prepare_data, get_images
 from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
 
 def init_detector_model():
-    Dino = load_model("/home/misha/anaconda3/envs/dpo/lib/python3.7/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py",\
-                       "/home/misha/code/cunning_manipulator/GroundingDINO/weights/groundingdino_swint_ogc.pth")
+    Dino = load_model("/home/AI/yudin.da/avshalumov_ms/.local/lib/python3.8/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py", \
+                       "../GroundingDINO/weights/groundingdino_swint_ogc.pth")
     return Dino
 
 def init_onepeace():
@@ -83,7 +83,7 @@ def main():
         tokenizer.pad_token = tokenizer.eos_token
     if detector_model_name == "DINO":
         detector = init_detector_model()
-        device = torch.device("cuda" if torch.is_available() else "cpu")
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print(device)
         detector.to(device)
     elif detector_model_name == 'onepeace':
@@ -103,32 +103,34 @@ def main():
         else: 
             prompt = tokenizer(data['prompt'][i],return_tensors="pt").input_ids
             output_tensor = model.generate(torch.Tensor(prompt),  max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
-            output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True).replace(prompt, '')       
+            output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True)
+            output = str(output[0]).replace(str(prompt), '')       
+            print(output)
         name, img_sources, images = get_images(data['item_id'][i], path_to_imgs)
         if detector_model_name == 'DINO':
             predicted_bbox, pred_score = get_Dino_predictions(detector, images, img_sources, output)
         elif detector_model_name == 'onepeace':
             predicted_bbox = get_ONE_PEACE_predictions(detector, path_to_imgs+name, str(output))[0]
             pred_score = 1
-            try: 
-                dataset_bbox = torch.Tensor([[float(x) for x in re.split(',', data['true_bbox'][i][1:-1])]])
-                real_bbox = box_convert(boxes=dataset_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()[0] 
-                iou_score = float(box_iou(real_bbox, predicted_bbox))
-            except Exception as e:
-                iou_score = 0.0
-                pred_score = 0.0
-                print(f"Exception: {e}")
+        try: 
+            dataset_bbox = torch.Tensor([[float(x) for x in re.split(',', data['true_bbox'][i][1:-1])]])
+            real_bbox = box_convert(boxes=dataset_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()[0] 
+            iou_score = float(box_iou(real_bbox, predicted_bbox))
+        except Exception as e:
+            iou_score = 0.0
+            pred_score = 0.0
+            print(f"Exception: {e}")
         if i==49:
                     with open('./input_output_examples.txt', 'a') as f:
-                        prompt_bbox = data['description_bbox'][i]
+                        #prompt_bbox = data['description_bbox'][i]
                         f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))
                         image = plt.imread(path_to_imgs+name)
                         image = cv2.rectangle(image, (int(predicted_bbox[0]), int(predicted_bbox[1])), (int(predicted_bbox[2]), int(predicted_bbox[3])), (0, 0, 0), 2)
                         cv2.putText(image, 'predicted', (int(predicted_bbox[0]), int(predicted_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,0), 2)
                         image = cv2.rectangle(image, (int(real_bbox[0]), int(real_bbox[1])), (int(real_bbox[2]), int(real_bbox[3])), (36,255,12), 2)
                         cv2.putText(image, 'dataset', (int(real_bbox[0]), int(real_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
-                        image = cv2.rectangle(image, (int(prompt_bbox[0]), int(prompt_bbox[1])), (int(prompt_bbox[2]), int(prompt_bbox[3])), (36,255,12), 2)
-                        cv2.putText(image, 'dataset', (int(prompt_bbox[0]), int(prompt_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                        #image = cv2.rectangle(image, (int(prompt_bbox[0]), int(prompt_bbox[1])), (int(prompt_bbox[2]), int(prompt_bbox[3])), (36,255,12), 2)
+                        #cv2.putText(image, 'dataset', (int(prompt_bbox[0]), int(prompt_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
                         im = Image.fromarray((image * 255).astype(np.uint8)).convert('RGB')
                         im.save(f"./images/image_{i}.png")
         ious.append(iou_score)
