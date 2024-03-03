@@ -75,4 +75,4 @@ class OnePeaceDetector:
                 vl_features[:, ::2] *= image_widths.unsqueeze(1)
                 vl_features[:, 1::2] *= image_heights.unsqueeze(1)
                 coords = vl_features.cpu().tolist()
-            return coords
+            return coords, 1
