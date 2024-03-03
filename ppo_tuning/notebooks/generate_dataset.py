@@ -20,7 +20,13 @@ from transformers import (
 import tqdm
 from transformers import GenerationConfig
 
-def load_and_tockenizer():
+def mixtral_model_and_tokenizer():
+    model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForCausalLM.from_pretrained(model_id, load_in_4bit=True)
+    return model, tokenizer
+    
+def llama_model_and_tockenizer():
     # Load tokenizer and model with QLoRA configuration
     compute_dtype = getattr(torch, bnb_4bit_compute_dtype)
     
@@ -52,7 +58,7 @@ def load_and_tockenizer():
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"  # Fix weird overflow issue with fp16 training
-    return tokenizer, model
+    return model, tokenizer
 
 def generate(prompt, model, tokenizer):
     inputs = tokenizer.encode(prompt, return_tensors='pt')

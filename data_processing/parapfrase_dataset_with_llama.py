@@ -27,6 +27,16 @@ def count_sentences_advanced(text):
     
     return points_in_text<=1 and bad_points_in_text==0
 
+def length_check(text):
+    return len(text)>5
+
+def correctness(text):
+    chekers = [count_sentences_advanced, length_check]
+    for checker in chekers:
+        p = checker(text)
+        if not p:
+            return p
+    return True
     
 def generate(prompt, model, tokenizer):
     inputs = tokenizer.encode(prompt, return_tensors='pt')
@@ -36,7 +46,7 @@ def generate(prompt, model, tokenizer):
         result = result.split(":")[1]
     except:
         result = result
-    return result, count_sentences_advanced(result)
+    return result, correctness(result)
 
 def sample_santences(row_dict, sample_count, prompt, model, tokenizer):
     result = {key:[row_dict[key]] for key in row_dict}
