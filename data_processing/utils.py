@@ -79,7 +79,7 @@ def main(data_path, model, tokenizer):
 
 if __name__ == "__main__": 
     tockenizer, model = load_and_tockenizer()
-    new_data = main("../dpo_experiment/modified_output.csv",model, tockenizer)
+    new_data = main("../dpo_tuning/modified_output.csv", model, tockenizer)
     new_data.to_csv("../dpo_experiment/modified_output2.csv")
 
 

@@ -25,10 +25,10 @@ import cv2
 import matplotlib.pyplot as plt
 from training_arguments import ValidationArguments
 import peft
-from dpo_experiment.utils.metrics import box_iou
+from dpo_tuning.utils.metrics import box_iou
 from one_peace.models import from_pretrained
-from dpo_experiment.utils.data import prepare_data, get_images
-from dpo_experiment.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
+from dpo_tuning.utils.data import prepare_data, get_images
+from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
 
 def init_detector_model():
     Dino = load_model("/home/misha/anaconda3/envs/dpo/lib/python3.7/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py",\

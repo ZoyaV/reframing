@@ -10,14 +10,14 @@ from torchvision.ops import box_convert
 from groundingdino.util.inference import load_model, load_image, predict
 import pandas as pd
 from transformers import HfArgumentParser
-from dpo_experiment.training_arguments import ProcessingArguments
+from dpo_tuning.training_arguments import ProcessingArguments
 import statistics
 import re
 import random
-from dpo_experiment.utils.metrics import box_iou
+from dpo_tuning.utils.metrics import box_iou
 from one_peace.models import from_pretrained
-from dpo_experiment.utils.data import prepare_data, get_images
-from dpo_experiment.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
+from dpo_tuning.utils.data import prepare_data, get_images
+from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
 
 
 def init_detector_model():
