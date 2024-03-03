@@ -68,7 +68,7 @@ class ValidationCallback(WandbCallback):
         self.step=eval_step
         if detector_model_name == "DINO": 
             self.detector = DinoDetector()
-        elif detector_model_name = "onepeace":
+        elif detector_model_name == "onepeace":
             self.detector = OnePeaceDetector()
         self.seed=seed
         super().__init__()

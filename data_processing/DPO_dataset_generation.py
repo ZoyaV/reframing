@@ -44,20 +44,13 @@ def get_objects_descriptions(ds: pd.DataFrame):
             object_descriptions[ds['item_id'][i]] = [[i, ds['description'][i]]]
     return object_descriptions
 
-def main():
-    # Initialize the tokenizer, model and reference model
-    parser = HfArgumentParser(ProcessingArguments)
-    p_args = parser.parse_args_into_dataclasses()[0]
+def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source):
     correct_reward_iou = []  
     correct_reward_score = []
     means = []
     prompt_bboxes = []
-    model_name = p_args.model_name
-    path_to_source = p_args.path_to_source
-    path_to_imgs = p_args.path_to_imgs
-    path_to_output = p_args.path_to_output
     if model_name == "DINO":
-        model =init_detector_model()
+        model = init_detector_model()
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print(device)
         model.to(device)
@@ -96,6 +89,12 @@ def main():
     ds['harmonic_mean'] = means
     ds['description_bbox'] = prompt_bboxes
     ds.to_csv(path_to_output, index=False)
+    return ds
+
+
+def generate_triplets(path_to_output, ds=None):
+    if ds==None:
+        ds = pd.read_csv(path_to_output)
     df = pd.DataFrame(columns = ['id', 'item_id', 'true_bbox', 'prompt', 'correct', 'rejected', 
                              'iou_correct', 'score_correct', 'harmonic_correct',
                              'iou_rejected', 'score_rejected', 'harmonic_rejected', 'description_bbox'])
@@ -126,11 +125,24 @@ def main():
         else: 
             df.loc[len(df)] = [i, ds['item_id'][i], ds['true_bbox'][i], prompt, ds['description'][k2], ds['description'][k1],
                                ds['response_iou'][k2], ds['response_score'][k2], ds['harmonic_mean'][k2], 
-                               ds['response_iou'][k1], ds['response_score'][k1], ds['harmonic_mean'][k1]], ds['description_bbox'][i]
+                               ds['response_iou'][k1], ds['response_score'][k1], ds['harmonic_mean'][k1], ds['description_bbox'][i]]
         # except Exception as e: 
         #     print(e)
         #     continue
     df.to_csv(path_to_output, index=False)
+
+def main():
+    # Initialize the tokenizer, model and reference model
+    parser = HfArgumentParser(ProcessingArguments)
+    p_args = parser.parse_args_into_dataclasses()[0]
+    model_name = p_args.model_name
+    path_to_source = p_args.path_to_source
+    path_to_imgs = p_args.path_to_imgs
+    path_to_output = p_args.path_to_output
+
+
+    ds = evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source)
+    generate_triplets(path_to_output)
 # Generate text
 if __name__ == "__main__":
     main()

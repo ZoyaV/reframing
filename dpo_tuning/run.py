@@ -46,9 +46,9 @@ def main():
 # Instantiate Accelerator with the custom configuration
     accelerator = Accelerator(kwargs_handlers=[process_group_kwargs],log_with="wandb")
     if accelerator.is_main_process:
-        accelerator.init_trackers(script_args.run_name, init_kwargs={
+        accelerator.init_trackers(str(script_args.run_name), init_kwargs={
             "wandb": {
-                script_args.run_name+"_seed_"+str(script_args.seed)
+                'name':str(script_args.run_name)+"_seed_"+str(script_args.seed)
             }
         })
     # 1. load a pretrained model
@@ -136,16 +136,16 @@ def main():
         max_length=script_args.max_length,
         #compute_metrics=compute_metrics
     )
-    val_callback = ValidationCallback(
-    val_dataset=data['test'],
-    accelerator=accelerator,
-    detector_model=Dino,
-    eval_step=script_args.save_steps,
-    seed=script_args.seed
-    )
+    # val_callback = ValidationCallback(
+    # val_dataset=data['test'],
+    # accelerator=accelerator,
+    # detector_model=Dino,
+    # eval_step=script_args.save_steps,
+    # seed=script_args.seed
+    # )
 
-    # Add the callback to the trainer
-    dpo_trainer.add_callback(val_callback)
+    # # Add the callback to the trainer
+    # dpo_trainer.add_callback(val_callback)
 
     # 6. train
     dpo_trainer.train()
