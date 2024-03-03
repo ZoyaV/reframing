@@ -7,11 +7,14 @@ from groundingdino.util.inference import load_model, load_image, predict
 from one_peace.models import from_pretrained
 
 class BaseDetector:
-    def __init__(self):
-        raise NotImplementedError
-
+    def __init__(self, detector_class):
+        self.detector_class = detector_class
+        if self.detector_class == 'Dyno':
+            self.detector = DynoDetector()
+        if self.detector_class == 'OnePeace':
+            self.detector = OnePeaceDetector()
     def predict(self, image_metadata):
-        raise NotImplementedError
+        raise self.detector.predict(image_metadata)
 
     def get_bboxes(self, image, text_queries):
         raise NotImplementedError
@@ -20,17 +23,20 @@ class BaseDetector:
         raise NotImplementedError
 
 
-class DynoDetector(BaseDetector):
-
+class DynoDetector:
     def __init__(self):
-        super(DynoDetector, self).__init__()
+
         self.detector = load_model("./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",\
                        "./GroundingDINO/weights/groundingdino_swint_ogc.pth")
 
-    def predict(self, image_metadata):
-            images, img_sources, output = (image_metadata['image_np'],
+    def _scrap_image_metadata(self, image_metadata):
+        return (image_metadata['image_np'],
                                            image_metadata['image_pil'],
                                            image_metadata['correct'])
+
+
+    def predict(self, image_metadata):
+            images, img_sources, output = self._scrap_image_metadata(image_metadata)
             boxes, logits_detector, phrases = predict(
                 model=self.detector,
                 image=images,
@@ -46,10 +52,8 @@ class DynoDetector(BaseDetector):
             return predicted_bbox, pred_score
 
 
-class OnePeaceDetector(BaseDetector):
-
+class OnePeaceDetector:
     def __init__(self):
-        super(OnePeaceDetector, self).__init__()
         device = "cuda" if torch.cuda.is_available() else "cpu"
         self.detector = from_pretrained(
                         "ONE-PEACE_Grounding",
@@ -58,11 +62,13 @@ class OnePeaceDetector(BaseDetector):
                         dtype="float32"
                         )
 
+    def _scrap_image_metadata(self, image_metadata):
+        return image_metadata['image_path'], image_metadata['correct']
     def predict(self, image_metadata):
-            image, output = image_metadata['image_path'], image_metadata['correct']
-            (src_images, image_widths, image_heights), src_tokens  = self.detector.process_image_text_pairs(
-            [(image, output)], return_image_sizes=True
-            )
+            image, output = self._scrap_image_metadata(image_metadata)
+            (src_images, image_widths, image_heights), src_tokens = self.detector.process_image_text_pairs(
+                                                                        [(image, output)], return_image_sizes=True
+                                                                        )
             with torch.no_grad():
                 vl_features = self.detector.extract_vl_features(src_images, src_tokens).sigmoid()
                 # extract coords
