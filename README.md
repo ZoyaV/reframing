@@ -13,8 +13,8 @@ To set up the environment and dependencies required to run the code, follow thes
 1. Clone this repository:
 
 ```bash
-git clone git@github.com:ZoyaV/cunning_manipulator.git
-cd cunning_manipulator
+git clone git@github.com:ZoyaV/reframing.git
+cd reframing
 ```
 
 2. Install the required packages using pip (settings for python3.9):
@@ -25,45 +25,48 @@ pip install -r requirements.txt
 
 ## Getting Started
 
-The experiment consists of two main parts: training NLP-based manipulator using Proximal Policy Optimization (PPO) tuning with **feedback from detector**, training the NLP-based manipulator with reward based on human feedback.
+The experiment consists of: creating dataset using **feedback from detector**, training language model using Direct Preference Optimization (DPO) using this dataset and validating results by running detector inference on tuned model predictions.
 
+### Creating DPO dataset 
+```bash
+cd dpo_tuning
+sh run_dpo.sh
+```
+In order to use your own config or setup parametrs in console, use the following
 
-### Training the NLP-based Manipulator with Reward from Detector Feedback
+```bash
+python3 data_processing/DPO_dataset_generation.py --path_to_source ./dpo_experiment/new_DINO_gold_dataset.csv --path_to_imgs /datasets/gold/images/RGB_raw/ --model_name DINO --path_to_output ./dpo_dataset.csv
+```
+
+### Train Reframing with DPO
 
 To train the NLP-based manipulator using reward modeling, proceed as follows:
 
 ```bash
-cd ppo_tuning
+cd dpo_tuning
+sh run_dpo.sh
 ```
-Traing with your own config or setup parametrs in console
+In order to train with your own config or setup parametrs in console
 
 ```bash
 python3.9 train.py --config config.yaml --reward_model detector --project cunman_detection_feedback
 ```
 
 
-### Training the NLP-based Manipulator with Reward from Human Feedback
+### Validate results
 
 1. At First train Human Feedback model *ppo_tuning/human_feedback/HFModel.ipynb*
 
 2. To train the NLP-based manipulator using reward modeling, proceed as follows:
 
 ```bash
-cd ppo_tuning
+cd dpo_tuning
+sh run_validation.sh
 ```
-Traing with your own config or setup parametrs in console
+Use your own config or setup parametrs in console
 
 ```bash
-python3.9 train.py --config config.yaml --reward_model hf --inp prompt --out text --txt_in_len 30 --txt_out_len 30 --project cunman_human_feedback
-```
-
-
-## Running the Models
-
-Run the mine script from the root directory
-
-```bash
-python3.9 main.py 
+python3 dpo_experiment/validation.py --path_to_source ./dpo_experiment/new_DINO_gold_dataset.csv --path_to_imgs /datasets/gold/images/RGB_raw/ --detector_model_name DINO --path_to_checkpoint ./dpo_experiment/results/checkpoint-4900/ --language_model_type tuned --run_name new_data_DINO_train_4900
 ```
 
 ## File Structure
@@ -72,9 +75,11 @@ The repository is organized as follows:
 
 ```
 |- detectors/              # Detectors models under which the manipulator is trained
-|- metrics/            # Metrics calculation such as IOU using for Detector feedback calculation
-|- ppo_tuning/           # Main code for PPO_loss tuning
-|- requirements.txt   # List of required Python packages
+|- dpo_tuning/           
+    |- run.py                # Main code for DPO_loss tuning
+    |- training_arguments.py # Arguments list for all scripts
+    |- validation.py         # Validation code
+|- requirements.txt     # List of required Python packages
 ```
 
 Please make sure to update the placeholders such as `your-username`, `your-repo`, and provide specific instructions on how to prepare the datasets, run the training scripts, and perform evaluations with the models.
