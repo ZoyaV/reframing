@@ -79,7 +79,7 @@ class ProcessingArguments:
 
 
 class ValidationArguments:
-    path_to_source: Optional[str] = field(default='./dataset/modified_output_concatenated_long_with_bboxes.csv',\
+    path_to_source: Optional[str] = field(default='./new_DINO_gold_dataset.csv',\
                                            metadata={"help": "path to csv with descriptions, img refs and GT bboxes"})
     
     path_to_imgs: Optional[str] = field(default='../ONE-PEACE/gold/images/RGB_raw/',\
@@ -87,6 +87,10 @@ class ValidationArguments:
     
     path_to_output: Optional[str] = field(default="./dataset/dpo_all_pipeline_test.csv", \
                                             metadata={"help": "path to output file"})
-    model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name: None/onepeace/DINO"})
-    model_type: Optional[str] = field(default="none", metadata={"help": "none/pretrained/tuned"})
+    detector_model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name: None/onepeace/DINO"})
+    language_model_type: Optional[str] = field(default="none", metadata={"help": "none/pretrained/tuned"})
+    language_model_name: Optional[str] = field(default="NousResearch/Llama-2-7b-chat-hf", metadata={"help": "path to langauge model or it's name"})
     v_range: Optional[str] = field(default="train", metadata={"help": "validation range: train/test"})
+    path_to_checkpoint: Optional[str] = field(default="./results/checkpoint-1000", metadata={"help": "path to tuned LLM checkpoint"})
+    prompt: Optional[str] = field(default="Paraphrase sentence: ", metadata={"help": "prompt used in dataset"})
+    run_name: Optional[str] = field(default="llama2_tuned", metadata={"help": "run name"})
