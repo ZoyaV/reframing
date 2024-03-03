@@ -55,9 +55,7 @@ python3.9 train.py --config config.yaml --reward_model detector --project cunman
 
 ### Validate results
 
-1. At First train Human Feedback model *ppo_tuning/human_feedback/HFModel.ipynb*
-
-2. To train the NLP-based manipulator using reward modeling, proceed as follows:
+To train Reframing using DPO-like dataset, proceed as follows:
 
 ```bash
 cd dpo_tuning
