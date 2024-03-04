@@ -1,0 +1,1 @@
+pip install groundingdino-py #files will be in ../../.local/lib/python3.X/site-packages/groundingdino/config/

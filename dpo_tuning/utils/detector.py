@@ -1,5 +1,5 @@
 from torchvision.ops import box_convert
-from groundingdino.util.inference import predict
+from groundingdino.util.inference import predict, load_image
 import numpy as np
 import torch
 import cv2
@@ -35,3 +35,17 @@ def get_ONE_PEACE_predictions(onepeace, img_path, text):
         vl_features[:, 1::2] *= image_heights.unsqueeze(1)
         coords = vl_features.cpu().tolist()
     return coords
+
+
+def get_images(obj, path):
+    obj_split = obj.split('_')
+    obj_split_len = len(obj_split)
+    if obj_split_len == 3:
+        obj_name = obj_split[0]
+    elif obj_split_len == 4:
+        obj_name = obj_split[0] + '_' + obj_split[1]
+    elif obj_split_len == 5:
+        obj_name = obj_split[0] + '_' + obj_split[1] + '_' + obj_split[2]
+    name = obj_name+'/'+obj_name+'_'+obj_split[len(obj_split)-2]+'/'+obj+'.png'
+    img_sources, images = load_image(path+name)
+    return name, img_sources, images

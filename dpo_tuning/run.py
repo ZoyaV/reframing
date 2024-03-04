@@ -14,9 +14,6 @@ from peft import LoraConfig, PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser, TrainingArguments
 import numpy as np
 from trl import DPOTrainer
-sys.path.append("../")
-sys.path.append("../../GroundingDINO/")
-from groundingdino.util.inference import load_model, load_image, predict
 from torchvision.ops import box_convert
 import re
 from training_arguments import ScriptArguments

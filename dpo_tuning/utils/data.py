@@ -8,7 +8,7 @@ from groundingdino.util.inference import load_image
 
 
 def prepare_data(path):
-    data = pd.read_csv(path)[5000:75000]
+    data = pd.read_csv(path)[6000:75000]
     data['chosen'] = data['correct']
     print(data.size)
     data = data.dropna()
@@ -63,17 +63,5 @@ def get_stack_exchange_paired(
         remove_columns=original_columns,
     )
 
-def get_images(obj, path):
-    obj_split = obj.split('_')
-    obj_split_len = len(obj_split)
-    if obj_split_len == 3:
-        obj_name = obj_split[0]
-    elif obj_split_len == 4:
-        obj_name = obj_split[0] + '_' + obj_split[1]
-    elif obj_split_len == 5:
-        obj_name = obj_split[0] + '_' + obj_split[1] + '_' + obj_split[2]
-    name = obj_name+'/'+obj_name+'_'+obj_split[len(obj_split)-2]+'/'+obj+'.png'
-    img_sources, images = load_image(path+name)
-    return name, img_sources, images
     
     

@@ -12,7 +12,7 @@ class ScriptArguments:
     beta: Optional[float] = field(default=0.1, metadata={"help": "the beta parameter for DPO loss"})
 
     # training parameters
-    seed: Optional[int] = field(default=105, metadata={"help": "training seed"})
+    seed: Optional[int] = field(default=42, metadata={"help": "training seed"})
     model_name_or_path: Optional[str] = field(
         default="NousResearch/Llama-2-7b-chat-hf",
         metadata={"help": "the location of the SFT model name or path"},
@@ -23,7 +23,7 @@ class ScriptArguments:
     weight_decay: Optional[float] = field(default=0.05, metadata={"help": "the weight decay"})
     optimizer_type: Optional[str] = field(default="paged_adamw_32bit", metadata={"help": "the optimizer type"})
 
-    per_device_train_batch_size: Optional[int] = field(default=4, metadata={"help": "train batch size per device"})
+    per_device_train_batch_size: Optional[int] = field(default=2, metadata={"help": "train batch size per device"})
     path_to_source: Optional[str] = field(default='../new_DINO_gold_dataset_with_prompt_boxes.csv',\
                                            metadata={"help": "path to csv with descriptions, img refs and GT bboxes"})
     #per_device_eval_batch_size: Optional[int] = field(default=1, metadata={"help": "eval batch size per device"})
