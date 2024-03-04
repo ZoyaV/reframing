@@ -4,7 +4,6 @@ from dataclasses import dataclass, field
 from datasets import Dataset, load_dataset
 from typing import Dict, Optional
 import pandas as pd
-from groundingdino.util.inference import load_image
 
 
 def prepare_data(path):

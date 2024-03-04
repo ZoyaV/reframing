@@ -14,22 +14,14 @@ from peft import LoraConfig, PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser, TrainingArguments
 import numpy as np
 from trl import DPOTrainer
-from torchvision.ops import box_convert
 import re
 from training_arguments import ScriptArguments
 
 
-from utils.metrics import box_iou
-from utils.data import prepare_data, get_images
-from utils.detector import get_Dino_predictions
-from utils.callback import ValidationCallback
+from utils.data import prepare_data
 
 
-from PIL import Image
-import cv2
-import matplotlib.pyplot as plt
 from torch.distributed.elastic.multiprocessing.errors import record
-from transformers.integrations import WandbCallback
 import os
 
 
