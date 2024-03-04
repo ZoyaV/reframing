@@ -16,8 +16,8 @@ import re
 import random
 from dpo_tuning.utils.metrics import box_iou
 from one_peace.models import from_pretrained
-from dpo_tuning.utils.data import prepare_data, get_images
-from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
+from dpo_tuning.utils.data import prepare_datax
+from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions, get_images
 
 
 def init_detector_model():

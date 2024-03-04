@@ -27,8 +27,8 @@ from training_arguments import ValidationArguments
 import peft
 from dpo_tuning.utils.metrics import box_iou
 from one_peace.models import from_pretrained
-from dpo_tuning.utils.data import prepare_data, get_images
-from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions
+from dpo_tuning.utils.data import prepare_data
+from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions, get_images
 
 def init_detector_model():
     Dino = load_model("/home/AI/yudin.da/avshalumov_ms/.local/lib/python3.8/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py", \
