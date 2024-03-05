@@ -14,7 +14,7 @@ class BaseDetector:
         if self.detector_class == 'OnePeace':
             self.detector = OnePeaceDetector()
     def predict(self, image_metadata):
-        raise self.detector.predict(image_metadata)
+        return self.detector.predict(image_metadata)
 
     def get_bboxes(self, image, text_queries):
         raise NotImplementedError

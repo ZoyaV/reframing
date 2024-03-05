@@ -49,3 +49,23 @@ def get_images(obj, path):
     name = obj_name+'/'+obj_name+'_'+obj_split[len(obj_split)-2]+'/'+obj+'.png'
     img_sources, images = load_image(path+name)
     return name, img_sources, images
+
+def annotate_and_save(i, predicted_bbox, real_bbox, prompt_bbox, output_dir, path_to_imgs, name, run_name):
+    if os.path.exists(f'{output_dir}/input_output_examples.txt'):
+        with open(f'{output_dir}/input_output_examples.txt', 'a') as f:
+            print("output proxy")
+            # f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))
+    else:
+        os.system(f"touch {output_dir}/input_output_examples.txt")
+        with open(f'{output_dir}/input_output_examples.txt', 'a') as f:
+            print("output proxy")
+            # f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))        
+    image = plt.imread(path_to_imgs+name)
+    image = cv2.rectangle(image, (int(predicted_bbox[0]), int(predicted_bbox[1])), (int(predicted_bbox[2]), int(predicted_bbox[3])), (0, 0, 0), 2)
+    cv2.putText(image, 'predicted', (int(predicted_bbox[0]), int(predicted_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,0), 2)
+    image = cv2.rectangle(image, (int(real_bbox[0]), int(real_bbox[1])), (int(real_bbox[2]), int(real_bbox[3])), (36,255,12), 2)
+    cv2.putText(image, 'dataset', (int(real_bbox[0]), int(real_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+    image = cv2.rectangle(image, (int(prompt_bbox[0]), int(prompt_bbox[1])), (int(prompt_bbox[2]), int(prompt_bbox[3])), (0,255,0), 2)
+    cv2.putText(image, 'dataset', (int(prompt_bbox[0]), int(prompt_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,255,0), 2)
+    im = Image.fromarray((image * 255).astype(np.uint8)).convert('RGB')
+    im.save(f"./{output_dir}/images/images_{run_name}_{i}.png")

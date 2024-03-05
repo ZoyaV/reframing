@@ -89,7 +89,7 @@ class ValidationArguments:
     path_to_imgs: Optional[str] = field(default='../ONE-PEACE/gold/images/RGB_raw/',\
                                          metadata={"help": "path to folder with images"})
     
-    path_to_output: Optional[str] = field(default="./dataset/dpo_all_pipeline_test.csv", \
+    path_to_output: Optional[str] = field(default="./results", \
                                             metadata={"help": "path to output file"})
     detector_model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name: None/onepeace/DINO"})
     language_model_type: Optional[str] = field(default="none", metadata={"help": "none/pretrained/tuned"})
