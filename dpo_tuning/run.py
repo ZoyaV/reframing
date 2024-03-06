@@ -64,7 +64,7 @@ def main():
     # accelerator.prepare(model_ref)
     tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path)
     tokenizer.pad_token = tokenizer.eos_token
-
+    print(script_args.path_to_source)
     # 2. Load the Stack-exchange paired dataset
     data = prepare_data(script_args.path_to_source)
 
