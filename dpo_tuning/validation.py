@@ -44,7 +44,8 @@ def get_predictions(i, data, prompt_name, detector, path_to_imgs, model=None, to
             output = data['prompt'][i].replace(prompt_name, '')
         else: 
             prompt = tokenizer(data['prompt'][i],return_tensors="pt").input_ids
-            output_tensor = model.generate(torch.Tensor(prompt),  max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
+            output_tensor = model.generate(torch.Tensor(prompt),  max_new_tokens=100, top_k=50, top_p=0.95)
+            
             output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True)
             output = str(output[0]).replace(str(prompt), '')       
             print(output)
@@ -55,7 +56,7 @@ def get_predictions(i, data, prompt_name, detector, path_to_imgs, model=None, to
         image_metadata = {'image_np': images, 'image_pil': img_sources, 'correct': output, 'image_path': path_to_imgs+name}
         predicted_bbox, pred_score = detector.predict(image_metadata)
         print( predicted_bbox, pred_score, output)
-        return real_bbox, predicted_bbox, pred_score, output
+        return real_bbox, predicted_bbox, pred_score, output,name
 
 def main():
     parser = HfArgumentParser(ValidationArguments)
@@ -84,7 +85,7 @@ def main():
         model = peft.PeftModel.from_pretrained(model,path_to_checkpoint, torch_dtype=torch.float16)
         model = model.merge_and_unload()
         tokenizer = AutoTokenizer.from_pretrained(path_to_checkpoint)
-        tokenizer.pad_token = tokenizer.eos_token
+        model.bfloat16()
     elif language_model_type=="pretrained": 
         model  = AutoModelForCausalLM.from_pretrained(
         language_model_name,  #NousResearch/Llama-2-7b-chat-hf
@@ -103,7 +104,7 @@ def main():
 
 
     if v_range == "train":
-        data = pd.read_csv(path_to_source, header=0)[:100]
+        data = pd.read_csv(path_to_source, header=0)[:20]
     elif v_range == "test":
         data = pd.read_csv(path_to_source, header=0)
         data = data[len(data)-100:].reset_index(drop=True)
@@ -112,7 +113,7 @@ def main():
     ious = []
     scores = []
     for i in range(len(data)):
-        real_bbox, predicted_bbox, pred_score, output = get_predictions(i, data, prompt, detector, path_to_imgs, model, tokenizer)
+        real_bbox, predicted_bbox, pred_score, output, name = get_predictions(i, data, prompt, detector, path_to_imgs, model, tokenizer)
         if i==49:
             split = re.split(' ', re.split(',', data['description_bbox'][i][1:-1])[0])
             prompt_bbox = torch.Tensor([float(x) for x in split[0:len(split)-1]])

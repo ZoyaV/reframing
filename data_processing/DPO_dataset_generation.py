@@ -16,8 +16,9 @@ import re
 import random
 from dpo_tuning.utils.metrics import box_iou
 from one_peace.models import from_pretrained
-from dpo_tuning.utils.data import prepare_datax
+from dpo_tuning.utils.data import prepare_data
 from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions, get_images
+import tqdm
 
 
 def init_detector_model():
@@ -44,7 +45,7 @@ def get_objects_descriptions(ds: pd.DataFrame):
             object_descriptions[ds['item_id'][i]] = [[i, ds['description'][i]]]
     return object_descriptions
 
-def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source):
+def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source, use_score, ranking_strategy,threshhold=None):
     correct_reward_iou = []  
     correct_reward_score = []
     means = []
@@ -57,18 +58,18 @@ def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_sour
     elif model_name == 'onepeace':
         model = init_onepeace()
     ds = pd.read_csv(path_to_source, sep=',', header=0)
-    for i in range(len(ds)):
+    for i in tqdm.tqdm(range(len(ds))):
         correct = ds['description'][i]
         name, img_sources, images = get_images(ds['item_id'][i], path_to_imgs)
-        if ds["score"][i] == -1:
+        if use_score == True and ds["score"][i] == -1:
             correct_reward_iou.append(-1.0)
             correct_reward_score.append(0.0)
             means.append(0.0)
             prompt_bboxes.append([0,0,0,0])
             continue
-        elif model_name == 'DINO':
+        elif model_name.lower() == 'dino':
             predicted_bbox, pred_score = get_Dino_predictions(model, images, img_sources, correct)
-        elif model_name == 'onepeace':
+        elif model_name.lower() == 'onepeace':
             predicted_bbox = get_ONE_PEACE_predictions(model, str(path_to_imgs)+str(name), str(correct))[0]
             pred_score = 1
         try: 
@@ -88,6 +89,22 @@ def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_sour
     ds['response_score'] = correct_reward_score
     ds['harmonic_mean'] = means
     ds['description_bbox'] = prompt_bboxes
+    if ranking_strategy.lower() == 'iou':
+        ds['rank'] = correct_reward_iou
+    elif ranking_strategy.lower() == 'score':
+        ds['rank'] = correct_reward_score
+    elif ranking_strategy.lower() == 'mean':
+        ds['rank'] = means
+    elif ranking_strategy.lower() == 'threshhold':
+        values = []
+        if not threshhold:
+            threshhold=0.7
+        for i in range(len(correct_reward_iou)):
+            if correct_reward_iou[i]>threshhold:
+                values.append(correct_reward_score[i])
+            else:
+                values.append(0.0)
+        ds['rank'] = means
     ds.to_csv(path_to_output, index=False)
     return ds
 
@@ -118,6 +135,7 @@ def generate_triplets(path_to_output, ds=None):
             if object_descriptions[ds['item_id'][i]][n2] != resp1 and object_descriptions[ds['item_id'][i]][n2] != resp2:
                 k2 = object_descriptions[ds['item_id'][i]][n2][0]
                 break
+        
         if ds['harmonic_mean'][k1] >=  ds['harmonic_mean'][k2]:
             df.loc[len(df)] = [i, ds['item_id'][i], ds['true_bbox'][i], prompt, ds['description'][k1], ds['description'][k2],
                                ds['response_iou'][k1], ds['response_score'][k1], ds['harmonic_mean'][k1],
@@ -139,9 +157,12 @@ def main():
     path_to_source = p_args.path_to_source
     path_to_imgs = p_args.path_to_imgs
     path_to_output = p_args.path_to_output
+    ranking_strategy = p_args.ranking_strategy
+    threshhold = p_args.ranking_strategy
+    use_score = p_args.use_score
 
 
-    ds = evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source)
+    ds = evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source,use_score,ranking_strategy,threshhold)
     generate_triplets(path_to_output)
 # Generate text
 if __name__ == "__main__":

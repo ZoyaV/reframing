@@ -81,6 +81,10 @@ class ProcessingArguments:
     path_to_output: Optional[str] = field(default="./dataset/dpo_all_pipeline_test.csv", \
                                             metadata={"help": "path to output file"})
     model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name"})
+    ranking_strategy: Optional[str] = field(default="mean", metadata={"help": "ranking strategy for dataset generation: IOU/score/mean/threshold"})
+    threshhold: Optional[str] = field(default="None", metadata={"help": "threshhold(in case you are using threshold-based strategt)"})
+    use_score: Optional[str] = field(default="False", metadata={"help": "whether to use filtration or not"})
+
 
 @dataclass
 class ValidationArguments:
@@ -90,9 +94,9 @@ class ValidationArguments:
     path_to_imgs: Optional[str] = field(default='../ONE-PEACE/gold/images/RGB_raw/',\
                                          metadata={"help": "path to folder with images"})
     
-    path_to_output: Optional[str] = field(default="./results", \
+    path_to_output: Optional[str] = field(default="./results/val_results.csv", \
                                             metadata={"help": "path to output file"})
-    detector_model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name: None/onepeace/DINO"})
+    detector_model_name: Optional[str] = field(default="Dino", metadata={"help": "detector model name: None/onepeace/DINO"})
     language_model_type: Optional[str] = field(default="none", metadata={"help": "none/pretrained/tuned"})
     language_model_name: Optional[str] = field(default="NousResearch/Llama-2-7b-chat-hf", metadata={"help": "path to langauge model or it's name"})
     v_range: Optional[str] = field(default="train", metadata={"help": "validation range: train/test"})
