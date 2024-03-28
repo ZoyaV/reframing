@@ -44,7 +44,7 @@ def llama_model_and_tockenizer():
             print("=" * 80)
             print("Your GPU supports bfloat16: accelerate training with bf16=True")
             print("=" * 80)
-    
+    model_name="google/gemma-7b-it"
     # Load base model
     model = AutoModelForCausalLM.from_pretrained(
         model_name,

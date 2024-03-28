@@ -41,9 +41,15 @@ def correctness(text):
 def generate(prompt, model, tokenizer):
     inputs = tokenizer.encode(prompt, return_tensors='pt')
     outputs = model.generate(inputs, max_length=200, generation_config = GenerationConfig(do_sample = True, temperature= 1))
-    result = tokenizer.decode(outputs[0], skip_special_tokens=True).split(" [/INST] ")[1].split(".")[0]
+    
+    result = tokenizer.decode(outputs[0], skip_special_tokens=True)
+   # print()
+    result = result.split("[/INST]")[1]
+   # print("O:", result)
     try:
+        #result = result_pred.split(".")[0]
         result = result.split(":")[1]
+       # print("R:", result)
     except:
         result = result
     return result, correctness(result)
@@ -53,9 +59,9 @@ def sample_santences(row_dict, sample_count, prompt, model, tokenizer):
     result['score'] = [0]
     sentence = row_dict['description']
     for i in range(sample_count):
-        sentence, correct = generate(prompt.format(sentence), model, tokenizer)
+        refrase, correct = generate(prompt.format(sentence), model, tokenizer)
         score = 0 if correct else -1
-        result['description'].append(sentence)
+        result['description'].append(refrase)
         result['score'].append(score)
         for key in row_dict:
             if key not in ['description', 'score']:
@@ -67,7 +73,7 @@ if __name__ == "__main__":
     data = data[['description','item_id', 'true_bbox']]
     
     model, tokenizer = llama_model_and_tockenizer()
-    prompt = "Paraphrase sentence: {} [/INST]" 
+    prompt = "[INST] Paraphrase sentence (1 sentense): {} [/INST]" 
     dfs = []
     for i in tqdm.tqdm(range(data.shape[0])):
         sentences = sample_santences(dict(data.iloc[i]), 5, prompt, model, tokenizer)
@@ -75,7 +81,7 @@ if __name__ == "__main__":
         dfs.append(sentences)
         if i%10 == 0:
             result = pd.concat(dfs, ignore_index=True)
-            result.to_csv(f"./datasets/augmented_gold_{i}.csv")
+            result.to_csv(f"./datasets/gemma_augmented_gold_{i}.csv")
     result = pd.concat(dfs, ignore_index=True)
-    result.to_csv(f"./datasets/augmented_gold.csv")
+    result.to_csv(f"./datasets/gemma_augmented_gold.csv")
     
