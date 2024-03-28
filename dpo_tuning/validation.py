@@ -24,11 +24,21 @@ import matplotlib.pyplot as plt
 from training_arguments import ValidationArguments
 import peft
 from dpo_tuning.utils.metrics import box_iou
-from one_peace.models import from_pretrained
+#from one_peace.models import from_pretrained
 from dpo_tuning.utils.data import prepare_data
 from dpo_tuning.utils.detector import get_images, annotate_and_save
 from detectors.detectors import BaseDetector
 
+def prepare_hprompt(promt):
+    if ":" in promt:
+        if promt.count(":") == 2:
+            parts = promt.split(":")
+            return f"{parts[0]}:{parts[2]}"
+        else:
+            parts = promt.split(":")
+            return f"{parts[0]}:{parts[1]}"
+    return prompt
+    
 def get_predictions(i, data, prompt_name, detector, path_to_imgs, model=None, tokenizer=None):
         if not model:
             output = data['prompt'][i].replace(prompt_name, '')
@@ -38,6 +48,7 @@ def get_predictions(i, data, prompt_name, detector, path_to_imgs, model=None, to
             output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True)
             output = str(output[0]).replace(str(prompt), '')       
             print(output)
+        output = prepare_hprompt(output)
         dataset_bbox = torch.Tensor([[float(x) for x in re.split(',', data['true_bbox'][i][1:-1])]])
         real_bbox = box_convert(boxes=dataset_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()[0] 
         name, img_sources, images = get_images(data['item_id'][i], path_to_imgs)
@@ -84,10 +95,11 @@ def main():
         tokenizer = AutoTokenizer.from_pretrained(language_model_name)
         tokenizer.pad_token = tokenizer.eos_token
 
-    if detector_model_name == "Dino": 
-        detector = BaseDetector("Dino")
-    elif detector_model_name == "OnePeace":
-        detector = BaseDetector("OnePeace")
+    # if detector_model_name == "Dino": 
+    #     detector = BaseDetector("Dino")
+    # elif detector_model_name == "OnePeace":
+    #     detector = BaseDetector("OnePeace")
+    detector = BaseDetector("Dino")
 
 
     if v_range == "train":

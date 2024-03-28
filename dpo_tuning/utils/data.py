@@ -6,11 +6,14 @@ from typing import Dict, Optional
 import pandas as pd
 
 
-def prepare_data(path):
+def prepare_data(path, eos_token):
+    print(path)
     data = pd.read_csv(path)[6000:75000]
-    data['chosen'] = data['correct'].apply(lambda x: "{}{}".format(x, '</s>'))
+    data['chosen'] = data['correct'].apply(lambda x: "{}{}".format(x, eos_token))
+    print(data['prompt'][:3])
     data['prompt'] = data['prompt'].apply(lambda x: "{}{}{}".format('[INST]', x, '[/INST]'))
-    data['rejected'] = data['rejected'].apply(lambda x: "{}{}".format(x, '</s>'))
+    print(data['prompt'][:3])
+    data['rejected'] = data['rejected'].apply(lambda x: "{}{}".format(x, eos_token))
     print(data.size)
     data = data.dropna()
     print(data.size)

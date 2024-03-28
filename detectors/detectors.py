@@ -4,7 +4,7 @@ import cv2
 
 from torchvision.ops import box_convert
 from groundingdino.util.inference import load_model, load_image, predict
-from one_peace.models import from_pretrained
+#from one_peace.models import from_pretrained
 
 class BaseDetector:
     def __init__(self, detector_class):
@@ -26,8 +26,8 @@ class BaseDetector:
 class DinoDetector:
     def __init__(self):
 
-        self.detector = load_model("./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",\
-                       "./GroundingDINO/weights/groundingdino_swint_ogc.pth")
+        self.detector = load_model("~/mambaforge/envs/tuning/lib/python3.8/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py", \
+                       "../../../weights/groundingdino_swint_ogc.pth")
 
     def _scrap_image_metadata(self, image_metadata):
         return (image_metadata['image_np'],

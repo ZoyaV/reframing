@@ -6,8 +6,6 @@ import pandas as pd
 
 def box_iou(boxA, boxB):
     # determine the (x, y)-coordinates of the intersection rectangle
-    print("a",boxA)
-    print("b",boxB)
     xA = max(boxA[0], boxB[0])
     yA = max(boxA[1], boxB[1])
     xB = min(boxA[2], boxB[2])

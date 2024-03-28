@@ -37,7 +37,8 @@ def main():
     if accelerator.is_main_process:
         accelerator.init_trackers(str(script_args.run_name), init_kwargs={
             "wandb": {
-                'name':str(script_args.run_name)+"_seed_"+str(script_args.seed)
+                'name':str(script_args.run_name)+"_seed_"+str(script_args.seed),
+                'group':script_args.model_name_or_path
             }
         })
     # 1. load a pretrained model
@@ -46,6 +47,7 @@ def main():
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
         load_in_4bit = True,
+        use_auth_token=True,
     )
     model.config.use_cache = False
     if script_args.ignore_bias_buffers:
@@ -53,6 +55,7 @@ def main():
         model._ddp_params_and_buffers_to_ignore = [
             name for name, buffer in model.named_buffers() if buffer.dtype == torch.bool
         ]
+    
 
     accelerator.prepare(model)
     # model_ref  = AutoModelForCausalLM.from_pretrained(
@@ -62,11 +65,13 @@ def main():
     #     load_in_4bit = True,
     # )
     # accelerator.prepare(model_ref)
-    tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path)
+    tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path,token = "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")
+   # tokenizer.pad_token = '</s>'
+  #  tokenizer.eos_token = tokenizer.pad_token
     tokenizer.pad_token = tokenizer.eos_token
     print(script_args.path_to_source)
     # 2. Load the Stack-exchange paired dataset
-    data = prepare_data(script_args.path_to_source)
+    data = prepare_data(script_args.path_to_source, tokenizer.eos_token)
 
     # 4. initialize training arguments:
     training_args = TrainingArguments(
