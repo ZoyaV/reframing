@@ -14,7 +14,7 @@ class ScriptArguments:
     # training parameters
     seed: Optional[int] = field(default=42, metadata={"help": "training seed"})
     model_name_or_path: Optional[str] = field(
-        default= "google/gemma-7b", #"openai-community/gpt2-medium",#"openai-community/gpt2-xl", #"google/gemma-2b", #"NousResearch/Llama-2-7b-chat-hf",
+        default= "NousResearch/Llama-2-7b-chat-hf", #"openai-community/gpt2-medium",#"openai-community/gpt2-xl", #"google/gemma-2b", #"NousResearch/Llama-2-7b-chat-hf",
         metadata={"help": "the location of the SFT model name or path"},
     )
     learning_rate: Optional[float] = field(default=5e-4, metadata={"help": "optimizer learning rate"})
@@ -23,10 +23,10 @@ class ScriptArguments:
     weight_decay: Optional[float] = field(default=0.05, metadata={"help": "the weight decay"})
     optimizer_type: Optional[str] = field(default="paged_adamw_32bit", metadata={"help": "the optimizer type"})
 
-    per_device_train_batch_size: Optional[int] = field(default=8, metadata={"help": "train batch size per device"})
+    per_device_train_batch_size: Optional[int] = field(default=2, metadata={"help": "train batch size per device"})
     path_to_source: Optional[str] = field(default='../datasets/DINO_gold_dataset_with_prompt_boxes_new_ranked_by_new_strategy.csv',\
                                            metadata={"help": "path to csv with descriptions, img refs and GT bboxes"})
-    per_device_eval_batch_size: Optional[int] = field(default=8, metadata={"help": "eval batch size per device"})
+    per_device_eval_batch_size: Optional[int] = field(default=4, metadata={"help": "eval batch size per device"})
     gradient_accumulation_steps: Optional[int] = field(
         default=4, metadata={"help": "the number of gradient accumulation steps"}
     )
@@ -40,7 +40,7 @@ class ScriptArguments:
 
     max_prompt_length: Optional[int] = field(default=512, metadata={"help": "the maximum prompt length"})
     max_length: Optional[int] = field(default=1024, metadata={"help": "the maximum sequence length"})
-    max_steps: Optional[int] = field(default=1001, metadata={"help": "max number of training steps"})
+    max_steps: Optional[int] = field(default=20000, metadata={"help": "max number of training steps"})
     logging_steps: Optional[int] = field(default=100, metadata={"help": "the logging frequency"})
     save_steps: Optional[int] = field(default=200, metadata={"help": "the saving frequency"})
     eval_steps: Optional[int] = field(default=500, metadata={"help": "the evaluation frequency"})
@@ -82,8 +82,8 @@ class ProcessingArguments:
                                             metadata={"help": "path to output file"})
     model_name: Optional[str] = field(default="DINO", metadata={"help": "detector model name"})
     ranking_strategy: Optional[str] = field(default="mean", metadata={"help": "ranking strategy for dataset generation: IOU/score/mean/threshold"})
-    threshhold: Optional[str] = field(default="None", metadata={"help": "threshhold(in case you are using threshold-based strategt)"})
-    use_score: Optional[str] = field(default="False", metadata={"help": "whether to use filtration or not"})
+    threshhold: Optional[float] = field(default=None, metadata={"help": "threshhold(in case you are using threshold-based strategt)"})
+    use_score: Optional[bool] = field(default=False, metadata={"help": "whether to use filtration or not"})
 
 
 @dataclass

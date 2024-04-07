@@ -3,12 +3,8 @@ from groundingdino.util.inference import predict, load_image
 import numpy as np
 import torch
 import cv2
-<<<<<<< HEAD
-#from one_peace.models import from_pretrained
-=======
 from one_peace.models import from_pretrained
 import os
->>>>>>> d082dea (recent changes)
 
 
 
