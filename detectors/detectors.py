@@ -86,10 +86,10 @@ class OnePeaceDetector:
 class YOLOWorldDetector:
     def __init__(self):
         cfg = Config.fromfile(
-            "/content/YOLO-World/configs/pretrain/yolo_world_l_t2i_bn_2e-4_100e_4x8gpus_obj365v1_goldg_train_lvis_minival.py"
+            "../YOLO-World/configs/pretrain/yolo_world_v2_l_vlpan_bn_2e-3_100e_4x8gpus_obj365v1_goldg_train_1280ft_lvis_minival.py"
         )
         cfg.work_dir = "."
-        cfg.load_from = "yolow-v8_l_clipv2_frozen_t2iv2_bn_o365_goldg_pretrain.pth"
+        cfg.load_from = "../YOLO-World/weights/yolo_world_v2_l_obj365v1_goldg_pretrain_1280ft-9babe3f6.pth"
         self.detector = Runner.from_cfg(cfg)
         self.detector.call_hook("before_run")
         self.detector.load_or_resume()
@@ -109,28 +109,32 @@ class YOLOWorldDetector:
         output_image="output.png",
 ):
         image_path, output = self._scrap_image_metadata(image_metadata)
-        texts = [[t.strip()] for t in class_names.split(",")] + [[" "]]
+        # texts = [[t.strip()] for t in class_names.split(",")] + [[" "]]
         data_info = self.detector.pipeline(dict(img_id=0, img_path=image_path,
-                                         texts=texts))
+                                         texts=[[output]]))
 
         data_batch = dict(
             inputs=data_info["inputs"].unsqueeze(0),
             data_samples=[data_info["data_samples"]],
         )
+        try: 
+            with autocast(enabled=False), torch.no_grad():
+                output = self.detector.model.test_step(data_batch)[0]
+                self.detector.model.class_names = [[output]]
+                pred_instances = output.pred_instances
 
-        with autocast(enabled=False), torch.no_grad():
-            output = self.detector.model.test_step(data_batch)[0]
-            self.detector.model.class_names = texts
-            pred_instances = output.pred_instances
+            keep_idxs = nms(pred_instances.bboxes, pred_instances.scores, iou_threshold=nms_thr)
+            pred_instances = pred_instances[keep_idxs]
+            pred_instances = pred_instances[pred_instances.scores.float() > score_thr]
 
-        keep_idxs = nms(pred_instances.bboxes, pred_instances.scores, iou_threshold=nms_thr)
-        pred_instances = pred_instances[keep_idxs]
-        pred_instances = pred_instances[pred_instances.scores.float() > score_thr]
+            if len(pred_instances.scores) > max_num_boxes:
+                indices = pred_instances.scores.float().topk(max_num_boxes)[1]
+                pred_instances = pred_instances[indices]
+            output.pred_instances = pred_instances
 
-        if len(pred_instances.scores) > max_num_boxes:
-            indices = pred_instances.scores.float().topk(max_num_boxes)[1]
-            pred_instances = pred_instances[indices]
-        output.pred_instances = pred_instances
-
-        pred_instances = pred_instances.cpu().numpy()
-        return pred_instances['bboxes'],pred_instances['scores']
+            pred_instances = pred_instances.cpu().numpy()
+            max_position = np.argmax(pred_instances['scores'])
+            return pred_instances['bboxes'][max_position],pred_instances['scores'][max_position]
+        except Exception as e:
+            print(e) 
+            return [0.0,0.0,0.0,0.0], 0.0

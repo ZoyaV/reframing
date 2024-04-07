@@ -72,7 +72,7 @@ def main():
     v_range = val_args.v_range
     run_name = val_args.run_name
 
-    if language_model_type == "none":
+    if language_model_type.lower() == "none":
         model=None
         tokenizer=None
     elif language_model_type == "tuned":
@@ -116,14 +116,14 @@ def main():
     scores = []
     for i in range(len(data)):
         real_bbox, predicted_bbox, pred_score, output, name = get_predictions(i, data, prompt, detector, path_to_imgs, model, tokenizer)
-        if i==49:
+        if i==10:
             split = re.split(' ', re.split(',', data['description_bbox'][i][1:-1])[0])
             prompt_bbox = torch.Tensor([float(x) for x in split[0:len(split)-1]])
-            annotate_and_save(i, predicted_bbox, real_bbox, prompt_bbox, path_to_output, path_to_imgs, name, run_name)
+            annotate_and_save(i, predicted_bbox, real_bbox, [0,0,0,0], path_to_output, path_to_imgs, name, run_name)
         iou_score = float(box_iou(real_bbox, predicted_bbox))
         ious.append(iou_score)
         scores.append(pred_score)
-    
+    print(ious,scores)
     iou = np.mean(ious)
     iou_std = np.std(ious)
     score_std = np.std(scores)

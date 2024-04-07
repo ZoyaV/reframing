@@ -3,9 +3,10 @@ from groundingdino.util.inference import predict, load_image
 import numpy as np
 import torch
 import cv2
-from one_peace.models import from_pretrained
+# from one_peace.models import from_pretrained
 import os
-
+import matplotlib.pyplot as plt
+from PIL import Image
 
 
 
@@ -52,13 +53,13 @@ def get_images(obj, path):
     return name, img_sources, images
 
 def annotate_and_save(i, predicted_bbox, real_bbox, prompt_bbox, output_dir, path_to_imgs, name, run_name):
-    if os.path.exists(f'{output_dir}/input_output_examples.txt'):
-        with open(f'{output_dir}/input_output_examples.txt', 'a') as f:
+    if os.path.exists(f'results/input_output_examples.txt'):
+        with open(f'results/input_output_examples.txt', 'a') as f:
             print("output proxy")
             # f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))
     else:
-        os.system(f"touch {output_dir}/input_output_examples.txt")
-        with open(f'{output_dir}/input_output_examples.txt', 'a') as f:
+        os.system(f"touch results/input_output_examples.txt")
+        with open(f'results/input_output_examples.txt', 'a') as f:
             print("output proxy")
             # f.write("{} ||| {} ||| {} ||| {} ||| {}\n".format(c, data['prompt'][i],output, iou_score, pred_score))        
     image = plt.imread(path_to_imgs+name)
@@ -69,4 +70,4 @@ def annotate_and_save(i, predicted_bbox, real_bbox, prompt_bbox, output_dir, pat
     image = cv2.rectangle(image, (int(prompt_bbox[0]), int(prompt_bbox[1])), (int(prompt_bbox[2]), int(prompt_bbox[3])), (0,255,0), 2)
     cv2.putText(image, 'dataset', (int(prompt_bbox[0]), int(prompt_bbox[1])-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,255,0), 2)
     im = Image.fromarray((image * 255).astype(np.uint8)).convert('RGB')
-    im.save(f"./{output_dir}/images/images_{run_name}_{i}.png")
+    im.save(f"./results/images/images_{run_name}_{i}.png")
