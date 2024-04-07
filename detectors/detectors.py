@@ -1,8 +1,12 @@
 import numpy as np
 import torch
 import cv2
-
-from torchvision.ops import box_convert
+from mmengine.config import Config
+from mmengine.dataset import Compose
+from mmengine.runner import Runner
+from mmengine.runner.amp import autocast
+from mmyolo.registry import RUNNERS
+from torchvision.ops import box_convert,nms
 from groundingdino.util.inference import load_model, load_image, predict
 #from one_peace.models import from_pretrained
 
@@ -13,6 +17,8 @@ class BaseDetector:
             self.detector = DinoDetector()
         if self.detector_class == 'OnePeace':
             self.detector = OnePeaceDetector()
+        if self.detector_class == 'YOLO':
+            self.detector = YOLOWorldDetector()
     def predict(self, image_metadata):
         return self.detector.predict(image_metadata)
 
@@ -26,8 +32,8 @@ class BaseDetector:
 class DinoDetector:
     def __init__(self):
 
-        self.detector = load_model("~/mambaforge/envs/tuning/lib/python3.8/site-packages/groundingdino/config/GroundingDINO_SwinT_OGC.py", \
-                       "../../../weights/groundingdino_swint_ogc.pth")
+        self.detector = load_model("./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py", \
+                       "./GroundingDINO/weights/groundingdino_swint_ogc.pth")
 
     def _scrap_image_metadata(self, image_metadata):
         return (image_metadata['image_np'],
@@ -76,3 +82,55 @@ class OnePeaceDetector:
                 vl_features[:, 1::2] *= image_heights.unsqueeze(1)
                 coords = vl_features.cpu().tolist()
             return coords, 1
+    
+class YOLOWorldDetector:
+    def __init__(self):
+        cfg = Config.fromfile(
+            "/content/YOLO-World/configs/pretrain/yolo_world_l_t2i_bn_2e-4_100e_4x8gpus_obj365v1_goldg_train_lvis_minival.py"
+        )
+        cfg.work_dir = "."
+        cfg.load_from = "yolow-v8_l_clipv2_frozen_t2iv2_bn_o365_goldg_pretrain.pth"
+        self.detector = Runner.from_cfg(cfg)
+        self.detector.call_hook("before_run")
+        self.detector.load_or_resume()
+        pipeline = cfg.test_dataloader.dataset.pipeline
+        self.detector.pipeline = Compose(pipeline)
+        self.detector.model.eval()
+
+    def _scrap_image_metadata(self, image_metadata):
+        return image_metadata['image_path'], image_metadata['correct']
+    
+    def predict(
+        self,
+        image_metadata,
+        max_num_boxes=100,
+        score_thr=0.05,
+        nms_thr=0.5,
+        output_image="output.png",
+):
+        image_path, output = self._scrap_image_metadata(image_metadata)
+        texts = [[t.strip()] for t in class_names.split(",")] + [[" "]]
+        data_info = self.detector.pipeline(dict(img_id=0, img_path=image_path,
+                                         texts=texts))
+
+        data_batch = dict(
+            inputs=data_info["inputs"].unsqueeze(0),
+            data_samples=[data_info["data_samples"]],
+        )
+
+        with autocast(enabled=False), torch.no_grad():
+            output = self.detector.model.test_step(data_batch)[0]
+            self.detector.model.class_names = texts
+            pred_instances = output.pred_instances
+
+        keep_idxs = nms(pred_instances.bboxes, pred_instances.scores, iou_threshold=nms_thr)
+        pred_instances = pred_instances[keep_idxs]
+        pred_instances = pred_instances[pred_instances.scores.float() > score_thr]
+
+        if len(pred_instances.scores) > max_num_boxes:
+            indices = pred_instances.scores.float().topk(max_num_boxes)[1]
+            pred_instances = pred_instances[indices]
+        output.pred_instances = pred_instances
+
+        pred_instances = pred_instances.cpu().numpy()
+        return pred_instances['bboxes'],pred_instances['scores']

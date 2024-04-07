@@ -8,7 +8,7 @@ import pandas as pd
 
 def prepare_data(path, eos_token):
     print(path)
-    data = pd.read_csv(path)[6000:75000]
+    data = pd.read_csv(path)#[6000:75000]
     data['chosen'] = data['correct'].apply(lambda x: "{}{}".format(x, eos_token))
     print(data['prompt'][:3])
     data['prompt'] = data['prompt'].apply(lambda x: "{}{}{}".format('[INST]', x, '[/INST]'))

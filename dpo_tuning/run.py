@@ -72,11 +72,11 @@ def main():
     print(script_args.path_to_source)
     # 2. Load the Stack-exchange paired dataset
     data = prepare_data(script_args.path_to_source, tokenizer.eos_token)
-
+    print(data['train'])
     # 4. initialize training arguments:
     training_args = TrainingArguments(
         per_device_train_batch_size=script_args.per_device_train_batch_size,
-        per_device_eval_batch_size=16,#script_args.per_device_eval_batch_size,
+        per_device_eval_batch_size=script_args.per_device_eval_batch_size,
         max_steps=script_args.max_steps,
         logging_steps=script_args.logging_steps,
         save_steps=script_args.save_steps,
@@ -128,6 +128,7 @@ def main():
         peft_config=peft_config,
         max_prompt_length=script_args.max_prompt_length,
         max_length=script_args.max_length,
+        # loss_type='ipo',
         #compute_metrics=compute_metrics
     )
     # val_callback = ValidationCallback(
