@@ -6,8 +6,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 os.system('pwd')
 import numpy as np
 import torch
-from torchvision.ops import box_convert
-from groundingdino.util.inference import load_model, load_image, predict
+from torchvision.ops import box_convert,nms
+# from groundingdino.util.inference import load_model, load_image, predict
 import pandas as pd
 from transformers import HfArgumentParser
 from dpo_tuning.training_arguments import ProcessingArguments
@@ -15,10 +15,16 @@ import statistics
 import re
 import random
 from dpo_tuning.utils.metrics import box_iou
-from one_peace.models import from_pretrained
+# from one_peace.models import from_pretrained
 from dpo_tuning.utils.data import prepare_data
 from dpo_tuning.utils.detector import get_Dino_predictions, get_ONE_PEACE_predictions, get_images
 import tqdm
+from mmengine.config import Config
+from mmengine.dataset import Compose
+from mmengine.runner import Runner
+from mmengine.runner.amp import autocast
+from mmyolo.registry import RUNNERS
+
 
 
 def init_detector_model():
@@ -35,6 +41,79 @@ def init_onepeace():
         dtype="float32"
         )
     return model
+def init_YOLO():
+    # load config
+    cfg = Config.fromfile(
+        "../YOLO-World/configs/pretrain/yolo_world_v2_l_vlpan_bn_2e-3_100e_4x8gpus_obj365v1_goldg_train_1280ft_lvis_minival.py"
+    )
+    cfg.work_dir = "."
+    cfg.load_from = "../YOLO-World/weights/yolo_world_v2_l_obj365v1_goldg_pretrain_1280ft-9babe3f6.pth"
+    runner = Runner.from_cfg(cfg)
+    runner.call_hook("before_run")
+    runner.load_or_resume()
+    pipeline = cfg.test_dataloader.dataset.pipeline
+    runner.pipeline = Compose(pipeline)
+
+    # run model evaluation
+    runner.model.eval()
+    return runner
+
+def run_image(
+        text,
+        runner,
+        input_image,
+        max_num_boxes=100,
+        score_thr=0.05,
+        nms_thr=0.5,
+        output_image="output.png",
+):
+    try:
+        output_image = "runs/detect/"+output_image
+        # texts = [[t.strip()] for t in class_names.split(",")] + [[" "]]
+        print(text)
+        data_info = runner.pipeline(dict(img_id=0, img_path=input_image,
+                                         texts=[[text]]))
+
+        data_batch = dict(
+            inputs=data_info["inputs"].unsqueeze(0),
+            data_samples=[data_info["data_samples"]],
+        )
+
+        with autocast(enabled=False), torch.no_grad():
+            output = runner.model.test_step(data_batch)[0]
+            runner.model.class_names = [[text]]
+            pred_instances = output.pred_instances
+
+        # nms
+        keep_idxs = nms(pred_instances.bboxes, pred_instances.scores, iou_threshold=nms_thr)
+        pred_instances = pred_instances[keep_idxs]
+        pred_instances = pred_instances[pred_instances.scores.float() > score_thr]
+
+        if len(pred_instances.scores) > max_num_boxes:
+            indices = pred_instances.scores.float().topk(max_num_boxes)[1]
+            pred_instances = pred_instances[indices]
+        output.pred_instances = pred_instances
+
+        # predictions
+        pred_instances = pred_instances.cpu().numpy()
+
+    # detections = sv.Detections(
+    #     xyxy=pred_instances['bboxes'],
+    #     class_id=pred_instances['labels'],
+    #     confidence=pred_instances['scores']
+    # )
+
+    # # label ids with confidence scores
+    # labels = [
+    #     f"{class_id} {confidence:0.2f}"
+    #     for class_id, confidence
+    #     in zip(detections.class_id, detections.confidence)
+    # ]
+    
+        print(pred_instances['bboxes'][0],pred_instances['scores'])
+        return pred_instances['bboxes'][0],pred_instances['scores'][0]
+    except:
+        return [0.0,0.0,0.0,0.0], [0.0]
 
 def get_objects_descriptions(ds: pd.DataFrame):
     object_descriptions = {}
@@ -47,6 +126,7 @@ def get_objects_descriptions(ds: pd.DataFrame):
 
 def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source, use_score, ranking_strategy,threshhold=None):
     correct_reward_iou = []  
+    print(use_score)
     correct_reward_score = []
     means = []
     prompt_bboxes = []
@@ -57,6 +137,8 @@ def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_sour
         model.to(device)
     elif model_name == 'onepeace':
         model = init_onepeace()
+    elif model_name == 'yolo':
+        runner = init_YOLO()
     ds = pd.read_csv(path_to_source, sep=',', header=0)
     for i in tqdm.tqdm(range(len(ds))):
         correct = ds['description'][i]
@@ -72,6 +154,8 @@ def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_sour
         elif model_name.lower() == 'onepeace':
             predicted_bbox = get_ONE_PEACE_predictions(model, str(path_to_imgs)+str(name), str(correct))[0]
             pred_score = 1
+        elif model_name.lower() == 'yolo':
+            predicted_bbox,pred_score = run_image(str(correct),runner, str(path_to_imgs)+str(name))
         try: 
             dataset_bbox = torch.Tensor([[float(x) for x in re.split(',', ds['true_bbox'][i][1:-1])]])
             real_bbox = box_convert(boxes=dataset_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()[0] 
@@ -110,7 +194,7 @@ def evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_sour
 
 
 def generate_triplets(path_to_output, ds=None):
-    if ds==None:
+    if ds is None:
         ds = pd.read_csv(path_to_output)
     df = pd.DataFrame(columns = ['id', 'item_id', 'true_bbox', 'prompt', 'correct', 'rejected', 
                              'iou_correct', 'score_correct', 'harmonic_correct',
@@ -162,8 +246,9 @@ def main():
     use_score = p_args.use_score
 
 
-    ds = evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source,use_score,ranking_strategy,threshhold)
-    generate_triplets(path_to_output)
+    # ds = evaluate_descriptions(model_name, path_to_imgs, path_to_output, path_to_source,use_score,ranking_strategy,threshhold)
+    ds = pd.read_csv('./YOLOWorld_gold_dataset_evaluated.csv')
+    generate_triplets(path_to_output,ds)
 # Generate text
 if __name__ == "__main__":
     main()
