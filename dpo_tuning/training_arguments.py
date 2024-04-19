@@ -17,7 +17,7 @@ class ScriptArguments:
         default= "NousResearch/Llama-2-7b-chat-hf", #"openai-community/gpt2-medium",#"openai-community/gpt2-xl", #"google/gemma-2b", #"NousResearch/Llama-2-7b-chat-hf",
         metadata={"help": "the location of the SFT model name or path"},
     )
-    learning_rate: Optional[float] = field(default=5e-4, metadata={"help": "optimizer learning rate"})
+    learning_rate: Optional[float] = field(default=5e-6, metadata={"help": "optimizer learning rate"})
     lr_scheduler_type: Optional[str] = field(default="cosine", metadata={"help": "the lr scheduler type"})
     warmup_steps: Optional[int] = field(default=100, metadata={"help": "the number of warmup steps"})
     weight_decay: Optional[float] = field(default=0.05, metadata={"help": "the weight decay"})
@@ -31,7 +31,7 @@ class ScriptArguments:
         default=4, metadata={"help": "the number of gradient accumulation steps"}
     )
     gradient_checkpointing: Optional[bool] = field(
-        default=False, metadata={"help": "whether to use gradient checkpointing"}
+        default=True, metadata={"help": "whether to use gradient checkpointing"}
     )
 
     lora_alpha: Optional[float] = field(default=16, metadata={"help": "the lora alpha parameter"})
@@ -39,11 +39,11 @@ class ScriptArguments:
     lora_r: Optional[int] = field(default=8, metadata={"help": "the lora r parameter"})
 
     max_prompt_length: Optional[int] = field(default=512, metadata={"help": "the maximum prompt length"})
-    max_length: Optional[int] = field(default=1024, metadata={"help": "the maximum sequence length"})
+    max_length: Optional[int] = field(default=256, metadata={"help": "the maximum sequence length"})
     max_steps: Optional[int] = field(default=20000, metadata={"help": "max number of training steps"})
-    logging_steps: Optional[int] = field(default=100, metadata={"help": "the logging frequency"})
-    save_steps: Optional[int] = field(default=200, metadata={"help": "the saving frequency"})
-    eval_steps: Optional[int] = field(default=500, metadata={"help": "the evaluation frequency"})
+    logging_steps: Optional[int] = field(default=1, metadata={"help": "the logging frequency"})
+    save_steps: Optional[int] = field(default=500, metadata={"help": "the saving frequency"})
+    eval_steps: Optional[int] = field(default=1, metadata={"help": "the evaluation frequency"})
 
     
     output_dir: Optional[str] = field(default=f"./results/DINO/", metadata={"help": "the output directory"})
@@ -59,7 +59,9 @@ class ScriptArguments:
             'Use `"all"` to report to all integrations installed, `"none"` for no integrations.'
         },
     )
-    run_name:  Optional[str] = field(default="dpo_llama2", metadata={"help": "wandb run name"})
+    path_to_imgs: Optional[str] = field(default='/datasets/gold/images/RGB_raw/',\
+                                         metadata={"help": "path to folder with images"})
+    run_name:  Optional[str] = field(default="dpo_llama2_NEW", metadata={"help": "wandb run name"})
     detector_model_name: Optional[str] = field(default="DINO", metadata={"help": "DINO/onepeace"})
     # debug argument for distributed training
     ignore_bias_buffers: Optional[bool] = field(

@@ -2,13 +2,13 @@ import os
 import torch
 from dataclasses import dataclass, field
 from datasets import Dataset, load_dataset
-from typing import Dict, Optional
+from typing import Dict, Optional, Union
 import pandas as pd
 
 
 def prepare_data(path, eos_token):
     print(path)
-    data = pd.read_csv(path)#[6000:75000]
+    data = pd.read_csv(path)[:25000]
     data['chosen'] = data['correct'].apply(lambda x: "{}{}".format(x, eos_token))
     print(data['prompt'][:3])
     data['prompt'] = data['prompt'].apply(lambda x: "{}{}{}".format('[INST]', x, '[/INST]'))
@@ -68,4 +68,16 @@ def get_stack_exchange_paired(
     )
 
     
-    
+def pad_to_length(tensor: torch.Tensor, length: int, pad_value: Union[int, float], dim: int = -1) -> torch.Tensor:
+    if tensor.size(dim) >= length:
+        return tensor
+    else:
+        pad_size = list(tensor.shape)
+        pad_size[dim] = length - tensor.size(dim)
+        return torch.cat(
+            [
+                tensor,
+                pad_value * torch.ones(*pad_size, dtype=tensor.dtype, device=tensor.device),
+            ],
+            dim=dim,
+        )

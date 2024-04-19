@@ -1,4 +1,8 @@
 # 0. imports
+import sys
+sys.path.append("../")
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..')) 
 from datetime import timedelta
 from accelerate import Accelerator, InitProcessGroupKwargs
 import os
@@ -16,6 +20,10 @@ import numpy as np
 from trl import DPOTrainer
 import re
 from training_arguments import ScriptArguments
+from utils.reframing_trainer import ReframingTrainer
+from detectors.detectors import BaseDetector
+import bitsandbytes as bnb
+
 
 
 from utils.data import prepare_data
@@ -48,6 +56,7 @@ def main():
         torch_dtype=torch.float16,
         load_in_4bit = True,
         use_auth_token=True,
+        bnb_4bit_compute_dtype=torch.float16,
     )
     model.config.use_cache = False
     if script_args.ignore_bias_buffers:
@@ -56,18 +65,17 @@ def main():
             name for name, buffer in model.named_buffers() if buffer.dtype == torch.bool
         ]
     
-
+    detection_model = BaseDetector("Dino")
     accelerator.prepare(model)
-    # model_ref  = AutoModelForCausalLM.from_pretrained(
-    #     script_args.model_name_or_path,
-    #     low_cpu_mem_usage=True,
-    #     torch_dtype=torch.float16,
-    #     load_in_4bit = True,
-    # )
-    # accelerator.prepare(model_ref)
+    model_ref  = AutoModelForCausalLM.from_pretrained(
+        script_args.model_name_or_path,
+        low_cpu_mem_usage=True,
+        torch_dtype=torch.float16,
+        load_in_4bit = True,
+        bnb_4bit_compute_dtype=torch.float16,
+    )
+    accelerator.prepare(model_ref)
     tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path,token = "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")
-   # tokenizer.pad_token = '</s>'
-  #  tokenizer.eos_token = tokenizer.pad_token
     tokenizer.pad_token = tokenizer.eos_token
     print(script_args.path_to_source)
     # 2. Load the Stack-exchange paired dataset
@@ -86,8 +94,8 @@ def main():
         evaluation_strategy="steps",
         num_train_epochs=15,
         seed=script_args.seed,
-        eval_steps=500,
-        do_eval=False,
+        eval_steps=script_args.eval_steps,
+        do_eval=True,
         logging_strategy="steps",
         output_dir=script_args.output_dir,
         report_to=script_args.report_to,
@@ -95,10 +103,11 @@ def main():
         warmup_steps=script_args.warmup_steps,
         optim=script_args.optimizer_type,
         fp16=True,
+        bf16=False,
         remove_unused_columns=False,
         run_name=script_args.run_name + str(script_args.seed),
+        ddp_find_unused_parameters=False
     )
-
     peft_config = LoraConfig(
         r=script_args.lora_r,
         lora_alpha=script_args.lora_alpha,
@@ -117,19 +126,21 @@ def main():
     )
 
     # 5. initialize the DPO trainer
-    dpo_trainer = DPOTrainer(
-        model,
+    dpo_trainer = ReframingTrainer(
+        detection_model=detection_model,
+        path_to_imgs = script_args.path_to_imgs,
+        model=model,
         args=training_args,
-        #generate_during_eval=True,
         beta=script_args.beta,
         train_dataset=data['train'],
-        eval_dataset=data['test'],
+        eval_dataset=data['train'].select(range(100)),
         tokenizer=tokenizer,
         peft_config=peft_config,
         max_prompt_length=script_args.max_prompt_length,
         max_length=script_args.max_length,
+        generate_during_eval=True,
         # loss_type='ipo',
-        #compute_metrics=compute_metrics
+        compute_metrics=None,
     )
     # val_callback = ValidationCallback(
     # val_dataset=data['test'],

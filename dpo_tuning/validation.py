@@ -17,7 +17,7 @@ from transformers import (
     AutoTokenizer,
     HfArgumentParser,
 )
-
+import tqdm
 from PIL import Image
 import cv2
 import matplotlib.pyplot as plt
@@ -47,9 +47,13 @@ def get_predictions(i, data, prompt_name, detector, path_to_imgs, model=None, to
             output_tensor = model.generate(torch.Tensor(prompt),  max_new_tokens=100, top_k=50, top_p=0.95)
             
             output = tokenizer.batch_decode(output_tensor, skip_special_tokens=True)
-            output = str(output[0]).replace(str(prompt), '')       
+            output = str(output[0]).replace(str(data['prompt'][i]), '') 
+            output = str(output[0]).replace('\n','')      
             print(output)
-        # output = prepare_hprompt(output)
+            if 'Sure!' in output or 'Sure,' in output:
+                output = output.split(":")[1:]
+            else:
+                output = output
         dataset_bbox = torch.Tensor([[float(x) for x in re.split(',', data['true_bbox'][i][1:-1])]])
         real_bbox = box_convert(boxes=dataset_bbox, in_fmt="xywh", out_fmt="xyxy").numpy()[0] 
         name, img_sources, images = get_images(data['item_id'][i], path_to_imgs)
@@ -96,11 +100,11 @@ def main():
         tokenizer = AutoTokenizer.from_pretrained(language_model_name)
         tokenizer.pad_token = tokenizer.eos_token
 
-    if detector_model_name == "Dino": 
+    if detector_model_name.lower() == "dino": 
         detector = BaseDetector("Dino")
-    elif detector_model_name == "OnePeace":
+    elif detector_model_name.lower() == "onepeace":
         detector = BaseDetector("OnePeace")
-    elif detector_model_name == "YOLO":
+    elif detector_model_name.lower() == "yolo":
         detector = BaseDetector("YOLO")
     # detector = BaseDetector("Dino")
 
@@ -114,12 +118,12 @@ def main():
     data = data.dropna()
     ious = []
     scores = []
-    for i in range(len(data)):
+    for i in tqdm.tqdm(range(len(data))):
         real_bbox, predicted_bbox, pred_score, output, name = get_predictions(i, data, prompt, detector, path_to_imgs, model, tokenizer)
-        if i==10:
-            split = re.split(' ', re.split(',', data['description_bbox'][i][1:-1])[0])
-            prompt_bbox = torch.Tensor([float(x) for x in split[0:len(split)-1]])
-            annotate_and_save(i, predicted_bbox, real_bbox, [0,0,0,0], path_to_output, path_to_imgs, name, run_name)
+        # if i==10:
+        #     split = re.split(' ', re.split(',', data['description_bbox'][i][1:-1])[0])
+        #     prompt_bbox = torch.Tensor([float(x) for x in split[0:len(split)-1]])
+        #     annotate_and_save(i, predicted_bbox, real_bbox, prompt_bbox, path_to_output, path_to_imgs, name, run_name)
         iou_score = float(box_iou(real_bbox, predicted_bbox))
         ious.append(iou_score)
         scores.append(pred_score)
